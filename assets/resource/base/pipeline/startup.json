@@ -1,0 +1,12 @@
+{
+    "StartUp": {
+        "next": [
+            "Sub_StartCrossCore"
+        ]
+    },
+    "Sub_StartCrossCore": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.megagame.crosscore/com.megagame.crosscore.extend.PhoneUtilActivity"
+    }
+}
