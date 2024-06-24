@@ -18,7 +18,7 @@
 
 ## 使用说明
 
-下载地址：<https://github.com/MaaXYZ/MCCA/releases>
+下载地址：<https://github.com/Tohkahb/MCCA/releases>
 
 ### Windows
 
@@ -57,7 +57,7 @@
 0. 完整克隆本项目及子项目
 
     ```bash
-    git clone --recursive https://github.com/MaaXYZ/MCCA.git
+    git clone --recursive https://github.com/Tohkahb/MCCA.git
     ```
 
 1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中
