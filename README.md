@@ -75,7 +75,7 @@
 
 ## Join us
 
-- MCCA 开发交流 QQ 群：513065464
+- MCCA 开发交流 QQ 群：950540737
 - MaaFramework 开发交流 QQ 群: 595990173
 
 ## 鸣谢
