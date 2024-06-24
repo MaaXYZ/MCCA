@@ -1,0 +1,449 @@
+{
+    "Awards": {
+        "next": [
+            "Sub_Cancel",
+            "Sub_CloseAnnouncement",
+            "Mail",
+            "NoMail",
+            "Sub_StartUp"
+        ]
+    },
+    "Mail":{
+        "recognition": "ColorMatch",
+        "roi": [
+            254,
+            14,
+            42,
+            27
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            178,
+            66
+        ],
+        "upper": [
+            255,
+            190,
+            72
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "Mail_Receive",
+            "Mail"
+        ]
+    },
+    "Mail_Receive":{
+        "recognition": "ColorMatch",
+        "roi": [
+            230,
+            606,
+            160,
+            64
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            190,
+            76
+        ],
+        "upper": [
+            255,
+            210,
+            90
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "DailyTask",
+            "NoDailyTask",
+            "Mail_Receive",
+            "Sub_StartUp"
+        ]
+    },
+    "NoMail": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/NoMail.png",
+        "roi": [
+            259,
+            20,
+            24,
+            24
+        ],
+        "next": [
+            "DailyTask",
+            "NoDailyTask"
+        ]
+    },
+    "DailyTask": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/DailyTask.png",
+        "roi": [
+            1219,
+            394,
+            39,
+            35
+        ],
+        "action": "Click",
+        "next": [
+            "DailyTask_Receive0",
+            "DailyTask_Receive1",
+            "DailyTask_Receive2",
+            "DailyTask"
+        ]
+    },
+    "DailyTask_Receive0":{
+        "recognition": "ColorMatch",
+        "roi": [
+            23,
+            233,
+            36,
+            43
+        ],
+        "method": 4,
+        "lower": [
+            120,
+            120,
+            120
+        ],
+        "upper": [
+            160,
+            160,
+            160
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "DailyTask_Receive1",
+            "DailyTask_Receive2"
+        ]
+    },
+    "DailyTask_Receive1": {
+        "recognition": "ColorMatch",
+        "roi": [
+            1083,
+            102,
+            44,
+            30
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            190,
+            76
+        ],
+        "upper": [
+            255,
+            210,
+            90
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "Sub_GetItems",
+            "DailyTask_Receive1",
+            "DailyTask_Receive2"
+        ]
+    },
+    "DailyTask_Receive2":{
+        "recognition": "ColorMatch",
+        "roi": [
+            23,
+            303,
+            36,
+            43
+        ],
+        "method": 4,
+        "lower": [
+            120,
+            120,
+            120
+        ],
+        "upper": [
+            160,
+            160,
+            160
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "DailyTask_Receive3",
+            "DailyTask_Receive2",
+            "BattlePass",
+            "NoBattlePass",
+            "Sub_StartUp"
+        ]
+    },
+    "DailyTask_Receive3": {
+        "recognition": "ColorMatch",
+        "roi": [
+            1083,
+            102,
+            44,
+            30
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            190,
+            76
+        ],
+        "upper": [
+            255,
+            210,
+            90
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "Sub_GetItems",
+            "BattlePass",
+            "NoBattlePass",
+            "DailyTask_Receive3",
+            "Sub_StartUp"
+        ]
+    },
+    "NoDailyTask": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/NoDailyTask.png",
+        "roi": [
+            1232,
+            405,
+            12,
+            12
+        ],
+        "next": [
+            "BattlePass",
+            "NoBattlePass",
+            "Sub_StartUp"
+        ]
+    },
+    "BattlePass": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/DailyTask.png",
+        "roi": [
+            328,
+            15,
+            36,
+            36
+        ],
+        "action": "Click",
+        "next": [
+            "BattlePass_Receive1",
+            "BattlePass"
+        ]
+    },
+    "BattlePass_Receive1":{
+        "recognition": "OCR",
+        "text": [
+            "任务"
+        ],
+        "roi": [
+            948,
+            274,
+            159,
+            76
+        ],
+        "action": "Click",
+        "next": [
+            "BattlePass_Receive2",
+            "BattlePass_Receive3",
+            "BattlePass_Receive1"
+        ]
+    },
+    "BattlePass_Receive2": {
+        "recognition": "ColorMatch",
+        "roi": [
+            922,
+            211,
+            36,
+            26
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            190,
+            76
+        ],
+        "upper": [
+            255,
+            210,
+            90
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "Sub_GetItems",
+            "BattlePass_Receive3",
+            "BattlePass_Receive2"
+        ]
+    },
+    "BattlePass_Receive3":{
+        "recognition": "ColorMatch",
+        "roi": [
+            197,
+            218,
+            40,
+            37
+        ],
+        "method": 4,
+        "lower": [
+            110,
+            110,
+            110
+        ],
+        "upper": [
+            160,
+            160,
+            160
+        ],
+        "count": 2,
+        "action": "Click",
+        "next": [
+            "Sub_GetItems",
+            "BattlePass_Receive4",
+            "BattlePass_Receive5",
+            "BattlePass_Receive3"
+        ]
+    },
+    "BattlePass_Receive4": {
+        "recognition": "ColorMatch",
+        "roi": [
+            922,
+            211,
+            36,
+            26
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            190,
+            76
+        ],
+        "upper": [
+            255,
+            210,
+            90
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "Sub_GetItems",
+            "BattlePass_Receive5",
+            "BattlePass_Receive4"
+        ]
+    },
+    "BattlePass_Receive5":{
+        "recognition": "ColorMatch",
+        "roi": [
+            195,
+            291,
+            40,
+            37
+        ],
+        "method": 4,
+        "lower": [
+            110,
+            110,
+            110
+        ],
+        "upper": [
+            160,
+            160,
+            160
+        ],
+        "count": 2,
+        "action": "Click",
+        "next": [
+            "Sub_GetItems",
+            "BattlePass_Receive7",
+            "BattlePass_Receive6",
+            "BattlePass_Receive5"
+        ]
+    },
+    "BattlePass_Receive6": {
+        "recognition": "ColorMatch",
+        "roi": [
+            922,
+            211,
+            36,
+            26
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            190,
+            76
+        ],
+        "upper": [
+            255,
+            210,
+            90
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "Sub_GetItems",
+            "BattlePass_Receive7",
+            "BattlePass_Receive6"
+        ]
+    },
+    "BattlePass_Receive7":{
+        "recognition": "OCR",
+        "text": [
+            "本期任务"
+        ],
+        "roi": [
+            182,
+            260,
+            195,
+            85
+        ],
+        "action": "Click",
+        "target": [
+            1170,
+            328,
+            10,
+            10
+        ],
+        "next": [
+            "BattlePass_Receive8"
+        ]
+    },
+    "BattlePass_Receive8": {
+        "recognition": "ColorMatch",
+        "roi": [
+            1218,
+            319,
+            36,
+            26
+        ],
+        "method": 4,
+        "lower": [
+            230,
+            190,
+            76
+        ],
+        "upper": [
+            255,
+            210,
+            90
+        ],
+        "count": 7,
+        "action": "Click",
+        "next": [
+            "StartUp"
+        ]
+    },
+    "NoBattlePass": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/NoBattlePass.png",
+        "roi": [
+            332,
+            16,
+            30,
+            28
+        ]
+    }
+}

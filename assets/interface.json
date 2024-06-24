@@ -26,154 +26,48 @@
             "entry": "StartUp"
         },
         {
-            "name": "收取荒原",
-            "entry": "Wilderness"
+            "name": "每日免费礼包",
+            "entry": "Shopping"
         },
         {
-            "name": "每日心相（意志解析）",
-            "entry": "Psychube"
-        },
-        {
-            "name": "常规作战",
-            "entry": "Combat",
+            "name": "每日探索(只使用自然回复的燃料)",
+            "entry": "DailyExplore",
             "option": [
-                "作战关卡",
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
+                "作战关卡"
             ]
         },
         {
-            "name": "活动：绿湖噩梦 17 艰难（活动已结束）",
-            "entry": "ANightmareAtGreenLake",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
+            "name": "模拟军演",
+            "entry": "Rehearsal",
             "param": {
-                "EnterTheShow": {
-                    "next": "ANightmareAtGreenLake"
-                },
-                "TargetStageName": {
-                    "text": "17"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
+                "Sortie": {
+                    "next": "Simulation"
                 }
             }
         },
         {
-            "name": "活动：行至摩卢旁卡 16 艰难（活动已结束）",
-            "entry": "JourneytoMorPankh",
+            "name": "基建(换班+好友换抽)",
+            "entry": "Infrastructures",
             "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
+                "是否访问每个好友换抽"
+            ]
+        },
+        {
+            "name": "周本",
+            "entry": "WeekInstance",
             "param": {
-                "EnterTheShow": {
-                    "next": "JourneytoMorPankh"
-                },
-                "TargetStageName": {
-                    "text": "16"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
+                "Sortie": {
+                    "next": "ActivityExploration"
                 }
             }
         },
         {
-            "name": "活动：洞穴的囚徒 证明启示 05（活动已结束）",
-            "entry": "ThePrisonerintheCave",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "param": {
-                "EnterTheShow": {
-                    "next": "dummyThePrisonerintheCave"
-                },
-                "TargetStageName": {
-                    "text": "dummy证明启示V"
-                },
-                "StageDifficulty": {
-                    "next": "dummyStageDifficulty_None"
-                }
-            }
-        },
-        {
-            "name": "活动：复兴乌卢鲁运动会 13 艰难（活动已结束）",
-            "entry": "RevivalTheUluruGames",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "param": {
-                "EnterTheShow": {
-                    "next": "RevivalTheUluruGames"
-                },
-                "TargetStageName": {
-                    "text": "13"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "活动：朔日手记 19 艰难 （活动已结束）",
-            "entry": "NotesOnShuoRi",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "param": {
-                "EnterTheShow": {
-                    "next": "NotesOnShuoRi"
-                },
-                "TargetStageName": {
-                    "text": "19"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "山麓的回音（肉鸽）",
-            "entry": "EchoesinInTheMountain"
-        },
-        {
-            "name": "活动：再见，来亚什基 16 艰难",
-            "entry": "GoodbyeRaya",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "param": {
-                "EnterTheShow": {
-                    "next": "GoodbyeRaya"
-                },
-                "TargetStageName": {
-                    "text": "16"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "领取奖励",
+            "name": "领取奖励(邮箱+每日+通行证)",
             "entry": "Awards"
         },
         {
             "name": "关闭游戏",
-            "entry": "Close1999"
+            "entry": "CloseCrossCore"
         }
     ],
     "recognizer": {},
@@ -182,259 +76,183 @@
         "作战关卡": {
             "cases": [
                 {
-                    "name": "7-26 厄险（啮咬盒）",
+                    "name": "技能书",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_7"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "26"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_ReAc"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
+                        "DailyExplore_ReAc": {
+                            "next": "DailyExplore_ReAc_Skill"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第4层"
                         }
                     }
                 },
                 {
-                    "name": "6-14 厄险（祝圣秘银）",
+                    "name": "星币",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_6"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "14"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_ReAc"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
+                        "DailyExplore_ReAc": {
+                            "next": "DailyExplore_ReAc_Money"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第6层"
                         }
                     }
                 },
                 {
-                    "name": "3-9 厄险（百灵百验鸟）",
+                    "name": "经验书",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_3"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "09"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_ReAc"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
+                        "DailyExplore_ReAc": {
+                            "next": "DailyExplore_ReAc_Experience"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第6层"
                         }
                     }
                 },
                 {
-                    "name": "4-20 厄险（双头形骨架）",
+                    "name": "遗余之谱(异星灰域商店币)",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_4"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "20"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_ReAc"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
+                        "DailyExplore_ReAc": {
+                            "next": "DailyExplore_ReAc_Token"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第4层"
                         }
                     }
                 },
                 {
-                    "name": "2-3 厄险（祝圣秘银）",
+                    "name": "芯片_物攻振奋",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_2"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "03"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_ChEm"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
+                        "DailyExplore_ChEm": {
+                            "next": "DailyExplore_ChEm_1"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第5层"
                         }
                     }
                 },
                 {
-                    "name": "3-13 厄险（盐封曼德拉）",
+                    "name": "芯片_能量金刚",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_3"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "13"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_ChEm"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
+                        "DailyExplore_ChEm": {
+                            "next": "DailyExplore_ChEm_2"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第5层"
                         }
                     }
                 },
                 {
-                    "name": "4-10 厄险（啮咬盒）",
+                    "name": "芯片_切割集中",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_4"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "10"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_ChEm"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
+                        "DailyExplore_ChEm": {
+                            "next": "DailyExplore_ChEm_3"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第5层"
                         }
                     }
                 },
                 {
-                    "name": "3-11 厄险（金爪灵摆）",
+                    "name": "模块_气象山脉",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_3"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "11"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_UpAc"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
+                        "DailyExplore_UpAc": {
+                            "next": "DailyExplore_UpAc_1"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第2层"
                         }
                     }
                 },
                 {
-                    "name": "尘埃运动 06",
+                    "name": "模块_灭刃乐团",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "ResourceChapter_LP"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "06"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_UpAc"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_None"
+                        "DailyExplore_UpAc": {
+                            "next": "DailyExplore_UpAc_2"
+                        },
+                        "DailyExplore_LevelSelect": {
+                            "text": "第2层"
                         }
                     }
                 },
                 {
-                    "name": "猪鼻美学 06",
+                    "name": "模块_不朽虫洞",
                     "param": {
-                        "EnterTheShow": {
-                            "next": "ResourceChapter_MA"
+                        "Sortie": {
+                            "next": "DailyExplore_Entry"
                         },
-                        "TargetStageName": {
-                            "text": "06"
+                        "DailyExplore_Entry": {
+                            "next": "DailyExplore_UpAc"
                         },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_None"
-                        }
-                    }
-                },
-                {
-                    "name": "丰收时令 04",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "ResourceChapter_MA"
+                        "DailyExplore_UpAc": {
+                            "next": "DailyExplore_UpAc_3"
                         },
-                        "TargetStageName": {
-                            "text": "04"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_None"
-                        }
-                    }
-                },
-                {
-                    "name": "群山之声 06（洞悉 岩）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "PromotionChapter_ME"
-                        },
-                        "TargetStageName": {
-                            "text": "06"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_None"
-                        }
-                    }
-                },
-                {
-                    "name": "星陨之所 06（洞悉 星）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "PromotionChapter_SL"
-                        },
-                        "TargetStageName": {
-                            "text": "06"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_None"
-                        }
-                    }
-                },
-                {
-                    "name": "深林之形 06（洞悉 林）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "PromotionChapter_SS"
-                        },
-                        "TargetStageName": {
-                            "text": "06"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_None"
-                        }
-                    }
-                },
-                {
-                    "name": "荒兽之野 06（洞悉 兽）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "PromotionChapter_BW"
-                        },
-                        "TargetStageName": {
-                            "text": "06"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_None"
+                        "DailyExplore_LevelSelect": {
+                            "text": "第2层"
                         }
                     }
                 }
             ]
         },
-        "复现次数": {
-            "cases": [
-                {
-                    "name": "x1",
-                    "param": {
-                        "SetReplaysTimes": {
-                            "text": "1"
-                        }
-                    }
-                },
-                {
-                    "name": "x2",
-                    "param": {
-                        "SetReplaysTimes": {
-                            "text": "2"
-                        }
-                    }
-                },
-                {
-                    "name": "x3",
-                    "param": {
-                        "SetReplaysTimes": {
-                            "text": "3"
-                        }
-                    }
-                },
-                {
-                    "name": "x4",
-                    "param": {
-                        "SetReplaysTimes": {
-                            "text": "4"
-                        }
-                    }
-                }
-            ]
-        },
-        "刷完全部体力": {
+        "是否访问每个好友换抽": {
             "cases": [
                 {
                     "name": "Yes",
                     "param": {
-                        "AllIn": {
+                        "Infr_Deal": {
                             "enabled": true
                         }
                     }
@@ -442,27 +260,7 @@
                 {
                     "name": "No",
                     "param": {
-                        "AllIn": {
-                            "enabled": false
-                        }
-                    }
-                }
-            ]
-        },
-        "吃全部临期糖": {
-            "cases": [
-                {
-                    "name": "Yes",
-                    "param": {
-                        "EatCandyWithin24H": {
-                            "enabled": true
-                        }
-                    }
-                },
-                {
-                    "name": "No",
-                    "param": {
-                        "EatCandyWithin24H": {
+                        "Infr_Deal": {
                             "enabled": false
                         }
                     }

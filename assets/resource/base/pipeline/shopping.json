@@ -1,0 +1,97 @@
+{
+    "Shopping": {
+        "next": [
+            "Sub_CloseAnnouncement",
+            "NoForFree",
+            "ForFree",
+            "DailyGift",
+            "Shop",
+            "Sub_StartUp"
+        ]
+    },
+    "Shop":{
+        "recognition": "OCR",
+        "text": [
+            "补给站"
+        ],
+        "roi": [
+            885,
+            451,
+            240,
+            139
+        ],
+        "action": "Click",
+        "next": [
+            "DailyGift",
+            "Shop"
+        ]
+    },
+    "DailyGift":{
+        "recognition": "OCR",
+        "text": [
+            "礼包"
+        ],
+        "roi": [
+            362,
+            57,
+            166,
+            89
+        ],
+        "action": "Click",
+        "next": [
+            "NoForFree",
+            "ForFree",
+            "DailyGift"
+        ]
+    },
+    "ForFree":{
+        "recognition": "OCR",
+        "text": [
+            "免费"
+        ],
+        "roi": [
+            1040,
+            528,
+            178,
+            91
+        ],
+        "action": "Click",
+        "next": [
+            "Purchase",
+            "ForFree"
+        ]
+    },
+    "NoForFree":{
+        "recognition": "TemplateMatch",
+        "template": "StartUp/NoForFree.png",
+        "roi": [
+            1040,
+            528,
+            178,
+            91
+        ],
+        "next": [
+            "StartUp"
+        ]
+    },
+    "Purchase":{
+        "recognition": "OCR",
+        "text": [
+            "购买"
+        ],
+        "roi": [
+            758,
+            513,
+            191,
+            75
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "Sub_GetItems",
+            "Purchase",
+            "NoForFree",
+            "ForFree"
+        ]
+    }
+}

@@ -1,12 +1,230 @@
 {
     "StartUp": {
         "next": [
+            "HomeFlag2",
+            "Sub_HomeButton",
+            "Sub_BackButton",
+            "Sub_GetItems",
+            "Sub_Cancel",
+            "Sub_Comfirm",
+            "Sub_CloseAnnouncement",
+            "SignIn",
+            "HomeFlag1",
+            "StartGame",
+            "NERI",
             "Sub_StartCrossCore"
+        ]
+    },
+    "Sub_StartUp": {
+        "is_sub": true,
+        "next": [
+            "HomeFlag2",
+            "Sub_HomeButton",
+            "Sub_BackButton",
+            "Sub_GetItems",
+            "Sub_Cancel",
+            "Sub_Comfirm",
+            "Sub_CloseAnnouncement",
+            "SignIn",
+            "HomeFlag1",
+            "StartGame",
+            "NERI"
+        ]
+    },
+    "NERI": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/NERI.png",
+        "roi": [
+            325,
+            214,
+            662,
+            354
+        ],
+        "next": [
+            "Downloading",
+            "StartGame",
+            "NERI"
+        ]
+    },
+    "Downloading": {
+        "recognition": "OCR",
+        "text": [
+            "下载"
+        ],
+        "roi": [
+            859,
+            645,
+            78,
+            54
+        ],
+        "next": [
+            "StartGame",
+            "Downloading"
+        ]
+    },
+    "StartGame": {
+        "recognition": "OCR",
+        "text": [
+            "开始游戏"
+        ],
+        "roi": [
+            444,
+            404,
+            414,
+            135
+        ],
+        "action": "Click",
+        "next": [
+            "HomeFlag1",
+            "Sub_CloseAnnouncement",
+            "SignIn",
+            "StartGame"
+        ]
+    },
+    "Sub_Comfirm": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": [
+            "确认"
+        ],
+        "roi": [
+            665,
+            364,
+            331,
+            152
+        ],
+        "action": "Click"
+    },
+    "Sub_Cancel": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": [
+            "取消"
+        ],
+        "roi": [
+            330,
+            346,
+            313,
+            150
+        ],
+        "action": "Click"
+    },
+    "Sub_CloseAnnouncement": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "StartUp/CloseAnnouncement.png",
+        "roi": [
+            1040,
+            55,
+            222,
+            130
+        ],
+        "action": "Click"
+    },
+    "SignIn": {
+        "recognition": "OCR",
+        "text": [
+            "签到"
+        ],
+        "roi": [
+            1053,
+            554,
+            211,
+            105
+        ],
+        "action": "Click",
+        "next": [
+            "HomeFlag1",
+            "Sub_HomeButton",
+            "Sub_BackButton",
+            "Sub_GetItems",
+            "Sub_Cancel",
+            "Sub_CloseAnnouncement",
+            "SignIn"
+        ]
+    },
+    "Sub_GetItems": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": [
+            "获得物品"
+        ],
+        "roi": [
+            447,
+            117,
+            405,
+            117
+        ],
+        "action": "Click"
+    },
+    "Sub_BackButton": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "StartUp/BackButton.png",
+        "roi": [
+            14,
+            10,
+            126,
+            72
+        ],
+        "action": "Click"
+    },
+    "Sub_HomeButton": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": ["StartUp/HomeButton.png","StartUp/HomeButton1.png"],
+        "roi": [
+            180,
+            10,
+            100,
+            70
+        ],
+        "action": "Click"
+    },
+    "HomeFlag1": {
+        "recognition": "OCR",
+        "text": [
+            "补给站"
+        ],
+        "roi": [
+            885,
+            451,
+            240,
+            139
+        ],
+        "post_delay": 1000,
+        "next": [
+            "Sub_HomeButton",
+            "Sub_BackButton",
+            "Sub_GetItems",
+            "Sub_Cancel",
+            "Sub_CloseAnnouncement",
+            "SignIn",
+            "HomeFlag2",
+            "HomeFlag1"
+        ]
+    },
+    "HomeFlag2": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/HomeFlag1.png",
+        "roi": [
+            327,
+            409,
+            55,
+            53
+        ],
+        "action": "Click",
+        "target": [
+            620,
+            350,
+            20,
+            20
         ]
     },
     "Sub_StartCrossCore": {
         "is_sub": true,
         "action": "StartApp",
         "package": "com.megagame.crosscore/com.megagame.crosscore.extend.PhoneUtilActivity"
-    }
+    },
+    "Stop": {}
 }
