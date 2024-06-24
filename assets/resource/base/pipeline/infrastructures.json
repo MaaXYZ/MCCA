@@ -1084,7 +1084,6 @@
         ]
     },
     "Infr_DealNextFriends_Visit0":{
-        "is_sub": true,
         "recognition": "OCR",
         "text": [
             "拜访"
