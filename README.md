@@ -1,6 +1,6 @@
 # MCCA
 
-基于全新架构的 交错战线 小助手。图像技术 + 模拟控制，解放双手！  
+基于全新架构的 交错战线 CrossCore 小助手。图像技术 + 模拟控制，解放双手！  
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
 ## 功能介绍
@@ -18,7 +18,7 @@
 
 ## 使用说明
 
-下载地址：<https://github.com/MaaXYZ/MCCA/releases>
+下载地址：<https://github.com/Tohkahb/MCCA/releases>
 
 ### Windows
 
@@ -57,7 +57,7 @@
 0. 完整克隆本项目及子项目
 
     ```bash
-    git clone --recursive https://github.com/MaaXYZ/MCCA.git
+    git clone --recursive https://github.com/Tohkahb/MCCA.git
     ```
 
 1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中
@@ -75,16 +75,10 @@
 
 ## Join us
 
-- MCCA 开发交流 QQ 群：513065464
+- MCCA 开发交流 QQ 群：950540737
 - MaaFramework 开发交流 QQ 群: 595990173
 
 ## 鸣谢
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
-
-感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
-
-<a href="https://github.com/MaaXYZ/MCCA/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MaaXYZ/MCCA&max=1000" />
-</a>
 
