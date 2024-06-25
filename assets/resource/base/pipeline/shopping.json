@@ -39,9 +39,22 @@
         ],
         "action": "Click",
         "next": [
-            "NoForFree",
-            "ForFree",
+            "DailyGiftYes",
             "DailyGift"
+        ]
+    },
+    "DailyGiftYes":{
+        "recognition": "TemplateMatch",
+        "template": "StartUp/NoForFree.png",
+        "roi": [
+            39,
+            540,
+            1198,
+            74
+        ],
+        "next": [
+            "ForFree",
+            "NoForFree"
         ]
     },
     "ForFree":{
@@ -65,10 +78,10 @@
         "recognition": "TemplateMatch",
         "template": "StartUp/NoForFree.png",
         "roi": [
-            1040,
-            528,
-            178,
-            91
+            39,
+            540,
+            1198,
+            74
         ],
         "next": [
             "StartUp"
@@ -90,8 +103,8 @@
         "next": [
             "Sub_GetItems",
             "Purchase",
-            "NoForFree",
-            "ForFree"
+            "ForFree",
+            "NoForFree"
         ]
     }
 }
