@@ -2,6 +2,6 @@
     "Sub_StartCrossCore": {
         "is_sub": true,
         "action": "StartApp",
-        "package": "com.megagame.crosscore/com.megagame.crosscore.extend.PhoneUtilActivity"
+        "package": "com.megagame.crosscore.bilibili/com.megagame.crosscore.bilibili.GSCPlayerActivity"
     }
 }
