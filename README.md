@@ -18,7 +18,7 @@
 
 ## 使用说明
 
-下载地址：<https://github.com/Tohkahb/MCCA/releases>
+下载地址：<https://github.com/MaaXYZ/MCCA/releases>
 1. 需要关闭模拟器设置中的“后台挂机时保活运行”
 2. 运行过程MaaPiCli窗口出现红字是正常的
 3. 模拟器不能有中文路径，窗口大小要16:9
