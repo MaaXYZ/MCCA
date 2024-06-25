@@ -62,7 +62,7 @@
 0. 完整克隆本项目及子项目
 
     ```bash
-    git clone --recursive https://github.com/Tohkahb/MCCA.git
+    git clone --recursive https://github.com/MaaXYZ/MCCA.git
     ```
 
 1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中
