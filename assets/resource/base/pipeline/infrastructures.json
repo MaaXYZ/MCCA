@@ -6,6 +6,30 @@
             "Sub_StartUp"
         ]
     },
+    "Infrastructures_Deal": {
+        "next": [
+            "Base_Deal",
+            "Infr_DealDefaltYes",
+            "Sub_StartUp"
+        ]
+    },
+    "Base_Deal":{
+        "recognition": "OCR",
+        "text": [
+            "基地"
+        ],
+        "roi": [
+            1020,
+            619,
+            167,
+            93
+        ],
+        "action": "Click",
+        "next": [
+            "Infr_DealDefaltYes",
+            "Base_Deal"
+        ]
+    },
     "Base":{
         "recognition": "OCR",
         "text": [
@@ -507,6 +531,21 @@
         "action": "Click",
         "next": [
             "Infr_Deal",
+            "Infr_DealSelf"
+        ]
+    },
+    "Infr_DealDefaltYes":{
+        "recognition": "TemplateMatch",
+        "template": "Infrastructures/Infr_Deal.png",
+        "roi": [
+            980,
+            225,
+            263,
+            235
+        ],
+        "action": "Click",
+        "next": [
+            "Infr_DealDefaltYes",
             "Infr_DealSelf"
         ]
     },

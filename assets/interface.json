@@ -53,6 +53,10 @@
             ]
         },
         {
+            "name": "仅好友换抽(不换班，只换抽，上面的开了这里就不用开了)",
+            "entry": "Infrastructures_Deal"
+        },
+        {
             "name": "周本",
             "entry": "WeekInstance",
             "param": {
