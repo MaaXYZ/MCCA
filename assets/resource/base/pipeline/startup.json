@@ -114,10 +114,10 @@
         "recognition": "TemplateMatch",
         "template": "StartUp/CloseAnnouncement.png",
         "roi": [
-            1040,
+            900,
             55,
-            222,
-            130
+            362,
+            150
         ],
         "action": "Click"
     },
