@@ -230,11 +230,11 @@
         ],
         "action": "Click",
         "next": [
-            "BattlePass_Receive1",
+            "BattlePass_ReceiveMission",
             "BattlePass"
         ]
     },
-    "BattlePass_Receive1":{
+    "BattlePass_ReceiveMission":{
         "recognition": "OCR",
         "text": [
             "任务"
@@ -247,12 +247,12 @@
         ],
         "action": "Click",
         "next": [
-            "BattlePass_Receive2",
-            "BattlePass_Receive3",
-            "BattlePass_Receive1"
+            "BattlePass_ReceiveDailyMissionGet",
+            "BattlePass_ReceiveWeeklyMission",
+            "BattlePass_ReceiveMission"
         ]
     },
-    "BattlePass_Receive2": {
+    "BattlePass_ReceiveDailyMissionGet": {
         "recognition": "ColorMatch",
         "roi": [
             922,
@@ -275,11 +275,11 @@
         "action": "Click",
         "next": [
             "Sub_GetItems",
-            "BattlePass_Receive3",
-            "BattlePass_Receive2"
+            "BattlePass_ReceiveWeeklyMission",
+            "BattlePass_ReceiveDailyMissionGet"
         ]
     },
-    "BattlePass_Receive3":{
+    "BattlePass_ReceiveWeeklyMission":{
         "recognition": "ColorMatch",
         "roi": [
             197,
@@ -302,12 +302,12 @@
         "action": "Click",
         "next": [
             "Sub_GetItems",
-            "BattlePass_Receive4",
-            "BattlePass_Receive5",
-            "BattlePass_Receive3"
+            "BattlePass_ReceiveWeeklyMissionGet",
+            "BattlePass_ReceiveMonthlyMission",
+            "BattlePass_ReceiveWeeklyMission"
         ]
     },
-    "BattlePass_Receive4": {
+    "BattlePass_ReceiveWeeklyMissionGet": {
         "recognition": "ColorMatch",
         "roi": [
             922,
@@ -330,11 +330,11 @@
         "action": "Click",
         "next": [
             "Sub_GetItems",
-            "BattlePass_Receive5",
-            "BattlePass_Receive4"
+            "BattlePass_ReceiveMonthlyMission",
+            "BattlePass_ReceiveWeeklyMissionGet"
         ]
     },
-    "BattlePass_Receive5":{
+    "BattlePass_ReceiveMonthlyMission":{
         "recognition": "ColorMatch",
         "roi": [
             195,
@@ -357,12 +357,12 @@
         "action": "Click",
         "next": [
             "Sub_GetItems",
-            "BattlePass_Receive7",
-            "BattlePass_Receive6",
-            "BattlePass_Receive5"
+            "BattlePass_MissionExist",
+            "BattlePass_ReceiveMonthlyMissionGet",
+            "BattlePass_ReceiveMonthlyMission"
         ]
     },
-    "BattlePass_Receive6": {
+    "BattlePass_ReceiveMonthlyMissionGet": {
         "recognition": "ColorMatch",
         "roi": [
             922,
@@ -385,11 +385,11 @@
         "action": "Click",
         "next": [
             "Sub_GetItems",
-            "BattlePass_Receive7",
-            "BattlePass_Receive6"
+            "BattlePass_MissionExist",
+            "BattlePass_ReceiveMonthlyMissionGet"
         ]
     },
-    "BattlePass_Receive7":{
+    "BattlePass_MissionExist":{
         "recognition": "OCR",
         "text": [
             "本期任务"
@@ -408,10 +408,11 @@
             10
         ],
         "next": [
-            "BattlePass_Receive8"
+            "BattlePass_ReceiveAll",
+            "StartUp"
         ]
     },
-    "BattlePass_Receive8": {
+    "BattlePass_ReceiveAll": {
         "recognition": "ColorMatch",
         "roi": [
             1218,
