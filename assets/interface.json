@@ -63,7 +63,10 @@
                 "Sortie": {
                     "next": "ActivityExploration"
                 }
-            }
+            },
+            "option": [
+                "周本关卡选择"
+            ]
         },
         {
             "name": "领取奖励(邮箱+每日+通行证)",
@@ -266,6 +269,48 @@
                     "param": {
                         "Infr_Deal": {
                             "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "周本关卡选择": {
+            "cases": [
+                {
+                    "name": "第一关45微晶",
+                    "param": {
+                        "ActivityExploration_2": {
+                            "next": [
+                                "ActivityExploration_3",
+                                "ActivityExploration_SwipeUp",
+                                "ActivityExploration_2"
+                            ]
+                        },
+                        "ActivityExploration_CombatEnd3": {
+                            "next": [
+                                "Sub_GetItems",
+                                "ActivityExploration_3",
+                                "ActivityExploration_CombatEnd3"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "第五关120微晶",
+                    "param": {
+                        "ActivityExploration_2": {
+                            "next": [
+                                "ActivityExploration_第五关",
+                                "ActivityExploration_SwipeDown",
+                                "ActivityExploration_2"
+                            ]
+                        },
+                        "ActivityExploration_CombatEnd3": {
+                            "next": [
+                                "Sub_GetItems",
+                                "ActivityExploration_第五关",
+                                "ActivityExploration_CombatEnd3"
+                            ]
                         }
                     }
                 }

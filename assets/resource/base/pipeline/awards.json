@@ -357,8 +357,8 @@
         "action": "Click",
         "next": [
             "Sub_GetItems",
-            "BattlePass_MissionExist",
             "BattlePass_ReceiveMonthlyMissionGet",
+            "BattlePass_MissionExist",
             "BattlePass_ReceiveMonthlyMission"
         ]
     },

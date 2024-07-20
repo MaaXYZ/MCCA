@@ -54,8 +54,8 @@
         ],
         "action": "Click",
         "next": [
-            "ActivityExploration_3",
-            "ActivityExploration_Swipe",
+            "ActivityExploration_第五关",
+            "ActivityExploration_SwipeDown",
             "ActivityExploration_2"
         ]
     },
@@ -74,6 +74,23 @@
         "next": [
             "ActivityExploration_Exist",
             "ActivityExploration_Start"
+        ]
+    },
+    "ActivityExploration_第五关":{
+        "recognition": "OCR",
+        "text": [
+            "虚影宙斯"
+        ],
+        "roi": [
+            682,
+            456,
+            180,
+            180
+        ],
+        "action": "Click",
+        "next": [
+            "ActivityExploration_Exist",
+            "ActivityExploration_第五关Start"
         ]
     },
     "ActivityExploration_Exist":{
@@ -115,6 +132,24 @@
             "ActivityExploration_Start"
         ]
     },
+    "ActivityExploration_第五关Start":{
+        "recognition": "OCR",
+        "text": [
+            "开始战斗"
+        ],
+        "roi": [
+            1057,
+            615,
+            200,
+            89
+        ],
+        "action": "Click",
+        "next": [
+            "ActivityExploration_Comfirm",
+            "ActivityExploration_第五关Start_1",
+            "ActivityExploration_第五关Start"
+        ]
+    },
     "ActivityExploration_Comfirm":{
         "is_sub": true,
         "recognition": "OCR",
@@ -146,6 +181,23 @@
             "ActivityExploration_Start_1"
         ]
     },
+    "ActivityExploration_第五关Start_1":{
+        "recognition": "OCR",
+        "text": [
+            "开始行动"
+        ],
+        "roi": [
+            1057,
+            615,
+            200,
+            89
+        ],
+        "action": "Click",
+        "next": [
+            "ActivityExploration_第五关Step_1",
+            "ActivityExploration_第五关Start_1"
+        ]
+    },
     "ActivityExploration_Step_1":{
         "recognition": "OCR",
         "text": [
@@ -167,6 +219,29 @@
         "post_delay": 1000,
         "next": [
             "ActivityExploration_Step_2"
+        ]
+    },
+    "ActivityExploration_第五关Step_1":{
+        "recognition": "OCR",
+        "text": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "action": "Click",
+        "target": [
+            538,
+            564,
+            20,
+            20
+        ],
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_第五关Step_2"
         ]
     },
     "ActivityExploration_Step_2":{
@@ -193,6 +268,29 @@
             "ActivityExploration_Step_2"
         ]
     },
+    "ActivityExploration_第五关Step_2":{
+        "recognition": "OCR",
+        "text": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "action": "Click",
+        "target": [
+            415,
+            384,
+            20,
+            20
+        ],
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_第五关Step_3"
+        ]
+    },
     "ActivityExploration_Step_3":{
         "recognition": "OCR",
         "text": [
@@ -215,6 +313,70 @@
         "next": [
             "ActivityExploration_Combating2",
             "ActivityExploration_Step_3"
+        ]
+    },
+    "ActivityExploration_第五关Step_3":{
+        "recognition": "ColorMatch",
+        "roi": [
+            375,
+            415,
+            40,
+            40
+        ],
+        "method": 4,
+        "lower": [
+            100,
+            135,
+            55
+        ],
+        "upper": [
+            120,
+            150,
+            70
+        ],
+        "count": 1,
+        "action": "Click",
+        "target": [
+            332,
+            260,
+            20,
+            20
+        ],
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_第五关Step_4"
+        ]
+    },
+    "ActivityExploration_第五关Step_4":{
+        "recognition": "ColorMatch",
+        "roi": [
+            377,
+            419,
+            40,
+            40
+        ],
+        "method": 4,
+        "lower": [
+            100,
+            135,
+            55
+        ],
+        "upper": [
+            120,
+            150,
+            70
+        ],
+        "count": 1,
+        "action": "Click",
+        "target": [
+            503,
+            295,
+            20,
+            20
+        ],
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_第五关Step_5"
         ]
     },
     "ActivityExploration_Step_4":{
@@ -240,6 +402,39 @@
             "ActivityExploration_Step_5"
         ]
     },
+    "ActivityExploration_第五关Step_5":{
+        "recognition": "ColorMatch",
+        "roi": [
+            808,
+            291,
+            40,
+            40
+        ],
+        "method": 4,
+        "lower": [
+            100,
+            135,
+            55
+        ],
+        "upper": [
+            120,
+            150,
+            70
+        ],
+        "count": 1,
+        "action": "Click",
+        "target": [
+            680,
+            224,
+            20,
+            20
+        ],
+        "timeout": 40000,
+        "next": [
+            "ActivityExploration_Combating3",
+            "ActivityExploration_第五关Step_5"
+        ]
+    },
     "ActivityExploration_Step_5":{
         "recognition": "OCR",
         "text": [
@@ -258,6 +453,7 @@
             20,
             20
         ],
+        "timeout": 40000,
         "next": [
             "ActivityExploration_Combating3",
             "ActivityExploration_Step_5"
@@ -362,11 +558,11 @@
         "action": "Click",
         "next": [
             "Sub_GetItems",
-            "ActivityExploration_3",
+            "ActivityExploration_第五关",
             "ActivityExploration_CombatEnd3"
         ]
     },
-    "ActivityExploration_Swipe":{
+    "ActivityExploration_SwipeUp":{
         "is_sub": true,
         "action": "Swipe",
         "begin": [
@@ -378,6 +574,22 @@
         "end": [
             617,
             385,
+            40,
+            40
+        ]
+    },
+    "ActivityExploration_SwipeDown":{
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            617,
+            385,
+            40,
+            40
+        ],
+        "end": [
+            617,
+            196,
             40,
             40
         ]
