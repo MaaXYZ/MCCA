@@ -282,8 +282,8 @@
                         "ActivityExploration_2": {
                             "next": [
                                 "ActivityExploration_3",
-                                "ActivityExploration_2",
-                                "ActivityExploration_SwipeUp"
+                                "ActivityExploration_SwipeUp",
+                                "ActivityExploration_2"
                             ]
                         },
                         "ActivityExploration_CombatEnd3": {
@@ -301,8 +301,8 @@
                         "ActivityExploration_2": {
                             "next": [
                                 "ActivityExploration_第五关",
-                                "ActivityExploration_2",
-                                "ActivityExploration_SwipeDown"
+                                "ActivityExploration_SwipeDown",
+                                "ActivityExploration_2"
                             ]
                         },
                         "ActivityExploration_CombatEnd3": {
@@ -316,5 +316,6 @@
                 }
             ]
         }
-    }
+    },
+    "version": "v0.9.6"
 }

@@ -2,7 +2,7 @@
     "Infrastructures": {
         "next": [
             "Base",
-            "Infr_GetResources",
+            "Infr_收取资源",
             "Sub_StartUp"
         ]
     },
@@ -42,10 +42,130 @@
             93
         ],
         "action": "Click",
+        "post_delay": 3000,
         "next": [
-            "Infr_GetResources",
+            "Infr_收取资源",
+            "Infr_驻员状况",
             "Base"
         ]
+    },
+    "Infr_收取资源":{
+        "recognition": "TemplateMatch",
+        "template": "Infrastructures/Infr_Recourse.png",
+        "roi": [
+            422,
+            423,
+            145,
+            140
+        ],
+        "action": "Click",
+        "next": [
+            "Sub_GetItems",
+            "Infr_驻员状况"
+        ]
+    },
+    "Infr_驻员状况":{
+        "recognition": "OCR",
+        "text": [
+            "驻员",
+            "状况"
+        ],
+        "roi": [
+            54,
+            554,
+            176,
+            89
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "Infr_驻员预设1",
+            "Infr_驻员状况"
+        ]
+    },
+    "Infr_驻员预设1":{
+        "recognition": "OCR",
+        "text": [
+            "驻员",
+            "预设"
+        ],
+        "roi": [
+            960,
+            180,
+            120,
+            90
+        ],
+        "action": "Click",
+        "next": [
+            "Infr_使用",
+            "Infr_驻员预设2"
+        ]
+    },
+    "Infr_驻员预设2":{
+        "recognition": "OCR",
+        "text": [
+            "驻员",
+            "预设"
+        ],
+        "roi": [
+            960,
+            320,
+            120,
+            90
+        ],
+        "action": "Click",
+        "next": [
+            "Infr_使用",
+            "Infr_驻员预设3"
+        ]
+    },
+    "Infr_驻员预设3":{
+        "recognition": "OCR",
+        "text": [
+            "驻员",
+            "预设"
+        ],
+        "roi": [
+            960,
+            460,
+            120,
+            90
+        ],
+        "action": "Click",
+        "next": [
+            "Infr_使用",
+            "Infr_BackButton"
+        ]
+    },
+    "Infr_BackButton": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/BackButton.png",
+        "roi": [
+            14,
+            10,
+            126,
+            72
+        ],
+        "action": "Click",
+        "next": [
+            "Infr_Deal",
+            "Infr_Exit",
+            "Infr_BackButton"
+        ]
+    },
+    "Infr_使用":{
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": [
+            "使用"
+        ],
+        "roi": [
+            847,
+            201,
+            215,
+            356
+        ],
+        "action": "Click"
     },
     "Infr_GetResources":{
         "recognition": "OCR",
