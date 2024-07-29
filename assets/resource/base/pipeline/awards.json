@@ -169,7 +169,6 @@
         "action": "Click",
         "next": [
             "DailyTask_Receive3",
-            "DailyTask_Receive2",
             "BattlePass",
             "NoBattlePass",
             "Sub_StartUp"
@@ -262,14 +261,14 @@
         ],
         "method": 4,
         "lower": [
-            230,
-            190,
-            76
+            220,
+            180,
+            70
         ],
         "upper": [
             255,
-            210,
-            90
+            220,
+            100
         ],
         "count": 7,
         "action": "Click",
@@ -317,14 +316,14 @@
         ],
         "method": 4,
         "lower": [
-            230,
-            190,
-            76
+            220,
+            180,
+            70
         ],
         "upper": [
             255,
-            210,
-            90
+            220,
+            100
         ],
         "count": 7,
         "action": "Click",
@@ -372,14 +371,14 @@
         ],
         "method": 4,
         "lower": [
-            230,
-            190,
-            76
+            220,
+            180,
+            70
         ],
         "upper": [
             255,
-            210,
-            90
+            220,
+            100
         ],
         "count": 7,
         "action": "Click",
@@ -422,14 +421,14 @@
         ],
         "method": 4,
         "lower": [
-            230,
-            190,
-            76
+            220,
+            180,
+            70
         ],
         "upper": [
             255,
-            210,
-            90
+            220,
+            100
         ],
         "count": 7,
         "action": "Click",
