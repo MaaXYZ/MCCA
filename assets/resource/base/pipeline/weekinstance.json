@@ -164,9 +164,11 @@
             190,
             94
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 2000
     },
     "ActivityExploration_关闭第二队":{
+        "is_sub": true,
         "recognition": "ColorMatch",
         "roi": [
             1139,
