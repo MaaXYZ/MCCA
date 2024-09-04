@@ -128,6 +128,7 @@
         "action": "Click",
         "next": [
             "ActivityExploration_Comfirm",
+            "ActivityExploration_关闭第二队"
             "ActivityExploration_Start_1",
             "ActivityExploration_Start"
         ]
@@ -146,6 +147,7 @@
         "action": "Click",
         "next": [
             "ActivityExploration_Comfirm",
+            "ActivityExploration_关闭第二队"
             "ActivityExploration_第五关Start_1",
             "ActivityExploration_第五关Start"
         ]
@@ -162,6 +164,28 @@
             190,
             94
         ],
+        "action": "Click"
+    },
+    "ActivityExploration_关闭第二队":{
+        "recognition": "ColorMatch",
+        "roi": [
+            1139,
+            366,
+            75,
+            42
+        ],
+        "method": 4,
+        "lower": [
+            220,
+            180,
+            70
+        ],
+        "upper": [
+            255,
+            220,
+            100
+        ],
+        "count": 1,
         "action": "Click"
     },
     "ActivityExploration_Start_1":{
