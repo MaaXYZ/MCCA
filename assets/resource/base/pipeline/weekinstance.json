@@ -128,7 +128,7 @@
         "action": "Click",
         "next": [
             "ActivityExploration_Comfirm",
-            "ActivityExploration_关闭第二队"
+            "ActivityExploration_关闭第二队",
             "ActivityExploration_Start_1",
             "ActivityExploration_Start"
         ]
@@ -147,7 +147,7 @@
         "action": "Click",
         "next": [
             "ActivityExploration_Comfirm",
-            "ActivityExploration_关闭第二队"
+            "ActivityExploration_关闭第二队",
             "ActivityExploration_第五关Start_1",
             "ActivityExploration_第五关Start"
         ]
