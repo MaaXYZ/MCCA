@@ -5,7 +5,7 @@
             "Sub_StartUp"
         ]
     },
-    "ActivityExploration":{
+    "ActivityExploration": {
         "recognition": "OCR",
         "text": [
             "活动探索"
@@ -23,7 +23,7 @@
             "ActivityExploration"
         ]
     },
-    "ActivityExploration_1":{
+    "ActivityExploration_1": {
         "recognition": "OCR",
         "text": [
             "碎星虚影"
@@ -41,7 +41,7 @@
             "ActivityExploration_1"
         ]
     },
-    "ActivityExploration_2":{
+    "ActivityExploration_2": {
         "recognition": "OCR",
         "text": [
             "戈里刻虚影"
@@ -59,7 +59,7 @@
             "ActivityExploration_2"
         ]
     },
-    "ActivityExploration_3":{
+    "ActivityExploration_3": {
         "recognition": "OCR",
         "text": [
             "虚影阿瑞斯"
@@ -76,7 +76,7 @@
             "ActivityExploration_Start"
         ]
     },
-    "ActivityExploration_第五关":{
+    "ActivityExploration_第五关": {
         "recognition": "OCR",
         "text": [
             "虚影宙斯"
@@ -93,7 +93,7 @@
             "ActivityExploration_第五关Start"
         ]
     },
-    "ActivityExploration_Exist":{
+    "ActivityExploration_Exist": {
         "recognition": "OCR",
         "text": [
             "600/600",
@@ -114,7 +114,7 @@
             20
         ]
     },
-    "ActivityExploration_Start":{
+    "ActivityExploration_Start": {
         "recognition": "OCR",
         "text": [
             "开始战斗"
@@ -133,7 +133,7 @@
             "ActivityExploration_Start"
         ]
     },
-    "ActivityExploration_第五关Start":{
+    "ActivityExploration_第五关Start": {
         "recognition": "OCR",
         "text": [
             "开始战斗"
@@ -152,7 +152,7 @@
             "ActivityExploration_第五关Start"
         ]
     },
-    "ActivityExploration_Comfirm":{
+    "ActivityExploration_Comfirm": {
         "is_sub": true,
         "recognition": "OCR",
         "text": [
@@ -167,20 +167,20 @@
         "action": "Click",
         "post_delay": 2000
     },
-    "ActivityExploration_关闭第二队":{
+    "ActivityExploration_关闭第二队": {
         "is_sub": true,
         "recognition": "ColorMatch",
         "roi": [
-            1139,
-            366,
-            75,
-            42
+            1153,
+            380,
+            21,
+            14
         ],
         "method": 4,
         "lower": [
             220,
             180,
-            70
+            60
         ],
         "upper": [
             255,
@@ -190,7 +190,7 @@
         "count": 1,
         "action": "Click"
     },
-    "ActivityExploration_Start_1":{
+    "ActivityExploration_Start_1": {
         "recognition": "OCR",
         "text": [
             "开始行动"
@@ -207,7 +207,7 @@
             "ActivityExploration_Start_1"
         ]
     },
-    "ActivityExploration_第五关Start_1":{
+    "ActivityExploration_第五关Start_1": {
         "recognition": "OCR",
         "text": [
             "开始行动"
@@ -224,7 +224,7 @@
             "ActivityExploration_第五关Start_1"
         ]
     },
-    "ActivityExploration_Step_1":{
+    "ActivityExploration_Step_1": {
         "recognition": "OCR",
         "text": [
             "行动"
@@ -247,7 +247,7 @@
             "ActivityExploration_Step_2"
         ]
     },
-    "ActivityExploration_第五关Step_1":{
+    "ActivityExploration_第五关Step_1": {
         "recognition": "OCR",
         "text": [
             "行动"
@@ -270,7 +270,7 @@
             "ActivityExploration_第五关Step_2"
         ]
     },
-    "ActivityExploration_Step_2":{
+    "ActivityExploration_Step_2": {
         "recognition": "OCR",
         "text": [
             "行动"
@@ -294,7 +294,7 @@
             "ActivityExploration_Step_2"
         ]
     },
-    "ActivityExploration_第五关Step_2":{
+    "ActivityExploration_第五关Step_2": {
         "recognition": "OCR",
         "text": [
             "行动"
@@ -317,7 +317,7 @@
             "ActivityExploration_第五关Step_3"
         ]
     },
-    "ActivityExploration_Step_3":{
+    "ActivityExploration_Step_3": {
         "recognition": "OCR",
         "text": [
             "行动"
@@ -341,7 +341,7 @@
             "ActivityExploration_Step_3"
         ]
     },
-    "ActivityExploration_第五关Step_3":{
+    "ActivityExploration_第五关Step_3": {
         "recognition": "ColorMatch",
         "roi": [
             375,
@@ -373,7 +373,7 @@
             "ActivityExploration_第五关Step_4"
         ]
     },
-    "ActivityExploration_第五关Step_4":{
+    "ActivityExploration_第五关Step_4": {
         "recognition": "ColorMatch",
         "roi": [
             377,
@@ -405,7 +405,7 @@
             "ActivityExploration_第五关Step_5"
         ]
     },
-    "ActivityExploration_Step_4":{
+    "ActivityExploration_Step_4": {
         "recognition": "OCR",
         "text": [
             "行动"
@@ -428,7 +428,7 @@
             "ActivityExploration_Step_5"
         ]
     },
-    "ActivityExploration_第五关Step_5":{
+    "ActivityExploration_第五关Step_5": {
         "recognition": "ColorMatch",
         "roi": [
             808,
@@ -461,7 +461,7 @@
             "ActivityExploration_第五关Step_5"
         ]
     },
-    "ActivityExploration_Step_5":{
+    "ActivityExploration_Step_5": {
         "recognition": "OCR",
         "text": [
             "行动"
@@ -588,7 +588,7 @@
             "ActivityExploration_CombatEnd3"
         ]
     },
-    "ActivityExploration_SwipeUp":{
+    "ActivityExploration_SwipeUp": {
         "is_sub": true,
         "action": "Swipe",
         "begin": [
@@ -604,7 +604,7 @@
             40
         ]
     },
-    "ActivityExploration_SwipeDown":{
+    "ActivityExploration_SwipeDown": {
         "is_sub": true,
         "action": "Swipe",
         "begin": [
