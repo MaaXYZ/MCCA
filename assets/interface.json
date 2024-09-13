@@ -95,7 +95,7 @@
                             "next": "DailyExplore_ReAc_Skill"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第4层"
+                            "expected": "第4层"
                         }
                     }
                 },
@@ -112,7 +112,7 @@
                             "next": "DailyExplore_ReAc_Money"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第6层"
+                            "expected": "第6层"
                         }
                     }
                 },
@@ -129,7 +129,7 @@
                             "next": "DailyExplore_ReAc_Experience"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第6层"
+                            "expected": "第6层"
                         }
                     }
                 },
@@ -146,7 +146,7 @@
                             "next": "DailyExplore_ReAc_Token"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第4层"
+                            "expected": "第4层"
                         }
                     }
                 },
@@ -163,7 +163,7 @@
                             "next": "DailyExplore_ChEm_1"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第5层"
+                            "expected": "第5层"
                         }
                     }
                 },
@@ -180,7 +180,7 @@
                             "next": "DailyExplore_ChEm_2"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第5层"
+                            "expected": "第5层"
                         }
                     }
                 },
@@ -197,7 +197,7 @@
                             "next": "DailyExplore_ChEm_3"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第5层"
+                            "expected": "第5层"
                         }
                     }
                 },
@@ -214,7 +214,7 @@
                             "next": "DailyExplore_UpAc_1"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第2层"
+                            "expected": "第2层"
                         }
                     }
                 },
@@ -231,7 +231,7 @@
                             "next": "DailyExplore_UpAc_2"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第2层"
+                            "expected": "第2层"
                         }
                     }
                 },
@@ -248,7 +248,7 @@
                             "next": "DailyExplore_UpAc_3"
                         },
                         "DailyExplore_LevelSelect": {
-                            "text": "第2层"
+                            "expected": "第2层"
                         }
                     }
                 }
