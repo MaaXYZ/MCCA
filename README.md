@@ -31,6 +31,7 @@
 - 若确定自己的电脑是 arm 架构，请下载 `MCCA-win-aarch64-vXXX.zip`
 - 解压后运行 `MaaPiCli.exe` 即可
 
+
 ### macOS
 
 - 若使用 Intel 处理器，请下载 `MCCA-macos-x86_64-vXXX.zip`
@@ -46,14 +47,18 @@
 
 ~~用 Linux 的大佬应该不需要我教~~
 
+## 图形化界面
+
+- 如果需要使用图形化界面，请下载 `MCCA-win-x86_64-with-gui-vXXX.zip`，目前只支持Windows
+- 图形化界面需要.NET8运行库，请自行安装
+- 解压后运行`MFAWPF.exe`即可
+- 本GUI由社区大佬[SweetSmellFox](https://github.com/SweetSmellFox)编写，相关项目见[MFAWPF](https://github.com/SweetSmellFox/MFAWPF)
+
 ## 其他说明
 
 - 添加 `-d` 参数可跳过交互直接运行任务，如 `./MaaPiCli.exe -d`
 - 反馈问题请附上日志文件 `debug/maa.log`，谢谢！
 
-## 图形化界面
-
-先凑活用吧（
 
 ## How to build
 
