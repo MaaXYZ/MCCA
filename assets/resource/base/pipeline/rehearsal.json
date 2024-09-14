@@ -5,7 +5,7 @@
             "Sub_StartUp"
         ]
     },
-    "Sortie":{
+    "Sortie": {
         "recognition": "OCR",
         "text": [
             "出击"
@@ -19,7 +19,7 @@
         "action": "Click",
         "next_doc": "Set in code."
     },
-    "Simulation":{
+    "Simulation": {
         "recognition": "OCR",
         "text": [
             "模拟军演"
@@ -36,7 +36,7 @@
             "Simulation"
         ]
     },
-    "Competitions":{
+    "Competitions": {
         "recognition": "OCR",
         "text": [
             "模拟军演"
@@ -55,11 +55,54 @@
             20
         ],
         "next": [
-            "Competitions_OpponentSelect", 
+            "Competitions_RefreshOpponent",
             "Competitions"
         ]
     },
-    "Competitions_OpponentSelect":{
+    "Competitions_RefreshOpponent": {
+        "recognition": "OCR",
+        "text": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "roi": [
+            341,
+            315,
+            23,
+            29
+        ],
+        "action": "Click",
+        "target": [
+            1070,
+            110,
+            165,
+            42
+        ],
+        "next": [
+            "Competitions_RefreshLimit",
+            "Competitions_RefreshOpponent",
+            "Competitions_OpponentSelect"
+        ]
+    },
+    "Competitions_RefreshLimit": {
+        "recognition": "OCR",
+        "text": [
+            "操作"
+        ],
+        "roi": [
+            542,
+            342,
+            206,
+            35
+        ],
+        "next": [
+            "Competitions_OpponentSelect"
+        ]
+    },
+    "Competitions_OpponentSelect": {
         "recognition": "OCR",
         "text": [
             "积分"
@@ -83,7 +126,7 @@
             "Competitions_OpponentSelect"
         ]
     },
-    "Competitions_NoOpponentSelect":{
+    "Competitions_NoOpponentSelect": {
         "recognition": "OCR",
         "text": [
             "模拟次数购买"
@@ -99,7 +142,7 @@
             "StartUp"
         ]
     },
-    "Competitions_Challenge":{
+    "Competitions_Challenge": {
         "recognition": "OCR",
         "text": [
             "挑战"
