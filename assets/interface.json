@@ -37,6 +37,10 @@
             ]
         },
         {
+            "name": "夏日活动",
+            "entry": "SummerActivities"
+        },
+        {
             "name": "模拟军演",
             "entry": "Rehearsal",
             "param": {

@@ -1,0 +1,190 @@
+{
+  "SummerActivities": {
+    "next": [
+      "SummerActivities_Entry",
+      "Sub_StartUp"
+    ]
+  },
+  "SummerActivities_Entry": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "夏日",
+    "roi": [
+      [
+        848,
+        145,
+        66,
+        123
+      ]
+    ],
+    "next": "SummerActivities_DailyTicket"
+  },
+  "SummerActivities_DailyTicket": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "海",
+    "roi": [
+      [
+        883,
+        129,
+        241,
+        117
+      ]
+    ],
+    "next": "SummerActivities_AllReward"
+  },
+  "SummerActivities_AllReward": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "领取",
+    "roi": [
+      [
+        1029,
+        93,
+        145,
+        44
+      ]
+    ],
+    "next": "SummerActivities_Back"
+  },
+  "SummerActivities_Back": {
+    "recognition": "DirectHit",
+    "action": "Click",
+    "target": [
+      44,
+      34,
+      120,
+      32
+    ],
+    "next": "SummerActivities_Start"
+  },
+  "SummerActivities_Start": {
+    "recognition": "DirectHit",
+    "action": "Click",
+    "target": [
+      905,
+      504,
+      198,
+      104
+    ],
+    "next": "SummerActivities_Difficulty"
+  },
+  "SummerActivities_Difficulty": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "困难",
+    "roi": [
+      [
+        12,
+        193,
+        144,
+        34
+      ]
+    ],
+    "next": [
+      "SummerActivities_Level",
+      "SummerActivities_Difficulty"
+    ]
+  },
+  "SummerActivities_Level": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "海",
+    "roi": [
+      [
+        106,
+        599,
+        119,
+        33
+      ]
+    ],
+    "next": [
+      "SummerActivities_Sweep",
+      "SummerActivities_Level"
+    ]
+  },
+  "SummerActivities_Sweep": {
+    "recognition": "OCR",
+    "text": [
+      "扫荡"
+    ],
+    "roi": [
+      843,
+      559,
+      115,
+      91
+    ],
+    "action": "Click",
+    "next": [
+      "SummerActivities_MopUpStart",
+      "SummerActivities_Sweep"
+    ]
+  },
+  "SummerActivities_MopUpAwards": {
+    "recognition": "OCR",
+    "text": [
+      "扫荡奖励"
+    ],
+    "roi": [
+      569,
+      5,
+      181,
+      66
+    ],
+    "action": "Click",
+    "next": [
+      "DailyExplore_LevelUp",
+      "SummerActivities_Sweep",
+      "SummerActivities_MopUpAwards"
+    ]
+  },
+  "SummerActivities_MopUpStart": {
+    "recognition": "OCR",
+    "text": [
+      "开始战斗"
+    ],
+    "roi": [
+      943,
+      521,
+      159,
+      85
+    ],
+    "action": "Click",
+    "next": [
+      "SummerActivities_MopUpDoubleMarkup",
+      "SummerActivities_Sweep",
+      "SummerActivities_MopUpAwards",
+      "SummerActivities_NoTicket",
+      "SummerActivities_MopUpStart"
+    ]
+  },
+  "SummerActivities_MopUpDoubleMarkup": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "text": [
+      "开启"
+    ],
+    "roi": [
+      702,
+      398,
+      252,
+      100
+    ],
+    "action": "Click",
+    "next": []
+  },
+  "SummerActivities_NoTicket": {
+    "recognition": "OCR",
+    "text": [
+      "取消"
+    ],
+    "roi": [
+      422,
+      431,
+      107,
+      35
+    ],
+    "action": "Click",
+    "next": []
+  }
+}
