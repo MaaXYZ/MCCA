@@ -43,5 +43,102 @@
     ],
     "action": "Click",
     "next_doc": "Set in code."
+  },
+  "子任务_进入首页": {
+    "is_sub": true,
+    "next": [
+      "首页标志2",
+      "子任务_点击首页按钮",
+      "子任务_点击返回",
+      "子任务_获得物品",
+      "子任务_点击取消",
+      "子任务_点击确认",
+      "子任务_关闭公告",
+      "签到",
+      "首页标志1",
+      "开始游戏",
+      "NERI"
+    ]
+  },
+  "子任务_点击确认": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "确认"
+    ],
+    "roi": [
+      665,
+      364,
+      331,
+      152
+    ],
+    "action": "Click"
+  },
+  "子任务_点击取消": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "取消"
+    ],
+    "roi": [
+      330,
+      346,
+      313,
+      150
+    ],
+    "action": "Click"
+  },
+  "子任务_获得物品": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "获得物品"
+    ],
+    "roi": [
+      447,
+      117,
+      405,
+      117
+    ],
+    "action": "Click"
+  },
+  "子任务_点击返回": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "StartUp/BackButton.png",
+    "roi": [
+      14,
+      10,
+      126,
+      72
+    ],
+    "action": "Click"
+  },
+  "子任务_点击首页按钮": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": [
+      "StartUp/HomeButton.png",
+      "StartUp/HomeButton1.png"
+    ],
+    "roi": [
+      180,
+      10,
+      100,
+      70
+    ],
+    "action": "Click"
+  },
+  "子任务_关闭公告": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "StartUp/CloseAnnouncement.png",
+    "roi": [
+      900,
+      55,
+      362,
+      200
+    ],
+    "action": "Click"
   }
 }

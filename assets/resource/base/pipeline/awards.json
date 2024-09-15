@@ -1,11 +1,11 @@
 {
     "Awards": {
         "next": [
-            "Sub_Cancel",
-            "Sub_CloseAnnouncement",
+            "子任务_点击取消",
+            "子任务_关闭公告",
             "Mail",
             "NoMail",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "Mail": {
@@ -59,7 +59,7 @@
             "DailyTask",
             "NoDailyTask",
             "Mail_Receive",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "NoMail": {
@@ -141,7 +141,7 @@
         "count": 7,
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "DailyTask_Receive1",
             "DailyTask_Receive2"
         ]
@@ -171,7 +171,7 @@
             "DailyTask_Receive3",
             "BattlePass",
             "NoBattlePass",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "DailyTask_Receive3": {
@@ -196,11 +196,11 @@
         "count": 7,
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "BattlePass",
             "NoBattlePass",
             "DailyTask_Receive3",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "NoDailyTask": {
@@ -215,7 +215,7 @@
         "next": [
             "BattlePass",
             "NoBattlePass",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "BattlePass": {
@@ -273,7 +273,7 @@
         "count": 7,
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "BattlePass_ReceiveWeeklyMission",
             "BattlePass_ReceiveDailyMissionGet"
         ]
@@ -300,7 +300,7 @@
         "count": 2,
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "BattlePass_ReceiveWeeklyMissionGet",
             "BattlePass_ReceiveMonthlyMission",
             "BattlePass_ReceiveWeeklyMission"
@@ -328,7 +328,7 @@
         "count": 7,
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "BattlePass_ReceiveMonthlyMission",
             "BattlePass_ReceiveWeeklyMissionGet"
         ]
@@ -355,7 +355,7 @@
         "count": 2,
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "BattlePass_ReceiveMonthlyMissionGet",
             "BattlePass_MissionExist",
             "BattlePass_ReceiveMonthlyMission"
@@ -383,7 +383,7 @@
         "count": 7,
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "BattlePass_MissionExist",
             "BattlePass_ReceiveMonthlyMissionGet"
         ]
@@ -408,7 +408,7 @@
         ],
         "next": [
             "BattlePass_ReceiveAll",
-            "StartUp"
+            "进入首页"
         ]
     },
     "BattlePass_ReceiveAll": {
@@ -433,7 +433,7 @@
         "count": 7,
         "action": "Click",
         "next": [
-            "StartUp"
+            "进入首页"
         ]
     },
     "NoBattlePass": {

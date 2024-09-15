@@ -1,5 +1,5 @@
 {
-    "Sub_StartCrossCore": {
+    "启动游戏": {
         "is_sub": true,
         "action": "StartApp",
         "package": "com.megagame.crosscore.bilibili/com.megagame.crosscore.bilibili.GSCPlayerActivity"

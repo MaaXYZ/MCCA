@@ -3,14 +3,14 @@
         "next": [
             "Base",
             "Infr_收取资源",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "Infrastructures_Deal": {
         "next": [
             "Base_Deal",
             "Infr_DealDefaltYes",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "Base_Deal": {
@@ -60,7 +60,7 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_驻员状况"
         ]
     },
@@ -199,8 +199,8 @@
         "action": "Click",
         "next": [
             "Infr_Occupancy",
-            "Sub_GetItems",
-            "Sub_BackButton"
+            "子任务_获得物品",
+            "子任务_点击返回"
         ]
     },
     "Infr_Occupancy": {
@@ -326,7 +326,7 @@
         "next": [
             "Infr_Substitute2",
             "Infr_SubstituteComfirm",
-            "Sub_BackButton"
+            "子任务_点击返回"
         ]
     },
     "Infr_SubstituteComfirm": {
@@ -440,7 +440,7 @@
         "next": [
             "Infr_Substitute3",
             "Infr_SubstituteComfirm",
-            "Sub_BackButton"
+            "子任务_点击返回"
         ]
     },
     "Infr_Substitute3": {
@@ -620,7 +620,7 @@
             "Infr_SubstituteComfirm",
             "Infr_Deal",
             "Infr_Exit",
-            "Sub_BackButton"
+            "子任务_点击返回"
         ]
     },
     "Infr_Exit": {
@@ -635,7 +635,7 @@
             51
         ],
         "next": [
-            "StartUp"
+            "进入首页"
         ]
     },
     "Infr_Deal": {
@@ -725,7 +725,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf2",
             "Infr_DealSelf3",
             "Infr_DealSelf4",
@@ -763,7 +763,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf3",
             "Infr_DealSelf4",
             "Infr_DealSelf5",
@@ -800,7 +800,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf4",
             "Infr_DealSelf5",
             "Infr_DealSelf6",
@@ -836,7 +836,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf5",
             "Infr_DealSelf6",
             "Infr_DealSelf7",
@@ -871,7 +871,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf6",
             "Infr_DealSelf7",
             "Infr_DealSelf8",
@@ -905,7 +905,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf7",
             "Infr_DealSelf8",
             "Infr_DealSelf01",
@@ -938,7 +938,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf8",
             "Infr_DealSelf01",
             "Infr_DealSelf02",
@@ -970,7 +970,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf01",
             "Infr_DealSelf02",
             "Infr_DealSelf03",
@@ -997,7 +997,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf02",
             "Infr_DealSelf03",
             "Infr_DealSelf04",
@@ -1023,7 +1023,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf03",
             "Infr_DealSelf04",
             "Infr_DealSelf05",
@@ -1048,7 +1048,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf04",
             "Infr_DealSelf05",
             "Infr_DealSelf06",
@@ -1072,7 +1072,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf05",
             "Infr_DealSelf06",
             "Infr_DealSelf07",
@@ -1095,7 +1095,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf06",
             "Infr_DealSelf07",
             "Infr_DealSelf08",
@@ -1117,7 +1117,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf07",
             "Infr_DealSelf08",
             "Infr_DealNextFriends"
@@ -1138,7 +1138,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealSelf08",
             "Infr_DealNextFriends"
         ]
@@ -1158,7 +1158,7 @@
         "next": [
             "Infr_DealSelf1_Yes",
             "Infr_DealSelf1_No",
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Infr_DealNextFriends"
         ]
     },
@@ -1336,7 +1336,7 @@
         ],
         "count": 50,
         "next": [
-            "StartUp"
+            "进入首页"
         ]
     }
 }

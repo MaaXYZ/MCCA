@@ -2,7 +2,7 @@
     "DailyExplore": {
         "next": [
             "首页_出击",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "DailyExplore_Entry": {
@@ -166,7 +166,7 @@
             10
         ],
         "next": [
-            "StartUp"
+            "进入首页"
         ]
     },
     "DailyExplore_MopUpAwards": {

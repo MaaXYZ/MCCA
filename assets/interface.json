@@ -23,7 +23,7 @@
     "task": [
         {
             "name": "启动游戏",
-            "entry": "StartUp"
+            "entry": "进入首页"
         },
         {
             "name": "每日免费礼包",
@@ -78,7 +78,7 @@
         },
         {
             "name": "关闭游戏",
-            "entry": "CloseCrossCore"
+            "entry": "关闭游戏"
         }
     ],
     "recognizer": {},
@@ -292,7 +292,7 @@
                         },
                         "ActivityExploration_CombatEnd3": {
                             "next": [
-                                "Sub_GetItems",
+                                "子任务_获得物品",
                                 "ActivityExploration_3",
                                 "ActivityExploration_CombatEnd3"
                             ]
@@ -311,7 +311,7 @@
                         },
                         "ActivityExploration_CombatEnd3": {
                             "next": [
-                                "Sub_GetItems",
+                                "子任务_获得物品",
                                 "ActivityExploration_第五关",
                                 "ActivityExploration_CombatEnd3"
                             ]

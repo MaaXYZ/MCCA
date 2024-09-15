@@ -1,34 +1,18 @@
 {
-    "StartUp": {
+    "进入首页": {
         "next": [
-            "HomeFlag2",
-            "Sub_HomeButton",
-            "Sub_BackButton",
-            "Sub_GetItems",
-            "Sub_Cancel",
-            "Sub_Comfirm",
-            "Sub_CloseAnnouncement",
-            "SignIn",
-            "HomeFlag1",
-            "StartGame",
+            "首页标志2",
+            "子任务_点击首页按钮",
+            "子任务_点击返回",
+            "子任务_获得物品",
+            "子任务_点击取消",
+            "子任务_点击确认",
+            "子任务_关闭公告",
+            "签到",
+            "首页标志1",
+            "开始游戏",
             "NERI",
-            "Sub_StartCrossCore"
-        ]
-    },
-    "Sub_StartUp": {
-        "is_sub": true,
-        "next": [
-            "HomeFlag2",
-            "Sub_HomeButton",
-            "Sub_BackButton",
-            "Sub_GetItems",
-            "Sub_Cancel",
-            "Sub_Comfirm",
-            "Sub_CloseAnnouncement",
-            "SignIn",
-            "HomeFlag1",
-            "StartGame",
-            "NERI"
+            "启动游戏"
         ]
     },
     "NERI": {
@@ -41,12 +25,12 @@
             354
         ],
         "next": [
-            "Downloading",
-            "StartGame",
+            "下载资源",
+            "开始游戏",
             "NERI"
         ]
     },
-    "Downloading": {
+    "下载资源": {
         "recognition": "OCR",
         "expected": [
             "下载"
@@ -58,70 +42,30 @@
             54
         ],
         "next": [
-            "StartGame",
-            "Downloading"
+            "开始游戏",
+            "下载资源"
         ]
     },
-    "StartGame": {
+    "开始游戏": {
         "recognition": "OCR",
         "expected": [
             "开始游戏"
         ],
         "roi": [
-            444,
-            404,
-            414,
-            135
+            580,
+            462,
+            121,
+            40
         ],
         "action": "Click",
         "next": [
-            "HomeFlag1",
-            "Sub_CloseAnnouncement",
-            "SignIn",
-            "StartGame"
+            "首页标志1",
+            "子任务_关闭公告",
+            "签到",
+            "开始游戏"
         ]
     },
-    "Sub_Comfirm": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": [
-            "确认"
-        ],
-        "roi": [
-            665,
-            364,
-            331,
-            152
-        ],
-        "action": "Click"
-    },
-    "Sub_Cancel": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": [
-            "取消"
-        ],
-        "roi": [
-            330,
-            346,
-            313,
-            150
-        ],
-        "action": "Click"
-    },
-    "Sub_CloseAnnouncement": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "StartUp/CloseAnnouncement.png",
-        "roi": [
-            900,
-            55,
-            362,
-            200
-        ],
-        "action": "Click"
-    },
-    "SignIn": {
+    "签到": {
         "recognition": "OCR",
         "expected": [
             "签到"
@@ -134,57 +78,16 @@
         ],
         "action": "Click",
         "next": [
-            "HomeFlag1",
-            "Sub_HomeButton",
-            "Sub_BackButton",
-            "Sub_GetItems",
-            "Sub_Cancel",
-            "Sub_CloseAnnouncement",
-            "SignIn"
+            "首页标志1",
+            "子任务_点击首页按钮",
+            "子任务_点击返回",
+            "子任务_获得物品",
+            "子任务_点击取消",
+            "子任务_关闭公告",
+            "签到"
         ]
     },
-    "Sub_GetItems": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": [
-            "获得物品"
-        ],
-        "roi": [
-            447,
-            117,
-            405,
-            117
-        ],
-        "action": "Click"
-    },
-    "Sub_BackButton": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "StartUp/BackButton.png",
-        "roi": [
-            14,
-            10,
-            126,
-            72
-        ],
-        "action": "Click"
-    },
-    "Sub_HomeButton": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": [
-            "StartUp/HomeButton.png",
-            "StartUp/HomeButton1.png"
-        ],
-        "roi": [
-            180,
-            10,
-            100,
-            70
-        ],
-        "action": "Click"
-    },
-    "HomeFlag1": {
+    "首页标志1": {
         "recognition": "OCR",
         "expected": [
             "补给站"
@@ -197,17 +100,17 @@
         ],
         "post_delay": 1000,
         "next": [
-            "Sub_HomeButton",
-            "Sub_BackButton",
-            "Sub_GetItems",
-            "Sub_Cancel",
-            "Sub_CloseAnnouncement",
-            "SignIn",
-            "HomeFlag2",
-            "HomeFlag1"
+            "子任务_点击首页按钮",
+            "子任务_点击返回",
+            "子任务_获得物品",
+            "子任务_点击取消",
+            "子任务_关闭公告",
+            "签到",
+            "首页标志2",
+            "首页标志1"
         ]
     },
-    "HomeFlag2": {
+    "首页标志2": {
         "recognition": "TemplateMatch",
         "template": "StartUp/HomeFlag1.png",
         "roi": [
@@ -224,10 +127,9 @@
             20
         ]
     },
-    "Sub_StartCrossCore": {
+    "启动游戏": {
         "is_sub": true,
         "action": "StartApp",
         "package": "com.megagame.crosscore/com.megagame.crosscore.extend.PhoneUtilActivity"
-    },
-    "Stop": {}
+    }
 }
