@@ -1,11 +1,11 @@
 {
     "DailyExplore": {
         "next": [
-            "Sortie",
+            "首页_出击",
             "Sub_StartUp"
         ]
     },
-    "DailyExplore_Entry":{
+    "DailyExplore_Entry": {
         "recognition": "OCR",
         "text": [
             "每日探索"
@@ -19,7 +19,7 @@
         "action": "Click",
         "next_doc": "Set in code."
     },
-    "DailyExplore_ReAc":{
+    "DailyExplore_ReAc": {
         "recognition": "OCR",
         "text": [
             "资源采集"
@@ -33,7 +33,7 @@
         "action": "Click",
         "next_doc": "Set in code."
     },
-    "DailyExplore_ReAc_Skill":{
+    "DailyExplore_ReAc_Skill": {
         "recognition": "OCR",
         "text": [
             "技能磨砺"
@@ -49,7 +49,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_ReAc_Money":{
+    "DailyExplore_ReAc_Money": {
         "recognition": "OCR",
         "text": [
             "星币开采"
@@ -65,7 +65,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_ReAc_Experience":{
+    "DailyExplore_ReAc_Experience": {
         "recognition": "OCR",
         "text": [
             "技术解析"
@@ -81,7 +81,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_ReAc_Token":{
+    "DailyExplore_ReAc_Token": {
         "recognition": "OCR",
         "text": [
             "荒墟拾遗"
@@ -97,7 +97,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_LevelSelect":{
+    "DailyExplore_LevelSelect": {
         "recognition": "OCR",
         "text_doc": "Set in code.",
         "roi": [
@@ -111,7 +111,7 @@
             "DailyExplore_MopUp"
         ]
     },
-    "DailyExplore_MopUp":{
+    "DailyExplore_MopUp": {
         "recognition": "OCR",
         "text": [
             "扫荡"
@@ -128,7 +128,7 @@
             "DailyExplore_MopUp"
         ]
     },
-    "DailyExplore_MopUpStart":{
+    "DailyExplore_MopUpStart": {
         "recognition": "OCR",
         "text": [
             "开始战斗"
@@ -142,12 +142,12 @@
         "action": "Click",
         "next": [
             "DailyExplore_MopUpDoubleMarkup",
-            "DailyExplore_MopUpAwards",   
-            "DailyExplore_NoFuel",  
+            "DailyExplore_MopUpAwards",
+            "DailyExplore_NoFuel",
             "DailyExplore_MopUpStart"
         ]
     },
-    "DailyExplore_NoFuel":{
+    "DailyExplore_NoFuel": {
         "recognition": "OCR",
         "text": [
             "燃料补给"
@@ -169,7 +169,7 @@
             "StartUp"
         ]
     },
-    "DailyExplore_MopUpAwards":{
+    "DailyExplore_MopUpAwards": {
         "recognition": "OCR",
         "text": [
             "扫荡奖励"
@@ -187,7 +187,7 @@
             "DailyExplore_MopUpAwards"
         ]
     },
-    "DailyExplore_LevelUp":{
+    "DailyExplore_LevelUp": {
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Combat/DailyExplore_LevelUp.png",
@@ -199,7 +199,7 @@
         ],
         "action": "Click"
     },
-    "DailyExplore_MopUpDoubleMarkup":{
+    "DailyExplore_MopUpDoubleMarkup": {
         "is_sub": true,
         "recognition": "OCR",
         "text": [
@@ -212,10 +212,9 @@
             100
         ],
         "action": "Click",
-        "next": [
-        ]
+        "next": []
     },
-    "DailyExplore_ChEm":{
+    "DailyExplore_ChEm": {
         "recognition": "OCR",
         "text": [
             "芯片嵌合"
@@ -229,7 +228,7 @@
         "action": "Click",
         "next_doc": "Set in code."
     },
-    "DailyExplore_ChEm_1":{
+    "DailyExplore_ChEm_1": {
         "recognition": "OCR",
         "text": [
             "鼓军嵌合"
@@ -245,7 +244,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_ChEm_2":{
+    "DailyExplore_ChEm_2": {
         "recognition": "OCR",
         "text": [
             "光"
@@ -261,7 +260,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_ChEm_3":{
+    "DailyExplore_ChEm_3": {
         "recognition": "OCR",
         "text": [
             "注"
@@ -277,7 +276,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_UpAc":{
+    "DailyExplore_UpAc": {
         "recognition": "OCR",
         "text": [
             "跃升行动"
@@ -291,7 +290,7 @@
         "action": "Click",
         "next_doc": "Set in code."
     },
-    "DailyExplore_UpAc_1":{
+    "DailyExplore_UpAc_1": {
         "recognition": "OCR",
         "text": [
             "自然"
@@ -307,7 +306,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_UpAc_2":{
+    "DailyExplore_UpAc_2": {
         "recognition": "OCR",
         "text": [
             "人造"
@@ -323,7 +322,7 @@
             "DailyExplore_LevelSelect"
         ]
     },
-    "DailyExplore_UpAc_3":{
+    "DailyExplore_UpAc_3": {
         "recognition": "OCR",
         "text": [
             "生命"

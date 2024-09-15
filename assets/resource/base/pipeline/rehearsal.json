@@ -1,27 +1,13 @@
 {
-    "Rehearsal": {
+    "模拟军演": {
         "next": [
-            "Sortie",
+            "首页_出击",
             "Sub_StartUp"
         ]
     },
-    "Sortie": {
+    "模拟军演_入口": {
         "recognition": "OCR",
-        "text": [
-            "出击"
-        ],
-        "roi": [
-            1058,
-            159,
-            212,
-            123
-        ],
-        "action": "Click",
-        "next_doc": "Set in code."
-    },
-    "Simulation": {
-        "recognition": "OCR",
-        "text": [
+        "expected": [
             "模拟军演"
         ],
         "roi": [
@@ -32,13 +18,13 @@
         ],
         "action": "Click",
         "next": [
-            "Competitions",
-            "Simulation"
+            "模拟军演_二级入口",
+            "模拟军演_入口"
         ]
     },
-    "Competitions": {
+    "模拟军演_二级入口": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "模拟军演"
         ],
         "roi": [
@@ -55,13 +41,14 @@
             20
         ],
         "next": [
-            "Competitions_RefreshOpponent",
-            "Competitions"
+            "模拟军演_刷新对手",
+            "模拟军演_选择对手",
+            "模拟军演_二级入口"
         ]
     },
-    "Competitions_RefreshOpponent": {
+    "模拟军演_刷新对手": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "1",
             "2",
             "3",
@@ -82,14 +69,14 @@
             42
         ],
         "next": [
-            "Competitions_RefreshLimit",
-            "Competitions_RefreshOpponent",
-            "Competitions_OpponentSelect"
+            "模拟军演_刷新上线",
+            "模拟军演_刷新对手",
+            "模拟军演_选择对手"
         ]
     },
-    "Competitions_RefreshLimit": {
+    "模拟军演_刷新上线": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "操作"
         ],
         "roi": [
@@ -99,12 +86,12 @@
             35
         ],
         "next": [
-            "Competitions_OpponentSelect"
+            "模拟军演_选择对手"
         ]
     },
-    "Competitions_OpponentSelect": {
+    "模拟军演_选择对手": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "积分"
         ],
         "roi": [
@@ -121,14 +108,15 @@
             40
         ],
         "next": [
-            "Competitions_Challenge",
-            "Competitions_NoOpponentSelect",
-            "Competitions_OpponentSelect"
+            "模拟军演_开始挑战",
+            "模拟军演_无挑战次数",
+            "模拟军演_刷新对手",
+            "模拟军演_选择对手"
         ]
     },
-    "Competitions_NoOpponentSelect": {
+    "模拟军演_无挑战次数": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "模拟次数购买"
         ],
         "roi": [
@@ -142,9 +130,9 @@
             "StartUp"
         ]
     },
-    "Competitions_Challenge": {
+    "模拟军演_开始挑战": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "挑战"
         ],
         "roi": [
@@ -155,42 +143,11 @@
         ],
         "action": "Click",
         "next": [
-            "Competitions_Combating",
-            "Competitions_Challenge"
+            "模拟军演_战斗中",
+            "模拟军演_开始挑战"
         ]
     },
-    "Combat_Doublespeed": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "Combat/Combat_Doublespeed.png",
-        "roi": [
-            973,
-            30,
-            95,
-            57
-        ],
-        "threshold": 0.9,
-        "action": "Click",
-        "target": [
-            1012,
-            52,
-            10,
-            10
-        ]
-    },
-    "Combat_Auto": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "Combat/Combat_Auto.png",
-        "roi": [
-            1069,
-            27,
-            105,
-            59
-        ],
-        "action": "Click"
-    },
-    "Competitions_Combating": {
+    "模拟军演_战斗中": {
         "recognition": "TemplateMatch",
         "template": "Combat/Combat_Combating.png",
         "roi": [
@@ -200,15 +157,15 @@
             59
         ],
         "next": [
-            "Combat_Auto",
-            "Combat_Doublespeed",
-            "Competitions_CombatEnd",
-            "Competitions_Combating"
+            "战斗_自动战斗",
+            "战斗_启用二倍速",
+            "模拟军演_战斗中_战斗结束",
+            "模拟军演_战斗中"
         ]
     },
-    "Competitions_CombatEnd": {
+    "模拟军演_战斗中_战斗结束": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "等级"
         ],
         "roi": [
@@ -220,15 +177,16 @@
         "action": "Click",
         "next": [
             "Sub_GetItems",
-            "Sub_RehearsalUpGrade",
-            "Competitions_OpponentSelect",
-            "Competitions_CombatEnd"
+            "模拟军演_阶段提升",
+            "模拟军演_刷新对手",
+            "模拟军演_选择对手",
+            "模拟军演_战斗中_战斗结束"
         ]
     },
-    "Sub_RehearsalUpGrade": {
+    "模拟军演_阶段提升": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "提升",
             "新的",
             "阶段"

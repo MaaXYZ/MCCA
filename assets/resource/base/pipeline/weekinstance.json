@@ -1,7 +1,7 @@
 {
     "WeekInstance": {
         "next": [
-            "Sortie",
+            "首页_出击",
             "Sub_StartUp"
         ]
     },
@@ -495,8 +495,8 @@
             59
         ],
         "next": [
-            "Combat_Auto",
-            "Combat_Doublespeed",
+            "战斗_自动战斗",
+            "战斗_启用二倍速",
             "ActivityExploration_CombatEnd1",
             "ActivityExploration_Combating1"
         ]
@@ -529,8 +529,8 @@
             59
         ],
         "next": [
-            "Combat_Auto",
-            "Combat_Doublespeed",
+            "战斗_自动战斗",
+            "战斗_启用二倍速",
             "ActivityExploration_CombatEnd2",
             "ActivityExploration_Combating2"
         ]
@@ -564,8 +564,8 @@
         ],
         "next": [
             "Sub_GetItems",
-            "Combat_Auto",
-            "Combat_Doublespeed",
+            "战斗_自动战斗",
+            "战斗_启用二倍速",
             "ActivityExploration_CombatEnd3",
             "ActivityExploration_Combating3"
         ]
