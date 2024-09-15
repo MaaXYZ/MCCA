@@ -7,7 +7,7 @@
     },
     "DailyExplore_Entry": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "每日探索"
         ],
         "roi": [
@@ -21,7 +21,7 @@
     },
     "DailyExplore_ReAc": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "资源采集"
         ],
         "roi": [
@@ -35,7 +35,7 @@
     },
     "DailyExplore_ReAc_Skill": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "技能磨砺"
         ],
         "roi": [
@@ -51,7 +51,7 @@
     },
     "DailyExplore_ReAc_Money": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "星币开采"
         ],
         "roi": [
@@ -67,7 +67,7 @@
     },
     "DailyExplore_ReAc_Experience": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "技术解析"
         ],
         "roi": [
@@ -83,7 +83,7 @@
     },
     "DailyExplore_ReAc_Token": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "荒墟拾遗"
         ],
         "roi": [
@@ -113,7 +113,7 @@
     },
     "DailyExplore_MopUp": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "扫荡"
         ],
         "roi": [
@@ -130,7 +130,7 @@
     },
     "DailyExplore_MopUpStart": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始战斗"
         ],
         "roi": [
@@ -149,7 +149,7 @@
     },
     "DailyExplore_NoFuel": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "燃料补给"
         ],
         "roi": [
@@ -171,7 +171,7 @@
     },
     "DailyExplore_MopUpAwards": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "扫荡奖励"
         ],
         "roi": [
@@ -202,7 +202,7 @@
     "DailyExplore_MopUpDoubleMarkup": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开启"
         ],
         "roi": [
@@ -216,7 +216,7 @@
     },
     "DailyExplore_ChEm": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "芯片嵌合"
         ],
         "roi": [
@@ -230,7 +230,7 @@
     },
     "DailyExplore_ChEm_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "鼓军嵌合"
         ],
         "roi": [
@@ -246,7 +246,7 @@
     },
     "DailyExplore_ChEm_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "光"
         ],
         "roi": [
@@ -262,7 +262,7 @@
     },
     "DailyExplore_ChEm_3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "注"
         ],
         "roi": [
@@ -278,7 +278,7 @@
     },
     "DailyExplore_UpAc": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "跃升行动"
         ],
         "roi": [
@@ -292,7 +292,7 @@
     },
     "DailyExplore_UpAc_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "自然"
         ],
         "roi": [
@@ -308,7 +308,7 @@
     },
     "DailyExplore_UpAc_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "人造"
         ],
         "roi": [
@@ -324,7 +324,7 @@
     },
     "DailyExplore_UpAc_3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "生命"
         ],
         "roi": [

@@ -13,9 +13,9 @@
             "Sub_StartUp"
         ]
     },
-    "Base_Deal":{
+    "Base_Deal": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "基地"
         ],
         "roi": [
@@ -30,9 +30,9 @@
             "Base_Deal"
         ]
     },
-    "Base":{
+    "Base": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "基地"
         ],
         "roi": [
@@ -49,7 +49,7 @@
             "Base"
         ]
     },
-    "Infr_收取资源":{
+    "Infr_收取资源": {
         "recognition": "TemplateMatch",
         "template": "Infrastructures/Infr_Recourse.png",
         "roi": [
@@ -64,9 +64,9 @@
             "Infr_驻员状况"
         ]
     },
-    "Infr_驻员状况":{
+    "Infr_驻员状况": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "驻员",
             "状况"
         ],
@@ -83,9 +83,9 @@
             "Infr_驻员状况"
         ]
     },
-    "Infr_驻员预设1":{
+    "Infr_驻员预设1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "驻员",
             "预设"
         ],
@@ -101,9 +101,9 @@
             "Infr_驻员预设2"
         ]
     },
-    "Infr_驻员预设2":{
+    "Infr_驻员预设2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "驻员",
             "预设"
         ],
@@ -119,9 +119,9 @@
             "Infr_驻员预设3"
         ]
     },
-    "Infr_驻员预设3":{
+    "Infr_驻员预设3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "驻员",
             "预设"
         ],
@@ -153,10 +153,10 @@
             "Infr_BackButton"
         ]
     },
-    "Infr_使用":{
+    "Infr_使用": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "使用"
         ],
         "roi": [
@@ -167,9 +167,9 @@
         ],
         "action": "Click"
     },
-    "Infr_GetResources":{
+    "Infr_GetResources": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "收取资源"
         ],
         "roi": [
@@ -185,9 +185,9 @@
             "Infr_GetResources"
         ]
     },
-    "Infr_GetAll":{
+    "Infr_GetAll": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "全部收取"
         ],
         "roi": [
@@ -203,7 +203,7 @@
             "Sub_BackButton"
         ]
     },
-    "Infr_Occupancy":{
+    "Infr_Occupancy": {
         "recognition": "ColorMatch",
         "roi": [
             678,
@@ -229,9 +229,9 @@
             "Infr_Occupancy"
         ]
     },
-    "Infr_Substitute1":{
+    "Infr_Substitute1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "设施详情"
         ],
         "roi": [
@@ -252,7 +252,7 @@
             "Infr_Substitute1"
         ]
     },
-    "Infr_Substitute1_0":{
+    "Infr_Substitute1_0": {
         "recognition": "TemplateMatch",
         "template": "Infrastructures/Infr_Substitute1.png",
         "roi": [
@@ -267,7 +267,7 @@
             "Infr_Substitute1_1"
         ]
     },
-    "Infr_Substitute1_1":{
+    "Infr_Substitute1_1": {
         "action": "Click",
         "target": [
             950,
@@ -279,7 +279,7 @@
             "Infr_Substitute1_2"
         ]
     },
-    "Infr_Substitute1_2":{
+    "Infr_Substitute1_2": {
         "action": "Click",
         "target": [
             1110,
@@ -291,7 +291,7 @@
             "Infr_Substitute1_3"
         ]
     },
-    "Infr_Substitute1_3":{
+    "Infr_Substitute1_3": {
         "action": "Click",
         "target": [
             473,
@@ -303,7 +303,7 @@
             "Infr_Substitute1_4"
         ]
     },
-    "Infr_Substitute1_4":{
+    "Infr_Substitute1_4": {
         "action": "Click",
         "target": [
             625,
@@ -315,7 +315,7 @@
             "Infr_Substitute1_5"
         ]
     },
-    "Infr_Substitute1_5":{
+    "Infr_Substitute1_5": {
         "action": "Click",
         "target": [
             780,
@@ -329,10 +329,10 @@
             "Sub_BackButton"
         ]
     },
-    "Infr_SubstituteComfirm":{
+    "Infr_SubstituteComfirm": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "确定"
         ],
         "roi": [
@@ -343,9 +343,9 @@
         ],
         "action": "Click"
     },
-    "Infr_Substitute2":{
+    "Infr_Substitute2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "设施详情"
         ],
         "roi": [
@@ -366,7 +366,7 @@
             "Infr_Substitute2"
         ]
     },
-    "Infr_Substitute2_0":{
+    "Infr_Substitute2_0": {
         "recognition": "TemplateMatch",
         "template": "Infrastructures/Infr_Substitute1.png",
         "roi": [
@@ -381,7 +381,7 @@
             "Infr_Substitute2_1"
         ]
     },
-    "Infr_Substitute2_1":{
+    "Infr_Substitute2_1": {
         "action": "Click",
         "target": [
             950,
@@ -393,7 +393,7 @@
             "Infr_Substitute2_2"
         ]
     },
-    "Infr_Substitute2_2":{
+    "Infr_Substitute2_2": {
         "action": "Click",
         "target": [
             1110,
@@ -405,7 +405,7 @@
             "Infr_Substitute2_3"
         ]
     },
-    "Infr_Substitute2_3":{
+    "Infr_Substitute2_3": {
         "action": "Click",
         "target": [
             473,
@@ -417,7 +417,7 @@
             "Infr_Substitute2_4"
         ]
     },
-    "Infr_Substitute2_4":{
+    "Infr_Substitute2_4": {
         "action": "Click",
         "target": [
             625,
@@ -429,7 +429,7 @@
             "Infr_Substitute2_5"
         ]
     },
-    "Infr_Substitute2_5":{
+    "Infr_Substitute2_5": {
         "action": "Click",
         "target": [
             780,
@@ -443,9 +443,9 @@
             "Sub_BackButton"
         ]
     },
-    "Infr_Substitute3":{
+    "Infr_Substitute3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "设施详情"
         ],
         "roi": [
@@ -466,7 +466,7 @@
             "Infr_Substitute3"
         ]
     },
-    "Infr_Substitute3_0":{
+    "Infr_Substitute3_0": {
         "recognition": "TemplateMatch",
         "template": "Infrastructures/Infr_Substitute1.png",
         "roi": [
@@ -481,7 +481,7 @@
             "Infr_Substitute3_1"
         ]
     },
-    "Infr_Substitute3_1":{
+    "Infr_Substitute3_1": {
         "action": "Click",
         "target": [
             473,
@@ -493,7 +493,7 @@
             "Infr_Substitute3_2"
         ]
     },
-    "Infr_Substitute3_2":{
+    "Infr_Substitute3_2": {
         "action": "Click",
         "target": [
             625,
@@ -505,7 +505,7 @@
             "Infr_Substitute3_3"
         ]
     },
-    "Infr_Substitute3_3":{
+    "Infr_Substitute3_3": {
         "action": "Click",
         "target": [
             789,
@@ -517,7 +517,7 @@
             "Infr_Substitute3_4"
         ]
     },
-    "Infr_Substitute3_4":{
+    "Infr_Substitute3_4": {
         "action": "Click",
         "target": [
             950,
@@ -529,7 +529,7 @@
             "Infr_Substitute3_5"
         ]
     },
-    "Infr_Substitute3_5":{
+    "Infr_Substitute3_5": {
         "action": "Click",
         "target": [
             1100,
@@ -541,7 +541,7 @@
             "Infr_Substitute4_0"
         ]
     },
-    "Infr_Substitute4_0":{
+    "Infr_Substitute4_0": {
         "action": "Swipe",
         "begin": [
             890,
@@ -560,7 +560,7 @@
             "Infr_Substitute4_1"
         ]
     },
-    "Infr_Substitute4_1":{
+    "Infr_Substitute4_1": {
         "action": "Click",
         "target": [
             473,
@@ -572,7 +572,7 @@
             "Infr_Substitute4_2"
         ]
     },
-    "Infr_Substitute4_2":{
+    "Infr_Substitute4_2": {
         "action": "Click",
         "target": [
             625,
@@ -584,7 +584,7 @@
             "Infr_Substitute4_3"
         ]
     },
-    "Infr_Substitute4_3":{
+    "Infr_Substitute4_3": {
         "action": "Click",
         "target": [
             789,
@@ -596,7 +596,7 @@
             "Infr_Substitute4_4"
         ]
     },
-    "Infr_Substitute4_4":{
+    "Infr_Substitute4_4": {
         "action": "Click",
         "target": [
             950,
@@ -608,7 +608,7 @@
             "Infr_Substitute4_5"
         ]
     },
-    "Infr_Substitute4_5":{
+    "Infr_Substitute4_5": {
         "action": "Click",
         "target": [
             1100,
@@ -623,9 +623,9 @@
             "Sub_BackButton"
         ]
     },
-    "Infr_Exit":{
+    "Infr_Exit": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "研发中心"
         ],
         "roi": [
@@ -638,7 +638,7 @@
             "StartUp"
         ]
     },
-    "Infr_Deal":{
+    "Infr_Deal": {
         "enabled": false,
         "recognition": "TemplateMatch",
         "template": "Infrastructures/Infr_Deal.png",
@@ -654,7 +654,7 @@
             "Infr_DealSelf"
         ]
     },
-    "Infr_DealDefaltYes":{
+    "Infr_DealDefaltYes": {
         "recognition": "TemplateMatch",
         "template": "Infrastructures/Infr_Deal.png",
         "roi": [
@@ -982,9 +982,9 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf01":{
+    "Infr_DealSelf01": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "X120000"
         ],
         "roi": [
@@ -1008,9 +1008,9 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf02":{
+    "Infr_DealSelf02": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "X120000"
         ],
         "roi": [
@@ -1033,9 +1033,9 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf03":{
+    "Infr_DealSelf03": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "X120000"
         ],
         "roi": [
@@ -1057,9 +1057,9 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf04":{
+    "Infr_DealSelf04": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "X120000"
         ],
         "roi": [
@@ -1080,9 +1080,9 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf05":{
+    "Infr_DealSelf05": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "X120000"
         ],
         "roi": [
@@ -1102,9 +1102,9 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf06":{
+    "Infr_DealSelf06": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "X120000"
         ],
         "roi": [
@@ -1123,9 +1123,9 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf07":{
+    "Infr_DealSelf07": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "X120000"
         ],
         "roi": [
@@ -1143,9 +1143,9 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf08":{
+    "Infr_DealSelf08": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "X120000"
         ],
         "roi": [
@@ -1162,10 +1162,10 @@
             "Infr_DealNextFriends"
         ]
     },
-    "Infr_DealSelf1_Yes":{
+    "Infr_DealSelf1_Yes": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "是否确认提交订单"
         ],
         "roi": [
@@ -1182,10 +1182,10 @@
             36
         ]
     },
-    "Infr_DealSelf1_No":{
+    "Infr_DealSelf1_No": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "订单兑换",
             "是否进行合成"
         ],
@@ -1226,7 +1226,7 @@
     },
     "Infr_DealNextFriends1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "好友列表"
         ],
         "roi": [
@@ -1242,9 +1242,9 @@
             "Infr_DealNextFriends_Visit0"
         ]
     },
-    "Infr_DealNextFriends_Visit0":{
+    "Infr_DealNextFriends_Visit0": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "拜访"
         ],
         "roi": [
@@ -1258,7 +1258,7 @@
             "Infr_DealSelf"
         ]
     },
-    "Infr_DealNextFriends_VisitNext":{
+    "Infr_DealNextFriends_VisitNext": {
         "recognition": "TemplateMatch",
         "template": "InfrastructureS/Infr_DealNextFriends_VisitNext.png",
         "roi": [
@@ -1279,7 +1279,7 @@
             "Infr_DealSelf"
         ]
     },
-    "Infr_DealNextFriends_Swipe":{
+    "Infr_DealNextFriends_Swipe": {
         "is_sub": true,
         "recognition": "ColorMatch",
         "roi": [
@@ -1315,7 +1315,7 @@
         ],
         "duration": 1000
     },
-    "Infr_DealNextFriends_End":{
+    "Infr_DealNextFriends_End": {
         "recognition": "ColorMatch",
         "roi": [
             1035,

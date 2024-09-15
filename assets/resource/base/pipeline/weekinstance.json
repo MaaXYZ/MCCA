@@ -7,7 +7,7 @@
     },
     "ActivityExploration": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活动探索"
         ],
         "roi": [
@@ -25,7 +25,7 @@
     },
     "ActivityExploration_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "碎星虚影"
         ],
         "roi": [
@@ -43,7 +43,7 @@
     },
     "ActivityExploration_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "戈里刻虚影"
         ],
         "roi": [
@@ -61,7 +61,7 @@
     },
     "ActivityExploration_3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "虚影阿瑞斯"
         ],
         "roi": [
@@ -78,7 +78,7 @@
     },
     "ActivityExploration_第五关": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "虚影宙斯"
         ],
         "roi": [
@@ -95,7 +95,7 @@
     },
     "ActivityExploration_Exist": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "600/600",
             "6007600",
             "6001600"
@@ -116,7 +116,7 @@
     },
     "ActivityExploration_Start": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始战斗"
         ],
         "roi": [
@@ -135,7 +135,7 @@
     },
     "ActivityExploration_第五关Start": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始战斗"
         ],
         "roi": [
@@ -155,7 +155,7 @@
     "ActivityExploration_Comfirm": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开启"
         ],
         "roi": [
@@ -192,7 +192,7 @@
     },
     "ActivityExploration_Start_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [
@@ -209,7 +209,7 @@
     },
     "ActivityExploration_第五关Start_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [
@@ -226,7 +226,7 @@
     },
     "ActivityExploration_Step_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行动"
         ],
         "roi": [
@@ -249,7 +249,7 @@
     },
     "ActivityExploration_第五关Step_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行动"
         ],
         "roi": [
@@ -272,7 +272,7 @@
     },
     "ActivityExploration_Step_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行动"
         ],
         "roi": [
@@ -296,7 +296,7 @@
     },
     "ActivityExploration_第五关Step_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行动"
         ],
         "roi": [
@@ -319,7 +319,7 @@
     },
     "ActivityExploration_Step_3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行动"
         ],
         "roi": [
@@ -407,7 +407,7 @@
     },
     "ActivityExploration_Step_4": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行动"
         ],
         "roi": [
@@ -463,7 +463,7 @@
     },
     "ActivityExploration_Step_5": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行动"
         ],
         "roi": [
@@ -503,7 +503,7 @@
     },
     "ActivityExploration_CombatEnd1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "等级"
         ],
         "roi": [
@@ -537,7 +537,7 @@
     },
     "ActivityExploration_CombatEnd2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "等级"
         ],
         "roi": [
@@ -572,7 +572,7 @@
     },
     "ActivityExploration_CombatEnd3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "等级"
         ],
         "roi": [
