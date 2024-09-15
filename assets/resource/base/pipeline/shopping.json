@@ -1,12 +1,12 @@
 {
     "Shopping": {
         "next": [
-            "Sub_CloseAnnouncement",
+            "子任务_关闭公告",
             "NoForFree",
             "ForFree",
             "DailyGift",
             "Shop",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "Shop": {
@@ -84,7 +84,7 @@
             74
         ],
         "next": [
-            "StartUp"
+            "进入首页"
         ]
     },
     "Purchase": {
@@ -101,7 +101,7 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "Purchase",
             "ForFree",
             "NoForFree"

@@ -2,7 +2,7 @@
     "WeekInstance": {
         "next": [
             "首页_出击",
-            "Sub_StartUp"
+            "子任务_进入首页"
         ]
     },
     "ActivityExploration": {
@@ -514,7 +514,7 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "ActivityExploration_Step_3",
             "ActivityExploration_CombatEnd1"
         ]
@@ -548,7 +548,7 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "ActivityExploration_Step_4",
             "ActivityExploration_CombatEnd2"
         ]
@@ -563,7 +563,7 @@
             59
         ],
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "战斗_自动战斗",
             "战斗_启用二倍速",
             "ActivityExploration_CombatEnd3",
@@ -583,7 +583,7 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_GetItems",
+            "子任务_获得物品",
             "ActivityExploration_第五关",
             "ActivityExploration_CombatEnd3"
         ]

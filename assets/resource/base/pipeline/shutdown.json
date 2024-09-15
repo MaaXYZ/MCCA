@@ -1,5 +1,5 @@
 {
-    "CloseCrossCore": {
+    "关闭游戏": {
         "action": "StopApp",
         "package": "com.megagame.crosscore"
     }
