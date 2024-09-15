@@ -48,7 +48,7 @@
     },
     "Downloading": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "下载"
         ],
         "roi": [
@@ -64,7 +64,7 @@
     },
     "StartGame": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始游戏"
         ],
         "roi": [
@@ -84,7 +84,7 @@
     "Sub_Comfirm": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "确认"
         ],
         "roi": [
@@ -98,7 +98,7 @@
     "Sub_Cancel": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "取消"
         ],
         "roi": [
@@ -123,7 +123,7 @@
     },
     "SignIn": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "签到"
         ],
         "roi": [
@@ -146,7 +146,7 @@
     "Sub_GetItems": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "获得物品"
         ],
         "roi": [
@@ -172,7 +172,10 @@
     "Sub_HomeButton": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": ["StartUp/HomeButton.png","StartUp/HomeButton1.png"],
+        "template": [
+            "StartUp/HomeButton.png",
+            "StartUp/HomeButton1.png"
+        ],
         "roi": [
             180,
             10,
@@ -183,7 +186,7 @@
     },
     "HomeFlag1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "补给站"
         ],
         "roi": [

@@ -38,14 +38,14 @@
         },
         {
             "name": "夏日活动",
-            "entry": "SummerActivities"
+            "entry": "夏活"
         },
         {
             "name": "模拟军演",
-            "entry": "Rehearsal",
+            "entry": "模拟军演",
             "param": {
-                "Sortie": {
-                    "next": "Simulation"
+                "首页_出击": {
+                    "next": "模拟军演_入口"
                 }
             }
         },
@@ -64,7 +64,7 @@
             "name": "周本",
             "entry": "WeekInstance",
             "param": {
-                "Sortie": {
+                "首页_出击": {
                     "next": "ActivityExploration"
                 }
             },
@@ -89,7 +89,7 @@
                 {
                     "name": "技能书",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -106,7 +106,7 @@
                 {
                     "name": "星币",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -123,7 +123,7 @@
                 {
                     "name": "经验书",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -140,7 +140,7 @@
                 {
                     "name": "遗余之谱(异星灰域商店币)",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -157,7 +157,7 @@
                 {
                     "name": "芯片_物攻振奋",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -174,7 +174,7 @@
                 {
                     "name": "芯片_能量金刚",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -191,7 +191,7 @@
                 {
                     "name": "芯片_切割集中",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -208,7 +208,7 @@
                 {
                     "name": "模块_气象山脉",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -225,7 +225,7 @@
                 {
                     "name": "模块_灭刃乐团",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {
@@ -242,7 +242,7 @@
                 {
                     "name": "模块_不朽虫洞",
                     "param": {
-                        "Sortie": {
+                        "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
                         "DailyExplore_Entry": {

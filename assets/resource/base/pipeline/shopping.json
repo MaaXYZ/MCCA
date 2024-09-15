@@ -9,9 +9,9 @@
             "Sub_StartUp"
         ]
     },
-    "Shop":{
+    "Shop": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "补给站"
         ],
         "roi": [
@@ -26,9 +26,9 @@
             "Shop"
         ]
     },
-    "DailyGift":{
+    "DailyGift": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "礼包"
         ],
         "roi": [
@@ -43,7 +43,7 @@
             "DailyGift"
         ]
     },
-    "DailyGiftYes":{
+    "DailyGiftYes": {
         "recognition": "TemplateMatch",
         "template": "StartUp/NoForFree.png",
         "roi": [
@@ -57,9 +57,9 @@
             "NoForFree"
         ]
     },
-    "ForFree":{
+    "ForFree": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "免费"
         ],
         "roi": [
@@ -74,7 +74,7 @@
             "ForFree"
         ]
     },
-    "NoForFree":{
+    "NoForFree": {
         "recognition": "TemplateMatch",
         "template": "StartUp/NoForFree.png",
         "roi": [
@@ -87,9 +87,9 @@
             "StartUp"
         ]
     },
-    "Purchase":{
+    "Purchase": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "购买"
         ],
         "roi": [

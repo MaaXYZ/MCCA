@@ -1,0 +1,47 @@
+{
+  "战斗_自动战斗": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "Combat/Combat_Auto.png",
+    "roi": [
+      1069,
+      27,
+      105,
+      59
+    ],
+    "action": "Click"
+  },
+  "战斗_启用二倍速": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "Combat/Combat_Doublespeed.png",
+    "roi": [
+      973,
+      30,
+      95,
+      57
+    ],
+    "threshold": 0.9,
+    "action": "Click",
+    "target": [
+      1012,
+      52,
+      10,
+      10
+    ]
+  },
+  "首页_出击": {
+    "recognition": "OCR",
+    "expected": [
+      "出击"
+    ],
+    "roi": [
+      1058,
+      159,
+      212,
+      123
+    ],
+    "action": "Click",
+    "next_doc": "Set in code."
+  }
+}

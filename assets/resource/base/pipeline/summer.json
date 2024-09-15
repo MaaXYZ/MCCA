@@ -1,11 +1,11 @@
 {
-  "SummerActivities": {
+  "夏活": {
     "next": [
-      "SummerActivities_Entry",
+      "夏活_入口",
       "Sub_StartUp"
     ]
   },
-  "SummerActivities_Entry": {
+  "夏活_入口": {
     "recognition": "OCR",
     "action": "Click",
     "expected": "夏日",
@@ -17,9 +17,12 @@
         123
       ]
     ],
-    "next": "SummerActivities_DailyTicket"
+    "next": [
+      "夏活_任务奖励入口",
+      "夏活_入口"
+    ]
   },
-  "SummerActivities_DailyTicket": {
+  "夏活_任务奖励入口": {
     "recognition": "OCR",
     "action": "Click",
     "expected": "海",
@@ -31,9 +34,9 @@
         117
       ]
     ],
-    "next": "SummerActivities_AllReward"
+    "next": "夏活_任务奖励_点击领取"
   },
-  "SummerActivities_AllReward": {
+  "夏活_任务奖励_点击领取": {
     "recognition": "OCR",
     "action": "Click",
     "expected": "领取",
@@ -45,10 +48,51 @@
         44
       ]
     ],
-    "next": "SummerActivities_Back"
+    "next": [
+      "夏活_任务奖励_奖励弹框",
+      "夏活_任务奖励_领取完成",
+      "夏活_任务奖励_点击领取"
+    ]
   },
-  "SummerActivities_Back": {
-    "recognition": "DirectHit",
+  "夏活_任务奖励_奖励弹框": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "获得物品",
+    "roi": [
+      [
+        527,
+        160,
+        214,
+        68
+      ]
+    ],
+    "next": [
+      "夏活_任务奖励_领取完成",
+      "夏活_任务奖励_奖励弹框"
+    ]
+  },
+  "夏活_任务奖励_领取完成": {
+    "recognition": "OCR",
+    "expected": "已完成",
+    "roi": [
+      [
+        1051,
+        210,
+        105,
+        41
+      ]
+    ],
+    "next": "夏活_任务奖励_返回"
+  },
+  "夏活_任务奖励_返回": {
+    "recognition": "OCR",
+    "expected": "任务奖励",
+    "roi": [
+      132,
+      90,
+      151,
+      52
+    ],
     "action": "Click",
     "target": [
       44,
@@ -56,10 +100,20 @@
       120,
       32
     ],
-    "next": "SummerActivities_Start"
+    "next": [
+      "夏活_进入关卡",
+      "夏活_任务奖励_返回"
+    ]
   },
-  "SummerActivities_Start": {
-    "recognition": "DirectHit",
+  "夏活_进入关卡": {
+    "recognition": "OCR",
+    "expected": "夏日",
+    "roi": [
+      268,
+      191,
+      199,
+      65
+    ],
     "action": "Click",
     "target": [
       905,
@@ -67,9 +121,12 @@
       198,
       104
     ],
-    "next": "SummerActivities_Difficulty"
+    "next": [
+      "夏活_关卡_难度选择",
+      "夏活_进入关卡"
+    ]
   },
-  "SummerActivities_Difficulty": {
+  "夏活_关卡_难度选择": {
     "recognition": "OCR",
     "action": "Click",
     "expected": "困难",
@@ -82,11 +139,11 @@
       ]
     ],
     "next": [
-      "SummerActivities_Level",
-      "SummerActivities_Difficulty"
+      "夏活_关卡_选择关卡",
+      "夏活_关卡_难度选择"
     ]
   },
-  "SummerActivities_Level": {
+  "夏活_关卡_选择关卡": {
     "recognition": "OCR",
     "action": "Click",
     "expected": "海",
@@ -99,13 +156,13 @@
       ]
     ],
     "next": [
-      "SummerActivities_Sweep",
-      "SummerActivities_Level"
+      "夏活_扫荡",
+      "夏活_关卡_选择关卡"
     ]
   },
-  "SummerActivities_Sweep": {
+  "夏活_扫荡": {
     "recognition": "OCR",
-    "text": [
+    "expected": [
       "扫荡"
     ],
     "roi": [
@@ -116,13 +173,13 @@
     ],
     "action": "Click",
     "next": [
-      "SummerActivities_MopUpStart",
-      "SummerActivities_Sweep"
+      "夏活_扫荡开始",
+      "夏活_扫荡"
     ]
   },
-  "SummerActivities_MopUpAwards": {
+  "夏活_扫荡奖励": {
     "recognition": "OCR",
-    "text": [
+    "expected": [
       "扫荡奖励"
     ],
     "roi": [
@@ -133,14 +190,26 @@
     ],
     "action": "Click",
     "next": [
-      "DailyExplore_LevelUp",
-      "SummerActivities_Sweep",
-      "SummerActivities_MopUpAwards"
+      "夏活_扫荡升级",
+      "夏活_扫荡",
+      "夏活_扫荡奖励"
     ]
   },
-  "SummerActivities_MopUpStart": {
+  "夏活_扫荡升级": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "Combat/DailyExplore_LevelUp.png",
+    "roi": [
+      540,
+      242,
+      207,
+      91
+    ],
+    "action": "Click"
+  },
+  "夏活_扫荡开始": {
     "recognition": "OCR",
-    "text": [
+    "expected": [
       "开始战斗"
     ],
     "roi": [
@@ -151,17 +220,17 @@
     ],
     "action": "Click",
     "next": [
-      "SummerActivities_MopUpDoubleMarkup",
-      "SummerActivities_Sweep",
-      "SummerActivities_MopUpAwards",
-      "SummerActivities_NoTicket",
-      "SummerActivities_MopUpStart"
+      "夏活_扫荡双倍标记",
+      "夏活_扫荡",
+      "夏活_扫荡奖励",
+      "夏活_无票券",
+      "夏活_扫荡开始"
     ]
   },
-  "SummerActivities_MopUpDoubleMarkup": {
+  "夏活_扫荡双倍标记": {
     "is_sub": true,
     "recognition": "OCR",
-    "text": [
+    "expected": [
       "开启"
     ],
     "roi": [
@@ -170,12 +239,11 @@
       252,
       100
     ],
-    "action": "Click",
-    "next": []
+    "action": "Click"
   },
-  "SummerActivities_NoTicket": {
+  "夏活_无票券": {
     "recognition": "OCR",
-    "text": [
+    "expected": [
       "取消"
     ],
     "roi": [
@@ -184,7 +252,6 @@
       107,
       35
     ],
-    "action": "Click",
-    "next": []
+    "action": "Click"
   }
 }
