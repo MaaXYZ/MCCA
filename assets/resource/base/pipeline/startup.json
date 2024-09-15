@@ -1,7 +1,7 @@
 {
     "进入首页": {
         "next": [
-            "HomeFlag2",
+            "首页标志2",
             "子任务_点击首页按钮",
             "子任务_点击返回",
             "子任务_获得物品",
@@ -9,7 +9,7 @@
             "子任务_点击确认",
             "子任务_关闭公告",
             "签到",
-            "HomeFlag1",
+            "首页标志1",
             "开始游戏",
             "NERI",
             "启动游戏"
@@ -59,7 +59,7 @@
         ],
         "action": "Click",
         "next": [
-            "HomeFlag1",
+            "首页标志1",
             "子任务_关闭公告",
             "签到",
             "开始游戏"
@@ -78,7 +78,7 @@
         ],
         "action": "Click",
         "next": [
-            "HomeFlag1",
+            "首页标志1",
             "子任务_点击首页按钮",
             "子任务_点击返回",
             "子任务_获得物品",
@@ -87,7 +87,7 @@
             "签到"
         ]
     },
-    "HomeFlag1": {
+    "首页标志1": {
         "recognition": "OCR",
         "expected": [
             "补给站"
@@ -106,11 +106,11 @@
             "子任务_点击取消",
             "子任务_关闭公告",
             "签到",
-            "HomeFlag2",
-            "HomeFlag1"
+            "首页标志2",
+            "首页标志1"
         ]
     },
-    "HomeFlag2": {
+    "首页标志2": {
         "recognition": "TemplateMatch",
         "template": "StartUp/HomeFlag1.png",
         "roi": [
@@ -131,6 +131,5 @@
         "is_sub": true,
         "action": "StartApp",
         "package": "com.megagame.crosscore/com.megagame.crosscore.extend.PhoneUtilActivity"
-    },
-    "Stop": {}
+    }
 }
