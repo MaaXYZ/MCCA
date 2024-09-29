@@ -43,7 +43,7 @@
         {
             "name": "模拟军演",
             "entry": "模拟军演",
-            "param": {
+            "pipeline_override": {
                 "首页_出击": {
                     "next": "模拟军演_入口"
                 }
@@ -63,7 +63,7 @@
         {
             "name": "周本",
             "entry": "WeekInstance",
-            "param": {
+            "pipeline_override": {
                 "首页_出击": {
                     "next": "ActivityExploration"
                 }
@@ -88,7 +88,7 @@
             "cases": [
                 {
                     "name": "技能书",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -105,7 +105,7 @@
                 },
                 {
                     "name": "星币",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -122,7 +122,7 @@
                 },
                 {
                     "name": "经验书",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -139,7 +139,7 @@
                 },
                 {
                     "name": "遗余之谱(异星灰域商店币)",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -156,7 +156,7 @@
                 },
                 {
                     "name": "芯片_物攻振奋",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -173,7 +173,7 @@
                 },
                 {
                     "name": "芯片_能量金刚",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -190,7 +190,7 @@
                 },
                 {
                     "name": "芯片_切割集中",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -207,7 +207,7 @@
                 },
                 {
                     "name": "模块_气象山脉",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -224,7 +224,7 @@
                 },
                 {
                     "name": "模块_灭刃乐团",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -241,7 +241,7 @@
                 },
                 {
                     "name": "模块_不朽虫洞",
-                    "param": {
+                    "pipeline_override": {
                         "首页_出击": {
                             "next": "DailyExplore_Entry"
                         },
@@ -262,7 +262,7 @@
             "cases": [
                 {
                     "name": "Yes",
-                    "param": {
+                    "pipeline_override": {
                         "Infr_Deal": {
                             "enabled": true
                         }
@@ -270,7 +270,7 @@
                 },
                 {
                     "name": "No",
-                    "param": {
+                    "pipeline_override": {
                         "Infr_Deal": {
                             "enabled": false
                         }
@@ -282,7 +282,7 @@
             "cases": [
                 {
                     "name": "第一关45微晶",
-                    "param": {
+                    "pipeline_override": {
                         "ActivityExploration_2": {
                             "next": [
                                 "ActivityExploration_3",
@@ -301,7 +301,7 @@
                 },
                 {
                     "name": "第五关120微晶",
-                    "param": {
+                    "pipeline_override": {
                         "ActivityExploration_2": {
                             "next": [
                                 "ActivityExploration_第五关",
