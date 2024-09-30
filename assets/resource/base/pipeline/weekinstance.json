@@ -35,6 +35,7 @@
             98
         ],
         "action": "Click",
+        "post_delay": 3000,
         "next": [
             "ActivityExploration_Exist",
             "ActivityExploration_2",
@@ -53,6 +54,7 @@
             154
         ],
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "ActivityExploration_第五关",
             "ActivityExploration_SwipeDown",
