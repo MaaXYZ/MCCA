@@ -26,6 +26,7 @@
         ],
         "action": "Click",
         "next": [
+            "Infr_收取资源_不换班",
             "Infr_DealDefaltYes",
             "Base_Deal"
         ]
@@ -62,6 +63,22 @@
         "next": [
             "子任务_获得物品",
             "Infr_驻员状况"
+        ]
+    },
+    "Infr_收取资源_不换班": {
+        "recognition": "TemplateMatch",
+        "template": "Infrastructures/Infr_Recourse.png",
+        "roi": [
+            412,
+            425,
+            331,
+            288
+        ],
+        "action": "Click",
+        "next": [
+            "子任务_获得物品",
+            "Infr_收取资源_不换班",
+            "Infr_DealDefaltYes"
         ]
     },
     "Infr_驻员状况": {
@@ -651,6 +668,7 @@
         "action": "Click",
         "next": [
             "Infr_Deal",
+            "Infr_制作素材",
             "Infr_DealSelf"
         ]
     },
@@ -665,8 +683,9 @@
         ],
         "action": "Click",
         "next": [
+            "Infr_行星指挥部_返回",
             "Infr_DealDefaltYes",
-            "Infr_DealSelf"
+            "Infr_制作素材"
         ]
     },
     "Infr_Deal1": {
@@ -686,7 +705,6 @@
     },
     "Infr_DealSelf": {
         "next": [
-            "Infr_DealNextFriends_End",
             "Infr_DealSelf1",
             "Infr_DealSelf2",
             "Infr_DealSelf3",
@@ -1220,6 +1238,9 @@
             26
         ],
         "next": [
+            "Infr_DealSelf1_Yes",
+            "Infr_DealSelf1_No",
+            "子任务_获得物品",
             "Infr_DealNextFriends1",
             "Infr_DealNextFriends"
         ]
@@ -1337,6 +1358,236 @@
         "count": 50,
         "next": [
             "进入首页"
+        ]
+    },
+    "Infr_制作素材": {
+        "recognition": "OCR",
+        "expected": [
+            "制作素材"
+        ],
+        "roi": [
+            42,
+            99,
+            108,
+            34
+        ],
+        "action": "Click",
+        "target": [
+            53,
+            358,
+            79,
+            73
+        ],
+        "next": [
+            "Infr_制作素材",
+            "Infr_制作素材_材料不足",
+            "Infr_制作素材_材料充足"
+        ]
+    },
+    "Infr_制作素材_材料充足": {
+        "recognition": "ColorMatch",
+        "roi": [
+            461,
+            520,
+            85,
+            28
+        ],
+        "lower": [
+            59,
+            65,
+            74
+        ],
+        "upper": [
+            99,
+            97,
+            107
+        ],
+        "action": "Click",
+        "target": [
+            272,
+            525,
+            145,
+            140
+        ],
+        "next": [
+            "Infr_制作素材_材料充足_合成",
+            "Infr_制作素材_材料充足"
+        ]
+    },
+    "Infr_制作素材_材料不足": {
+        "recognition": "ColorMatch",
+        "roi": [
+            461,
+            520,
+            85,
+            28
+        ],
+        "lower": [
+            33,
+            20,
+            33
+        ],
+        "upper": [
+            57,
+            32,
+            49
+        ],
+        "next": [
+            "Infr_制作素材_返回"
+        ]
+    },
+    "Infr_制作素材_材料充足_合成": {
+        "recognition": "OCR",
+        "expected": [
+            "合成份数"
+        ],
+        "roi": [
+            901,
+            95,
+            106,
+            33
+        ],
+        "action": "Click",
+        "target": [
+            1159,
+            342,
+            67,
+            33
+        ],
+        "next": [
+            "Infr_制作素材_材料充足_最大",
+            "Infr_制作素材_材料充足_合成"
+        ]
+    },
+    "Infr_制作素材_材料充足_最大": {
+        "recognition": "ColorMatch",
+        "roi": [
+            414,
+            308,
+            405,
+            107
+        ],
+        "lower": [
+            33,
+            20,
+            33
+        ],
+        "upper": [
+            57,
+            32,
+            49
+        ],
+        "next": [
+            "Infr_制作素材_材料充足_确定"
+        ]
+    },
+    "Infr_制作素材_材料充足_确定": {
+        "recognition": "OCR",
+        "expected": [
+            "合成份数"
+        ],
+        "roi": [
+            896,
+            94,
+            111,
+            35
+        ],
+        "action": "Click",
+        "target": [
+            1020,
+            603,
+            90,
+            39
+        ],
+        "next": [
+            "子任务_获得物品",
+            "Infr_制作素材_合成_返回"
+        ]
+    },
+    "Infr_制作素材_合成_返回": {
+        "action": "Click",
+        "recognition": "OCR",
+        "expected": [
+            "概率"
+        ],
+        "roi": [
+            43,
+            428,
+            51,
+            31
+        ],
+        "target": [
+            44,
+            29,
+            120,
+            39
+        ],
+        "next": [
+            "子任务_获得物品",
+            "Infr_制作素材_返回",
+            "Infr_换取页面",
+            "Infr_制作素材_合成_返回"
+        ]
+    },
+    "Infr_制作素材_返回": {
+        "action": "Click",
+        "recognition": "OCR",
+        "expected": [
+            "基地素材"
+        ],
+        "roi": [
+            61,
+            481,
+            112,
+            37
+        ],
+        "target": [
+            44,
+            29,
+            120,
+            39
+        ],
+        "next": [
+            "Infr_制作素材_返回",
+            "Infr_换取页面"
+        ]
+    },
+    "Infr_换取页面": {
+        "recognition": "OCR",
+        "expected": [
+            "制作素材"
+        ],
+        "roi": [
+            44,
+            96,
+            100,
+            40
+        ],
+        "next": [
+            "Infr_DealSelf"
+        ]
+    },
+    "Infr_行星指挥部_返回": {
+        "recognition": "OCR",
+        "expected": [
+            "行星指挥部"
+        ],
+        "roi": [
+            137,
+            105,
+            143,
+            35
+        ],
+        "action": "Click",
+        "target": [
+            52,
+            24,
+            102,
+            43
+        ],
+        "next": [
+            "Infr_DealDefaltYes",
+            "Infr_行星指挥部_返回"
         ]
     }
 }
