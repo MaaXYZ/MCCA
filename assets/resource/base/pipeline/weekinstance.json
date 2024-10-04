@@ -204,6 +204,7 @@
             89
         ],
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "ActivityExploration_Step_1",
             "ActivityExploration_Start_1"
@@ -221,6 +222,7 @@
             89
         ],
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "ActivityExploration_第五关Step_1",
             "ActivityExploration_第五关Start_1"
@@ -244,7 +246,7 @@
             20,
             20
         ],
-        "post_delay": 1000,
+        "post_delay": 3000,
         "next": [
             "ActivityExploration_Step_2"
         ]
@@ -267,7 +269,7 @@
             20,
             20
         ],
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "ActivityExploration_第五关Step_2"
         ]
@@ -290,7 +292,7 @@
             20,
             20
         ],
-        "post_delay": 1000,
+        "post_delay": 3000,
         "next": [
             "ActivityExploration_Combating1",
             "ActivityExploration_Step_2"
@@ -314,7 +316,7 @@
             20,
             20
         ],
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "ActivityExploration_第五关Step_3"
         ]
@@ -337,7 +339,7 @@
             20,
             20
         ],
-        "post_delay": 1000,
+        "post_delay": 3000,
         "next": [
             "ActivityExploration_Combating2",
             "ActivityExploration_Step_3"
@@ -402,7 +404,7 @@
             20,
             20
         ],
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "ActivityExploration_第五关Step_5"
         ]
@@ -425,7 +427,7 @@
             20,
             20
         ],
-        "post_delay": 2000,
+        "post_delay": 3000,
         "next": [
             "ActivityExploration_Step_5"
         ]
