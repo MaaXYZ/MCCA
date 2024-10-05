@@ -243,6 +243,7 @@
             130,
             64
         ],
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             705,
@@ -266,6 +267,7 @@
             130,
             64
         ],
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             538,
