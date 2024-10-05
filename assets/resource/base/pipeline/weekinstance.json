@@ -291,6 +291,7 @@
             130,
             64
         ],
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             588,
@@ -315,6 +316,7 @@
             130,
             64
         ],
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             415,
@@ -338,6 +340,7 @@
             130,
             64
         ],
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             777,
@@ -371,6 +374,7 @@
             120
         ],
         "count": 1,
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             332,
@@ -403,6 +407,7 @@
             120
         ],
         "count": 1,
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             503,
@@ -426,6 +431,7 @@
             130,
             64
         ],
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             592,
@@ -458,6 +464,7 @@
             120
         ],
         "count": 1,
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             680,
@@ -482,6 +489,7 @@
             130,
             64
         ],
+        "pre_delay": 2000,
         "action": "Click",
         "target": [
             592,
