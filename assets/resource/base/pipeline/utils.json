@@ -92,7 +92,8 @@
     "is_sub": true,
     "recognition": "OCR",
     "expected": [
-      "获得物品"
+      "获得物品",
+      "合成成功"
     ],
     "roi": [
       447,
