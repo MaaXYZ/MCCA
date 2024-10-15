@@ -73,7 +73,7 @@ jobs:
            rm -f ./gui/*.zip
            cp -r ./assets/resource/* ./gui/Resource/
            jq --arg version_name "MCCA" --arg version ${{ needs.meta.outputs.tag }} '. + {"version": {"name": $version_name, "version": $version}}' ./assets/interface.json > ./gui/interface.json
-          
+           mv ./gui/MFAWPF.exe ./gui/MCCA.exe
       - uses: actions/upload-artifact@v3
         with:
           name: MCCA-win-x86_64-with-gui
