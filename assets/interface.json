@@ -37,10 +37,6 @@
             ]
         },
         {
-            "name": "夏日活动",
-            "entry": "夏活"
-        },
-        {
             "name": "模拟军演",
             "entry": "模拟军演",
             "pipeline_override": {
