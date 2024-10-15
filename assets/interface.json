@@ -39,6 +39,9 @@
         {
             "name": "模拟军演",
             "entry": "模拟军演",
+            "option": [
+                "刷新战力阈值"
+            ],
             "pipeline_override": {
                 "首页_出击": {
                     "next": "模拟军演_入口"
@@ -311,6 +314,42 @@
                                 "ActivityExploration_第五关",
                                 "ActivityExploration_CombatEnd3"
                             ]
+                        }
+                    }
+                }
+            ]
+        },
+        "刷新战力阈值": {
+            "cases": [
+                {
+                    "name": "5000",
+                    "pipeline_override": {
+                        "模拟军演_刷新对手": {
+                            "expected": "^([5-9]\\d{3}|[1-9]\\d{4})$"
+                        }
+                    }
+                },
+                {
+                    "name": "10000",
+                    "pipeline_override": {
+                        "模拟军演_刷新对手": {
+                            "expected": "^[1-9]\\d{4}$"
+                        }
+                    }
+                },
+                {
+                    "name": "20000",
+                    "pipeline_override": {
+                        "模拟军演_刷新对手": {
+                            "expected": "^([2-9]\\d{4})$"
+                        }
+                    }
+                },
+                {
+                    "name": "30000",
+                    "pipeline_override": {
+                        "模拟军演_刷新对手": {
+                            "expected": "^([3-9]\\d{4})$"
                         }
                     }
                 }
