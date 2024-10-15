@@ -101,7 +101,8 @@
       405,
       117
     ],
-    "action": "Click"
+    "action": "Click",
+    "post_delay": 1000
   },
   "子任务_点击返回": {
     "is_sub": true,
