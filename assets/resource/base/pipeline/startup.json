@@ -8,6 +8,7 @@
             "子任务_点击取消",
             "子任务_点击确认",
             "子任务_关闭公告",
+            "关闭周年弹窗",
             "签到",
             "首页标志1",
             "开始游戏",
@@ -61,6 +62,7 @@
         "next": [
             "首页标志1",
             "子任务_关闭公告",
+            "关闭周年弹窗",
             "签到",
             "开始游戏"
         ]
@@ -131,5 +133,17 @@
         "is_sub": true,
         "action": "StartApp",
         "package": "com.megagame.crosscore/com.megagame.crosscore.extend.PhoneUtilActivity"
+    },
+    "关闭周年弹窗": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/CloseOneYear.png",
+        "roi": [
+            1143,
+            118,
+            36,
+            41
+        ],
+        "action": "Click",
+        "green_mask": true
     }
 }
