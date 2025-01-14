@@ -64,7 +64,7 @@
             "entry": "WeekInstance",
             "pipeline_override": {
                 "首页_出击": {
-                    "next": "ActivityExploration_fifth_ep"
+                    "next": "ActivityExploration"
                 }
             },
             "option": [
@@ -282,16 +282,38 @@
                 {
                     "name": "第一关45微晶",
                     "pipeline_override": {
-                        "首页_出击": {
-                            "next": "ActivityExploration_first_ep"
+                        "ActivityExploration_2": {
+                            "next": [
+                                "ActivityExploration_3",
+                                "ActivityExploration_SwipeUp",
+                                "ActivityExploration_2"
+                            ]
+                        },
+                        "ActivityExploration_CombatEnd3": {
+                            "next": [
+                                "子任务_获得物品",
+                                "ActivityExploration_3",
+                                "ActivityExploration_CombatEnd3"
+                            ]
                         }
                     }
                 },
                 {
                     "name": "第五关120微晶",
                     "pipeline_override": {
-                        "首页_出击": {
-                            "next": "ActivityExploration_fifth_ep"
+                        "ActivityExploration_2": {
+                            "next": [
+                                "ActivityExploration_第五关",
+                                "ActivityExploration_SwipeDown",
+                                "ActivityExploration_2"
+                            ]
+                        },
+                        "ActivityExploration_CombatEnd3": {
+                            "next": [
+                                "子任务_获得物品",
+                                "ActivityExploration_第五关",
+                                "ActivityExploration_CombatEnd3"
+                            ]
                         }
                     }
                 }

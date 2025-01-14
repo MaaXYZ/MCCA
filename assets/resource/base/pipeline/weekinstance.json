@@ -1,0 +1,641 @@
+{
+    "WeekInstance": {
+        "next": [
+            "首页_出击",
+            "子任务_进入首页"
+        ]
+    },
+    "ActivityExploration": {
+        "recognition": "OCR",
+        "expected": [
+            "活动探索"
+        ],
+        "roi": [
+            540,
+            98,
+            215,
+            95
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_1",
+            "ActivityExploration"
+        ]
+    },
+    "ActivityExploration_1": {
+        "recognition": "OCR",
+        "expected": [
+            "碎星虚影"
+        ],
+        "roi": [
+            450,
+            443,
+            302,
+            98
+        ],
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_Exist",
+            "ActivityExploration_2",
+            "ActivityExploration_1"
+        ]
+    },
+    "ActivityExploration_2": {
+        "recognition": "OCR",
+        "expected": [
+            "戈里刻虚影"
+        ],
+        "roi": [
+            100,
+            333,
+            500,
+            154
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_第五关",
+            "ActivityExploration_SwipeDown",
+            "ActivityExploration_2"
+        ]
+    },
+    "ActivityExploration_3": {
+        "recognition": "OCR",
+        "expected": [
+            "虚影阿瑞斯"
+        ],
+        "roi": [
+            653,
+            204,
+            180,
+            55
+        ],
+        "action": "Click",
+        "next": [
+            "ActivityExploration_Exist",
+            "ActivityExploration_Start"
+        ]
+    },
+    "ActivityExploration_第五关": {
+        "recognition": "OCR",
+        "expected": [
+            "虚影宙斯"
+        ],
+        "roi": [
+            682,
+            456,
+            180,
+            180
+        ],
+        "action": "Click",
+        "next": [
+            "ActivityExploration_Exist",
+            "ActivityExploration_第五关Start"
+        ]
+    },
+    "ActivityExploration_Exist": {
+        "recognition": "OCR",
+        "expected": [
+            "600/600",
+            "6007600",
+            "6001600"
+        ],
+        "roi": [
+            86,
+            623,
+            152,
+            40
+        ],
+        "action": "Click",
+        "target": [
+            208,
+            37,
+            20,
+            20
+        ]
+    },
+    "ActivityExploration_Start": {
+        "recognition": "OCR",
+        "expected": [
+            "开始战斗"
+        ],
+        "roi": [
+            1057,
+            615,
+            200,
+            89
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_Comfirm",
+            "ActivityExploration_关闭第二队",
+            "ActivityExploration_Start_1",
+            "ActivityExploration_Start",
+            "ActivityExploration_Step_1"
+        ]
+    },
+    "ActivityExploration_第五关Start": {
+        "recognition": "OCR",
+        "expected": [
+            "开始战斗"
+        ],
+        "roi": [
+            1057,
+            615,
+            200,
+            89
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_Comfirm",
+            "ActivityExploration_关闭第二队",
+            "ActivityExploration_第五关Start_1",
+            "ActivityExploration_第五关Start",
+            "ActivityExploration_第五关Step_1"
+        ]
+    },
+    "ActivityExploration_Comfirm": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": [
+            "开启"
+        ],
+        "roi": [
+            722,
+            405,
+            190,
+            94
+        ],
+        "action": "Click",
+        "post_delay": 2000
+    },
+    "ActivityExploration_关闭第二队": {
+        "is_sub": true,
+        "recognition": "ColorMatch",
+        "roi": [
+            1153,
+            380,
+            21,
+            14
+        ],
+        "method": 4,
+        "lower": [
+            220,
+            180,
+            60
+        ],
+        "upper": [
+            255,
+            220,
+            100
+        ],
+        "count": 1,
+        "action": "Click"
+    },
+    "ActivityExploration_Start_1": {
+        "recognition": "OCR",
+        "expected": [
+            "开始行动"
+        ],
+        "roi": [
+            1057,
+            615,
+            200,
+            89
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_Step_1",
+            "ActivityExploration_Start_1"
+        ]
+    },
+    "ActivityExploration_第五关Start_1": {
+        "recognition": "OCR",
+        "expected": [
+            "开始行动"
+        ],
+        "roi": [
+            1057,
+            615,
+            200,
+            89
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "ActivityExploration_第五关Step_1",
+            "ActivityExploration_第五关Start_1"
+        ]
+    },
+    "ActivityExploration_Step_1": {
+        "recognition": "OCR",
+        "expected": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            705,
+            284,
+            20,
+            20
+        ],
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_Step_2"
+        ]
+    },
+    "ActivityExploration_第五关Step_1": {
+        "recognition": "OCR",
+        "expected": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            538,
+            564,
+            20,
+            20
+        ],
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_第五关Step_2"
+        ]
+    },
+    "ActivityExploration_Step_2": {
+        "recognition": "OCR",
+        "expected": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            588,
+            221,
+            20,
+            20
+        ],
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_Combating1",
+            "ActivityExploration_Step_2"
+        ]
+    },
+    "ActivityExploration_第五关Step_2": {
+        "recognition": "OCR",
+        "expected": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            415,
+            384,
+            20,
+            20
+        ],
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_第五关Step_3"
+        ]
+    },
+    "ActivityExploration_Step_3": {
+        "recognition": "OCR",
+        "expected": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            777,
+            331,
+            20,
+            20
+        ],
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_Combating2",
+            "ActivityExploration_Step_3"
+        ]
+    },
+    "ActivityExploration_第五关Step_3": {
+        "recognition": "ColorMatch",
+        "roi": [
+            375,
+            415,
+            40,
+            40
+        ],
+        "method": 4,
+        "lower": [
+            80,
+            135,
+            55
+        ],
+        "upper": [
+            120,
+            180,
+            120
+        ],
+        "count": 1,
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            332,
+            260,
+            20,
+            20
+        ],
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_第五关Step_4"
+        ]
+    },
+    "ActivityExploration_第五关Step_4": {
+        "recognition": "ColorMatch",
+        "roi": [
+            377,
+            419,
+            40,
+            40
+        ],
+        "method": 4,
+        "lower": [
+            80,
+            135,
+            55
+        ],
+        "upper": [
+            120,
+            180,
+            120
+        ],
+        "count": 1,
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            503,
+            295,
+            20,
+            20
+        ],
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_第五关Step_5"
+        ]
+    },
+    "ActivityExploration_Step_4": {
+        "recognition": "OCR",
+        "expected": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            592,
+            186,
+            20,
+            20
+        ],
+        "post_delay": 3000,
+        "next": [
+            "ActivityExploration_Step_5"
+        ]
+    },
+    "ActivityExploration_第五关Step_5": {
+        "recognition": "ColorMatch",
+        "roi": [
+            808,
+            291,
+            40,
+            40
+        ],
+        "method": 4,
+        "lower": [
+            80,
+            135,
+            55
+        ],
+        "upper": [
+            120,
+            180,
+            120
+        ],
+        "count": 1,
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            680,
+            224,
+            20,
+            20
+        ],
+        "timeout": 40000,
+        "next": [
+            "ActivityExploration_Combating3",
+            "ActivityExploration_第五关Step_5"
+        ]
+    },
+    "ActivityExploration_Step_5": {
+        "recognition": "OCR",
+        "expected": [
+            "行动"
+        ],
+        "roi": [
+            1052,
+            11,
+            130,
+            64
+        ],
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            592,
+            186,
+            20,
+            20
+        ],
+        "timeout": 40000,
+        "next": [
+            "ActivityExploration_Combating3",
+            "ActivityExploration_Step_5"
+        ]
+    },
+    "ActivityExploration_Combating1": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Combat_Combating.png",
+        "roi": [
+            1169,
+            27,
+            105,
+            59
+        ],
+        "next": [
+            "战斗_自动战斗",
+            "战斗_启用二倍速",
+            "ActivityExploration_CombatEnd1",
+            "ActivityExploration_Combating1"
+        ]
+    },
+    "ActivityExploration_CombatEnd1": {
+        "recognition": "OCR",
+        "expected": [
+            "等级"
+        ],
+        "roi": [
+            210,
+            410,
+            97,
+            152
+        ],
+        "action": "Click",
+        "next": [
+            "子任务_获得物品",
+            "ActivityExploration_Step_3",
+            "ActivityExploration_CombatEnd1"
+        ]
+    },
+    "ActivityExploration_Combating2": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Combat_Combating.png",
+        "roi": [
+            1169,
+            27,
+            105,
+            59
+        ],
+        "next": [
+            "战斗_自动战斗",
+            "战斗_启用二倍速",
+            "ActivityExploration_CombatEnd2",
+            "ActivityExploration_Combating2"
+        ]
+    },
+    "ActivityExploration_CombatEnd2": {
+        "recognition": "OCR",
+        "expected": [
+            "等级"
+        ],
+        "roi": [
+            210,
+            410,
+            97,
+            152
+        ],
+        "action": "Click",
+        "next": [
+            "子任务_获得物品",
+            "ActivityExploration_Step_4",
+            "ActivityExploration_CombatEnd2"
+        ]
+    },
+    "ActivityExploration_Combating3": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Combat_Combating.png",
+        "roi": [
+            1169,
+            27,
+            105,
+            59
+        ],
+        "next": [
+            "子任务_获得物品",
+            "战斗_自动战斗",
+            "战斗_启用二倍速",
+            "ActivityExploration_CombatEnd3",
+            "ActivityExploration_Combating3"
+        ]
+    },
+    "ActivityExploration_CombatEnd3": {
+        "recognition": "OCR",
+        "expected": [
+            "等级"
+        ],
+        "roi": [
+            210,
+            410,
+            97,
+            152
+        ],
+        "action": "Click",
+        "next": [
+            "子任务_获得物品",
+            "ActivityExploration_第五关",
+            "ActivityExploration_CombatEnd3"
+        ]
+    },
+    "ActivityExploration_SwipeUp": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            617,
+            196,
+            40,
+            40
+        ],
+        "end": [
+            617,
+            385,
+            40,
+            40
+        ]
+    },
+    "ActivityExploration_SwipeDown": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            617,
+            385,
+            40,
+            40
+        ],
+        "end": [
+            617,
+            196,
+            40,
+            40
+        ]
+    }
+}
