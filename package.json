@@ -1,0 +1,21 @@
+{
+  "name": "mcca",
+  "version": "1.0.0",
+  "description": "基于全新架构的 交错战线 CrossCore 小助手。图像技术 + 模拟控制，解放双手！  \r 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！",
+  "main": "index.js",
+  "scripts": {
+    "start:mad": "cd ./lib/MaaDebugger && python -m MaaDebugger --port 8080",
+    "start:ic": "cd ./deps/tools/ImageCropper && python main.py",
+    "build": "python ./install.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Htgs/MCCA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Htgs/MCCA/issues"
+  },
+  "homepage": "https://github.com/Htgs/MCCA#readme"
+}

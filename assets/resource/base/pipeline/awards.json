@@ -11,10 +11,10 @@
     "Mail": {
         "recognition": "ColorMatch",
         "roi": [
-            254,
-            14,
-            42,
-            27
+            1058,
+            27,
+            34,
+            35
         ],
         "method": 4,
         "lower": [
@@ -66,10 +66,10 @@
         "recognition": "TemplateMatch",
         "template": "StartUp/NoMail.png",
         "roi": [
-            259,
-            20,
-            24,
-            24
+            1060,
+            31,
+            30,
+            26
         ],
         "next": [
             "DailyTask",
@@ -80,10 +80,10 @@
         "recognition": "TemplateMatch",
         "template": "StartUp/DailyTask.png",
         "roi": [
-            1219,
-            394,
-            39,
-            35
+            686,
+            609,
+            62,
+            83
         ],
         "action": "Click",
         "next": [

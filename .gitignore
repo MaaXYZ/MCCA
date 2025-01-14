@@ -448,3 +448,5 @@ install
 tools/ImageCropper/**/*.png
 
 config
+
+lib
