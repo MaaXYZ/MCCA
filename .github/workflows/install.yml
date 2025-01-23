@@ -49,35 +49,6 @@ jobs:
       tag: ${{ steps.set_tag.outputs.tag }}
       is_release: ${{ steps.set_tag.outputs.is_release }}
 
-  gui:
-    needs: meta
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: true
-      - name: Download Latest MFAWPF  
-        uses: robinraju/release-downloader@v1.8  
-        with:  
-             repository: SweetSmellFox/MFAWPF  
-             latest: true  
-             out-file-path: gui  
-             extract: true  
-      ##在下面更改项目名称
-      - name: gui resources          
-        shell: bash
-        run: |  
-           rm -f ./gui/*.zip
-           cp -r ./assets/resource/* ./gui/Resource/
-           jq --arg version_name "MCCA" --arg version ${{ needs.meta.outputs.tag }} '. + {"version": {"name": $version_name, "version": $version}}' ./assets/interface.json > ./gui/interface.json
-           mv ./gui/MFAWPF.exe ./gui/MCCA.exe
-      - uses: actions/upload-artifact@v3
-        with:
-          name: MCCA-win-x86_64-with-gui
-          path: "gui"
 
   windows:
     needs: meta
@@ -101,10 +72,20 @@ jobs:
           out-file-path: "deps"
           extract: true
 
+      - name: Download MFAWPF  
+        uses: robinraju/release-downloader@v1  
+        with:
+          repository: SweetSmellFox/MFAWPF
+          fileName: "MFAWPF*"
+          latest: true
+          out-file-path: "MFA"
+          extract: true
+
       - name: Install
         shell: bash
         run: |
           python ./install.py ${{ needs.meta.outputs.tag }}
+          cp MFA/MFAWPF.exe install
 
       - uses: actions/upload-artifact@v3
         with:
@@ -175,9 +156,46 @@ jobs:
           name: MCCA-macos-${{ matrix.arch }}
           path: "install"
 
+  mirrorchyan_res:
+    needs: meta
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Download MaaFramework
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: MaaXYZ/MaaFramework
+          fileName: "MAA-macos-aarch64*"
+          latest: true
+          out-file-path: "deps"
+          extract: true
+
+      - name: Install
+        shell: bash
+        run: |
+          python ./install.py ${{ needs.meta.outputs.tag }}
+      - name: MirrorChyan Package
+        id: zip
+        run: |
+          rm -rf install/resource/base/model/ocr
+        
+          mkdir MirrorChyan
+          zip -r MirrorChyan/${{ github.event.repository.name }}.zip install/resource install/interface.json
+          
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MirrorChyanRes
+          path: MirrorChyan
+
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [meta, windows, ubuntu, macos,gui]
+    needs: [meta, windows, ubuntu, macos, mirrorchyan_res]]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -185,6 +203,14 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           path: assets
+
+      - name: Upload to MirrorChyan
+        run: |
+          curl --location --request POST 'https://mirrorc.top/api/resources/${{ github.event.repository.name }}/versions' \
+            --header 'Authorization:${{ secrets.MirrorChyanUploadToken }}' \
+            --form 'name="${{ needs.meta.outputs.tag }}"' \
+            --form 'file=@"assets/MirrorChyanRes/${{ github.event.repository.name }}.zip"'
+          rm -rf assets/MirrorChyanRes
 
       - run: |
           cd assets
