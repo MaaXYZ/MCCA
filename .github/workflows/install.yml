@@ -195,7 +195,7 @@ jobs:
 
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [meta, windows, ubuntu, macos, mirrorchyan_res]]
+    needs: [meta, windows, ubuntu, macos, mirrorchyan_res]
     runs-on: ubuntu-latest
     permissions:
       contents: write
