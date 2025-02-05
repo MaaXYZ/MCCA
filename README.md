@@ -1,4 +1,4 @@
-# MCCA
+# MCCA(目前已停止适配更新，等一个大佬)
 
 基于全新架构的 交错战线 CrossCore 小助手。图像技术 + 模拟控制，解放双手！  
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
