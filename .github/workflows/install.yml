@@ -1,9 +1,7 @@
-name: install
-
 on:
   push:
     tags:
-      - "v*"
+      - "v[0-9]+.[0-9]+.[0-9]+*"  
     branches:
       - "**"
     paths:
@@ -19,79 +17,118 @@ on:
       - "**.py"
   workflow_dispatch:
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   meta:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - id: set_tag
         run: |
-          is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
-          tag=$(git describe --tags --match "v*" ${{ github.ref }} || true)
-          if [[ $tag != v* ]]; then
+          # 检查标签格式
+          if [[ ${{ github.ref }} =~ ^refs/tags/v[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*)?$ ]]; then
+            is_release=true
+            tag=${GITHUB_REF#refs/tags/}
+            echo "Release tag format is valid: $tag"
+          else
+            is_release=false
+            # 获取最新的发布标签
             tag=$(curl -sX GET "https://api.github.com/repos/${{ github.repository }}/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
-            if [[ $tag != v* ]]; then
+            if [[ ! $tag =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+)?$ ]]; then
+              echo "No valid release tag found, using v0.0.0"
               tag="v0.0.0"
             fi
             tag=$(date "+$tag-%y%m%d-$(git rev-parse --short HEAD)")
           fi
+
           if ! $($is_release) ; then
             prefix=${tag%-*-*}
             suffix=${tag#$prefix-}
             tag="$prefix-ci.$suffix"
           fi
 
+          # 检查是否为预发布版本
+          is_prerelease=false
+          if [[ $tag =~ .*alpha.* || $tag =~ .*beta.* || $tag =~ .*rc.* || $tag =~ .*dev.* || $tag =~ .*-ci.* ]]; then
+            is_prerelease=true
+            echo "This is a pre-release version"
+          fi
+
           echo tag=$tag | tee -a $GITHUB_OUTPUT
           echo is_release=$is_release | tee -a $GITHUB_OUTPUT
+          echo is_prerelease=$is_prerelease | tee -a $GITHUB_OUTPUT
     outputs:
       tag: ${{ steps.set_tag.outputs.tag }}
       is_release: ${{ steps.set_tag.outputs.is_release }}
+      is_prerelease: ${{ steps.set_tag.outputs.is_prerelease }}
 
   windows:
     needs: meta
     runs-on: windows-latest
     strategy:
       matrix:
-        arch: [aarch64, x86_64]
+        arch: [x86_64]
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
       - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1.8
+        uses: robinraju/release-downloader@v1
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-win-${{ matrix.arch }}*"
           latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
-      - name: Download MFAWPF
+      - name: Download MFAAvalonia
+        id: download_mfa
         uses: robinraju/release-downloader@v1
         with:
-          repository: SweetSmellFox/MFAWPF
-          fileName: "MFAWPF*"
+          repository: SweetSmellFox/MFAAvalonia
+          fileName: "MFAAvalonia-*-win-x64*"
           latest: true
           out-file-path: "MFA"
           extract: true
 
+      - name: Clean up MFAAvalonia archive on Windows
+        shell: bash
+        run: |
+          ARCHIVE_FILE_PATH="${{ fromJson(steps.download_mfa.outputs.downloaded_files)[0] }}"
+          rm -f "${ARCHIVE_FILE_PATH}"
+          echo "Archive cleanup command executed for MFAAvalonia on Windows."
+
+      - name: Setup Embed Python on Windows
+        shell: bash
+        run: |
+          python tools/ci/setup_embed_python.py
       - name: Install
         shell: bash
         run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
-          cp MFA/MFAWPF.exe install
+          ./install/python/python.exe ./tools/install.py ${{ needs.meta.outputs.tag }}
+          if [ -d "MFA" ]; then
+            echo "Copying MFA files to install directory..."
+            mkdir -p install
+            cp -rpvn MFA/. install/
+          else
+            echo "MFA directory not found, skipping copy."
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
           name: MCCA-win-${{ matrix.arch }}
           path: "install"
 
-  ubuntu:
+  linux:
     needs: meta
     runs-on: ubuntu-latest
     strategy:
@@ -100,23 +137,50 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1.8
+      - name: Download MaaFramework for Linux
+        uses: robinraju/release-downloader@v1
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-linux-${{ matrix.arch }}*"
           latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
-      - name: Install
+      - name: Download MFAAvalonia for Linux
+        id: download_mfa
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: SweetSmellFox/MFAAvalonia
+          fileName: "MFAAvalonia-*-linux-${{ matrix.arch == 'x86_64' && 'x64' || 'arm64' }}*"
+          latest: true
+          out-file-path: "MFA"
+          extract: true
+
+      - name: Clean up MFAAvalonia archive on Linux
         shell: bash
         run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
+          ARCHIVE_FILE_PATH="${{ fromJson(steps.download_mfa.outputs.downloaded_files)[0] }}"
+          rm -f "${ARCHIVE_FILE_PATH}"
+          echo "Archive cleanup command executed for MFAAvalonia on Linux."
+
+      - name: Install on Linux
+        shell: bash
+        run: |
+          PYTHON_EXECUTABLE="python"
+          echo "Using Python executable: $PYTHON_EXECUTABLE for Linux"
+          $PYTHON_EXECUTABLE ./tools/install.py ${{ needs.meta.outputs.tag }}
+          if [ -d "MFA" ]; then
+            echo "Copying MFA files to install directory on Linux..."
+            mkdir -p install
+            rsync -av --ignore-existing MFA/ install/
+          else
+            echo "MFA directory not found on Linux, skipping copy."
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
@@ -130,14 +194,13 @@ jobs:
       matrix:
         arch: [aarch64, x86_64]
       fail-fast: false
-
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
 
-      - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1.8
+      - name: Download MaaFramework for macOS
+        uses: robinraju/release-downloader@v1
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-macos-${{ matrix.arch }}*"
@@ -145,39 +208,140 @@ jobs:
           out-file-path: "deps"
           extract: true
 
-      - name: Install
+      - name: Download MFAAvalonia for macOS
+        id: download_mfa
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: SweetSmellFox/MFAAvalonia
+          fileName: "MFAAvalonia-*-osx-${{ matrix.arch == 'x86_64' && 'x64' || 'arm64' }}*"
+          latest: true
+          out-file-path: "MFA"
+          extract: true
+
+      - name: Clean up MFAAvalonia archive on macOS
         shell: bash
         run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
+          ARCHIVE_FILE_PATH="${{ fromJson(steps.download_mfa.outputs.downloaded_files)[0] }}"
+          rm -f "${ARCHIVE_FILE_PATH}"
+          echo "Archive cleanup command executed for MFAAvalonia on macOS."
+
+      - name: Setup Embed Python on macOS
+        shell: bash
+        run: |
+          python3 tools/ci/setup_embed_python.py
+          EMBED_PYTHON_PATH="./install/python/bin/python3"
+          if [ -f "$EMBED_PYTHON_PATH" ]; then
+            echo "Setting execute permission for $EMBED_PYTHON_PATH"
+            chmod +x "$EMBED_PYTHON_PATH"
+          else
+            echo "Warning: Embedded Python executable not found at $EMBED_PYTHON_PATH. Skipping chmod."
+          fi
+
+      - name: Install on macOS
+        shell: bash
+        run: |
+          PYTHON_EXECUTABLE="./install/python/bin/python3"
+          echo "Using Python executable: $PYTHON_EXECUTABLE for macOS"
+          $PYTHON_EXECUTABLE ./tools/install.py ${{ needs.meta.outputs.tag }}
+
+          if [ -d "MFA" ]; then
+            echo "Copying MFA files to install directory on macOS..."
+            mkdir -p install
+            rsync -av --ignore-existing MFA/ install/ # Using rsync like on Linux
+          else
+            echo "MFA directory not found on macOS, skipping copy."
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
           name: MCCA-macos-${{ matrix.arch }}
           path: "install"
 
+  changelog:
+    name: Generate changelog
+    runs-on: ubuntu-latest
+    outputs:
+      release_body: ${{ steps.git-cliff.outputs.content }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate a changelog
+        uses: orhun/git-cliff-action@v4
+        id: git-cliff
+        with:
+          config: .github/cliff.toml
+          args: -vv --latest --strip header
+        env:
+          OUTPUT: CHANGES.md
+          GITHUB_REPO: ${{ github.repository }}
+
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [meta, windows, ubuntu, macos]
+    needs: [meta, windows, linux, macos, changelog]
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           path: assets
 
-      - run: |
+      - name: Process and package artifacts
+        run: |
           cd assets
           for f in *; do
-            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
+            if [[ $f == *"win"* ]]; then
+              (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
+            else
+              echo "Processing Unix artifact: $f"
+
+              # 为主要可执行文件设置权限
+              # MaaPiCli
+              if [[ -f "$f/MaaPiCli" ]]; then
+                chmod +x $f/MaaPiCli
+                echo "Set execute permission for $f/MaaPiCli"
+              fi
+
+              # MFAAvalonia
+              find $f -type f -name "MFAAvalonia*" -exec chmod +x {} \; 2>/dev/null || true
+              echo "Set execute permission for all MFAAvalonia files"
+
+              # MFAUpdater
+              find $f -type f -name "MFAUpdater*" -exec chmod +x {} \; 2>/dev/null || true
+              echo "Set execute permission for all MFAUpdater files"
+
+              # 为Python解释器设置执行权限 (处理不同可能的路径)
+              PYTHON_PATHS=(
+                "$f/python/bin/python3"
+                "$f/python/python"
+                "$f/python/bin/python"
+                "$f/python/python.exe"
+              )
+              for PYTHON_PATH in "${PYTHON_PATHS[@]}"; do
+                if [[ -f "$PYTHON_PATH" ]]; then
+                  chmod +x "$PYTHON_PATH"
+                  echo "Set execute permission for $PYTHON_PATH"
+                fi
+              done
+
+              # 使用带有'p'标志的tar命令来保留权限
+              tar -cpzf $f-${{ needs.meta.outputs.tag }}.tar.gz -C $f .
+              echo "Created archive with preserved permissions: $f-${{ needs.meta.outputs.tag }}.tar.gz"
+            fi
           done
-      - uses: softprops/action-gh-release@v1
+
+      - uses: softprops/action-gh-release@v2.2.2
         with:
           files: assets/*
           tag_name: ${{ needs.meta.outputs.tag }}
+          body: ${{ needs.changelog.outputs.release_body }}
+          draft: false
+          prerelease: ${{ needs.meta.outputs.is_prerelease == 'true' }}
 
       - name: Trigger MirrorChyanUploading
         run: |
           gh workflow run --repo $GITHUB_REPOSITORY mirrorchyan
+          gh workflow run --repo $GITHUB_REPOSITORY mirrorchyan_release_note
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
