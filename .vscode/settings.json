@@ -6,15 +6,42 @@
                 "/install/resource/**/*.json"
             ],
             "url": "/deps/tools/pipeline.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/assets/interface.json",
+                "/install/interface.json"
+            ],
+            "url": "/deps/tools/interface.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/install/config/maa_pi_config.json"
+            ],
+            "url": "/deps/tools/interface_config.schema.json"
         }
     ],
-    "[json]": {
+    "files.exclude": {
+        "__pycache__": true
+    },
+    "files.associations": {
+        "**/assets/**/*.json": "jsonc"
+    },
+    "[json][jsonc]": {
         "editor.formatOnSave": true,
         "editor.insertSpaces": true,
         "editor.tabSize": 4,
         "editor.indentSize": "tabSize"
     },
     "[python]": {
+        "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "markdownlint.config": {
+        "MD028": false
     }
 }

@@ -1,5 +1,8 @@
 {
+    "name": "MCCA",
+    "url": "https://github.com/MaaXYZ/MCCA",
     "mirrorchyan_rid": "MCCA",
+    "mirrorchyan_multiplatform": true,
     "controller": [
         {
             "name": "ADB 默认方式",
@@ -81,8 +84,6 @@
             "entry": "关闭游戏"
         }
     ],
-    "recognizer": {},
-    "action": {},
     "option": {
         "作战关卡": {
             "cases": [

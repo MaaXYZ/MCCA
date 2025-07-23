@@ -6,17 +6,25 @@ on:
 jobs:
   mirrorchyan:
     runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [win, macos, linux]
+        arch: [aarch64, x86_64]
+        exclude:
+          - os: win
+            arch: aarch64
     steps:
-      - id: uploading
-        uses: MirrorChyan/uploading-action@v1
+      - uses: MirrorChyan/uploading-action@v1
+        if: ${{ github.repository_owner == 'MaaXYZ' }}
         with:
           filetype: latest-release
-          filename: "MCCA-win-x86_64-*.zip"
-          pick_files: '["resource", "interface.json"]'
-          exclude_files: '["resource/base/model/ocr/**"]'
+          filename: ${{ matrix.os == 'win' && format('MCCA-{0}-{1}-*.zip', matrix.os, matrix.arch) || format('MCCA-{0}-{1}-*.tar.gz', matrix.os, matrix.arch) }}
           mirrorchyan_rid: MCCA
 
-          owner: MaaXYZ
-          repo: MCCA
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
           upload_token: ${{ secrets.MirrorChyanUploadToken }}
+          os: ${{ matrix.os }}
+          arch: ${{ matrix.arch }}
