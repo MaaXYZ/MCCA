@@ -9,11 +9,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [win, macos, linux]
-        arch: [aarch64, x86_64]
-        exclude:
-          - os: win
-            arch: aarch64
+        os: [win]
+        arch: [x86_64]
     steps:
       - uses: MirrorChyan/uploading-action@v1
         if: ${{ github.repository_owner == 'MaaXYZ' }}
