@@ -1,0 +1,41 @@
+{
+    
+    "通用-返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "返回主页.png",
+        "roi": [164, 21, 112, 51],
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        },
+        "action": "Click",
+        "focus":true,
+        "focus_tip":"返回主页",
+        "focus_failed":"执行失败"
+    },
+    "通用-确认获得物品":{
+        "recognition": "OCR", 
+        "expected" : "获得物品",    
+        "roi" : [511,154,276,116],
+        "pre_wait_freezes": {
+            "time": 2000,
+            "threshold": 0.95
+        },
+        "action": "Click"
+    },
+    "通用-返回":{
+        "recognition": "TemplateMatch",
+        "template" : "返回.png",
+        "roi" : [11,8,426,102],
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        },
+        "action": "Click"
+    },
+    "通用-啥也不做": {
+        "action": "DoNothing",
+        "focus":true,
+        "focus_tip":"结束任务"
+    }
+}

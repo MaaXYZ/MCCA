@@ -9,29 +9,20 @@
         ]
     },
     "Mail": {
-        "recognition": "ColorMatch",
+        "recognition": "TemplateMatch",
+        "template": "Infrastructures/mail.png",
         "roi": [
-            1058,
-            27,
-            34,
-            35
+            1025,
+            15,
+            120,
+            50
         ],
-        "method": 4,
-        "lower": [
-            230,
-            178,
-            60
-        ],
-        "upper": [
-            255,
-            210,
-            80
-        ],
-        "count": 7,
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "Mail_Receive",
-            "Mail"
+            "Mail",
+            "进入首页"
         ]
     },
     "Mail_Receive": {
@@ -55,6 +46,7 @@
         ],
         "count": 7,
         "action": "Click",
+           "post_delay": 2000,
         "next": [
             "DailyTask",
             "NoDailyTask",
@@ -66,10 +58,10 @@
         "recognition": "TemplateMatch",
         "template": "StartUp/NoMail.png",
         "roi": [
-            1060,
-            31,
-            30,
-            26
+            1025,
+            15,
+            120,
+            50
         ],
         "next": [
             "DailyTask",
@@ -80,10 +72,10 @@
         "recognition": "TemplateMatch",
         "template": "StartUp/DailyTask.png",
         "roi": [
-            686,
-            609,
-            62,
-            83
+            684,
+            606,
+            80,
+            80
         ],
         "action": "Click",
         "next": [
@@ -207,10 +199,10 @@
         "recognition": "TemplateMatch",
         "template": "StartUp/NoDailyTask.png",
         "roi": [
-            1232,
-            405,
-            12,
-            12
+           684,
+            606,
+            80,
+            80
         ],
         "next": [
             "BattlePass",
@@ -222,8 +214,8 @@
         "recognition": "TemplateMatch",
         "template": "StartUp/DailyTask.png",
         "roi": [
-            328,
-            15,
+            44,
+            97,
             36,
             36
         ],
@@ -272,6 +264,7 @@
         ],
         "count": 7,
         "action": "Click",
+        "post_delay": 1000,
         "next": [
             "子任务_获得物品",
             "BattlePass_ReceiveWeeklyMission",
@@ -299,6 +292,7 @@
         ],
         "count": 2,
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "子任务_获得物品",
             "BattlePass_ReceiveWeeklyMissionGet",
@@ -354,6 +348,7 @@
         ],
         "count": 2,
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "子任务_获得物品",
             "BattlePass_ReceiveMonthlyMissionGet",
@@ -437,13 +432,15 @@
         ]
     },
     "NoBattlePass": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/NoBattlePass.png",
+         "recognition": "OCR",
+        "expected": [
+            "指南"
+        ],
         "roi": [
-            332,
-            16,
-            30,
-            28
+            44,
+            97,
+            160,
+            70
         ]
     }
 }

@@ -1,0 +1,379 @@
+{
+    "收菜": {
+        "next":[
+        "收菜-进入基地",
+        "收菜-矿场",
+        "收菜-驻员状况",
+        "收菜-交易所"
+         ]
+
+    },
+    "收菜-进入基地": {
+        "recognition": "OCR",           
+        "expected": "基地", 
+        "roi" : [587,650,76,48],            
+        "action": "Click",
+        "post_delay":3000,      
+        "next": [
+            "收菜"
+        ]
+    },
+    "收菜-矿场": {
+        "enabled":false,
+        "recognition": "TemplateMatch", 
+        "template" : "收菜.png",    
+         "roi" : [419,433,253,92] ,   
+         "pre_wait_freezes": {
+            "time": 2000,
+            "threshold": 0.95
+        }, 
+        "action": "Click",
+        "next": [
+            "收菜-挖矿确认"
+        ],
+        "focus":true,
+        "focus_tip":"矿场收菜",
+        "focus_failed":"执行失败"
+    },
+    "收菜-挖矿确认": {
+        "recognition": "OCR", 
+        "expected" : "获得物品",    
+        "roi" : [521,160,240,80],
+        "action": "Click",
+        "next": [
+            "收菜"
+        ]
+    },
+    "收菜-驻员状况": {
+        "enabled":false,
+        "recognition": "TemplateMatch", 
+        "template" : "是否换班.png",    
+         "roi" : [167,558,52,32],   
+         "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        }, 
+        "action": "Click",
+        "next": ["收菜-驻员界面"],
+        "focus":true,
+        "focus_tip":"进入驻员界面",
+        "focus_failed":"执行失败"
+    },
+    "收菜-驻员界面": {
+        "recognition": "OCR", 
+        "OCR" : "驻员预设",    
+        "roi" : [220,84,865,606],   
+        "action": "DoNothing",
+        "next": [
+            "收菜-指挥部",
+            "收菜-发电站",
+            "收菜-挖掘矿场",
+            "收菜-原料交易所",
+            "收菜-研发中心",
+            "收菜-退出驻员界面",
+            "收菜-驻员界面下滑"
+    ]
+    },
+    "收菜-指挥部": {
+        "recognition": "TemplateMatch",
+        "template" : ["干员-红.png","干员-黄.png"],
+        "roi" : [232,142,849,122],
+        "action": "DoNothing",
+        "next": ["收菜-指挥部-预设"
+                ]
+    },
+    "收菜-指挥部-预设": {
+        "recognition": "TemplateMatch", 
+        "template" : "预设.png", 
+        "roi" : [232,142,849,122],
+        "action": "Click",
+        "next": [ "收菜-更换队员",
+                  "收菜-驻员界面"
+                ]
+    },
+    "收菜-发电站": {
+        "recognition": "TemplateMatch",
+        "template" : ["干员-红.png","干员-黄.png"],
+        "roi" : [237,280,840,125],
+        "action": "DoNothing",
+        "next": ["收菜-发电站-预设"
+                ]
+    },
+    "收菜-发电站-预设": {
+        "recognition": "TemplateMatch", 
+        "template" : "预设.png", 
+        "roi" : [237,280,840,125],
+        "action": "Click",
+        "next": [ "收菜-更换队员",
+                  "收菜-驻员界面"
+                ]
+    },
+    "收菜-挖掘矿场": {
+        "recognition": "TemplateMatch",
+        "template" : ["干员-红.png","干员-黄.png"],
+        "roi" : [232,418,839,115],
+        "action": "DoNothing",
+        "next": ["收菜-挖掘矿场-预设"
+                ]
+    },
+    "收菜-挖掘矿场-预设": {
+        "recognition": "TemplateMatch", 
+        "template" : "预设.png", 
+        "roi" : [218,404,863,148],
+        "action": "Click",
+        "next": [ "收菜-更换队员",
+                  "收菜-驻员界面"
+                ]
+    },
+    "收菜-原料交易所": {
+        "recognition": "TemplateMatch",
+        "template" : ["干员-红.png","干员-黄.png"],
+        "roi" : [231,128,865,138],
+        "action": "DoNothing",
+        "next": ["收菜-原料交易所-预设"
+                ]
+    },
+    "收菜-原料交易所-预设": {
+        "recognition": "TemplateMatch", 
+        "template" : "预设.png", 
+        "roi" : [231,128,865,138],
+        "action": "Click",
+        "next": [ "收菜-更换队员",
+                  "收菜-驻员界面"
+                ]
+    },
+    "收菜-研发中心": {
+        "recognition": "TemplateMatch",
+        "template" : ["干员-红.png","干员-黄.png"],
+        "roi" : [219,383,889,147],
+        "action": "DoNothing",
+        "next": ["收菜-研发中心-预设"
+                ]
+    },
+    "收菜-研发中心-预设": {
+        "recognition": "TemplateMatch", 
+        "template" : "预设.png", 
+        "roi" : [219,383,889,147],
+        "action": "Click",
+        "next": [ "收菜-更换队员",
+                  "收菜-驻员界面"
+                ]
+    },
+    "收菜-驻员界面下滑": {
+        "recognition": "OCR", 
+        "OCR" : "驻员预设",    
+        "roi" : [969,158,91,517],   
+        "action": "Swipe",
+        "begin" : [499,586,1,1],
+        "end" : [498,210,1,1],
+        "next":["收菜-驻员界面"]
+           },    
+    "收菜-更换队员": {
+        "recognition": "OCR", 
+        "expected" : "使用",    
+        "roi" : [861,223,192,319],
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        }, 
+        "action": "Click",
+        "next":["收菜-驻员界面"]
+           },
+    "收菜-退出驻员界面":{
+        "recognition": "OCR", 
+        "expected" : "宿舍",    
+        "roi" : [337,613,50,26],
+        "action": "Click",
+        "target" : [84,47,1,1],
+        "next":["收菜"]
+       },
+    "收菜-交易所": {
+        "enabled":false,
+        "recognition": "TemplateMatch", 
+        "template" : "是否进入交易所.png",    
+         "roi" : [1083,269,94,104],   
+        "action": "Click",
+           "post_delay": 2000,
+        
+        "next": ["收菜-是否在自己的交易所"
+                 ],
+                 "focus":true,
+                 "focus_tip":"交易所",
+                 "focus_failed":"执行失败"
+    } ,
+    "收菜-交易所收菜": {
+        "recognition": "OCR", 
+        "expected" : "订单",    
+        "roi" : [346,29,558,40],
+        "next": ["收菜-已返回自己的订单库",
+                 "收菜-交易蓝图10-1",
+                 "收菜-拜访下一位"
+                 ]
+    } ,
+    "收菜-是否在自己的交易所": {
+        "recognition": "OCR", 
+        "expected" : "好友交付记录",    
+        "roi" : [62,509,145,47],   
+        "action": "DoNothing",
+        "next": [
+            "收菜-交易蓝图10-1",
+            "收菜-点击好友",
+            "收菜-返回主界面"
+                 ]
+    } ,
+    "收菜-点击好友":{
+        "enabled":false,
+        "recognition": "OCR", 
+        "expected" : "选择好友",    
+        "roi" : [83,637,96,38],   
+        "action": "Click",
+        "next": ["收菜-好友滑到最左1",
+                 "收菜-拜访第一位"],
+                 "focus":true,
+                 "focus_tip":"拜访好友",
+                 "focus_failed":"执行失败"
+    } ,
+    "收菜-好友滑到最左1": {
+        "enabled":false,
+        "recognition": "OCR", 
+        "OCR" : "驻员预设",    
+        "roi" : [969,158,91,517],   
+        "action": "Swipe",
+        "begin" : [297,320,1,1],
+        "end" : [1185,318,1,1],
+        "post_delay":2000,
+        "next":["收菜-好友滑到最左2"]
+    },  
+    "收菜-好友滑到最左2": {
+        "recognition": "OCR", 
+        "OCR" : "驻员预设",    
+        "roi" : [969,158,91,517],   
+        "action": "Swipe",
+        "begin" : [297,320,1,1],
+        "end" : [1185,318,1,1],
+        "post_delay":2000,
+        "next":["收菜-好友滑到最左3"]
+    },  
+    "收菜-好友滑到最左3": {
+        "recognition": "OCR", 
+        "OCR" : "驻员预设",    
+        "roi" : [969,158,91,517],   
+        "action": "Swipe",
+        "begin" : [297,320,1,1],
+        "end" : [1185,318,1,1],
+        "post_delay":1000,
+        "next":["收菜-拜访第一位"]
+    },  
+    "收菜-拜访第一位":{
+        "recognition": "OCR", 
+        "expected" : "拜访",    
+        "roi" : [264,480,155,67],   
+        "action": "Click",
+        "next": ["收菜-交易所收菜"
+                 ]
+    } ,
+    "收菜-拜访下一位":{
+        "recognition": "TemplateMatch", 
+        "template" : "下一位.png",    
+       "roi" : [177,595,56,76],   
+        "action": "Click",
+        "target" : [207,632,1,1],
+        "post_delay":1000,
+        "next": ["收菜-交易所收菜"]               
+    } ,
+    "收菜-交易蓝图10-1":{
+        "recognition": "TemplateMatch", 
+        "template" : "交易所-蓝图10-1.png", 
+        "green_mask":true,      
+        "action": "Click",
+        "target_offset" : [0,71,0,0],
+        "post_delay":1000,
+        "next": [
+            "收菜-确认交易"]
+    } ,
+    "收菜-确认交易":{
+        "recognition": "OCR", 
+        "expected" : "确定",    
+        "roi" : [729,416,149,63],
+        "action": "Click",
+        "next": ["收菜-确认获得物品",
+                  "收菜-合成素材"
+                 ]
+    } ,  
+    "收菜-合成素材":{
+        "recognition": "OCR", 
+        "expected" : "基地素材",    
+        "roi" : [24,470,151,64],
+        "action": "Click",
+        "target" : [338,593,1,1],
+        "next": ["收菜-素材最大化"
+                 ]
+    } ,
+    "收菜-素材最大化":{
+        "recognition": "OCR", 
+        "expected" : "合成份数",    
+        "roi" : [895,85,124,47],
+        "action": "Click",
+        "target" : [1195,362,1,1],
+        "next": ["收菜-素材确认"
+                 ]
+    } ,
+    "收菜-素材确认":{
+        "recognition": "OCR", 
+        "expected" : "合成份数",    
+        "roi" : [895,85,124,47],
+        "action": "Click",
+        "target" : [1070,625,1,1],
+        "next": ["收菜-确认获得物品-素材"
+                 ]
+    } ,
+    "收菜-确认获得物品-素材":{
+        "recognition": "OCR", 
+        "expected" : "获得物品",    
+        "roi" : [526,165,222,63],
+        "action": "Click",
+        "next": ["收菜-返回素材库"
+                 ]
+    } ,
+    "收菜-返回素材库":{
+        "recognition": "OCR", 
+        "expected" : "合成份数",    
+        "roi" : [895,85,124,47],
+        "action": "Click",
+        "target" : [81,45,1,1],
+        "next": ["收菜-返回交易所"
+                 ]
+    } ,
+    "收菜-返回交易所":{
+        "recognition": "OCR", 
+        "expected" : "基地素材",    
+        "roi" : [24,470,151,64],
+        "action": "Click",
+        "target" : [81,45,1,1],
+        "next": ["收菜-交易蓝图10-1"
+                 ]
+    } ,
+    "收菜-确认获得物品":{
+        "recognition": "OCR", 
+        "expected" : "获得物品",    
+        "roi" : [511,154,276,116],
+        "action": "Click",
+        "next": ["收菜-是否在自己的交易所",
+                 "收菜-交易所收菜"]
+    } ,
+    "收菜-已返回自己的订单库":{
+        "recognition": "OCR", 
+        "expected" : "好友交付记录",    
+        "roi" : [62,509,145,47],  
+        "action": "DoNothing",
+        "next": ["收菜-返回主界面"]
+
+    } ,
+    "收菜-返回主界面":{
+        "recognition": "TemplateMatch", 
+        "template" : "返回主页.png",    
+       "roi" : [164,21,112,51],   
+        "action": "Click",
+        "post_delay": 5000
+    }
+}

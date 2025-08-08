@@ -33,15 +33,13 @@
         ]
     },
     "Base": {
-        "recognition": "OCR",
-        "expected": [
-            "基地"
-        ],
+        "recognition": "TemplateMatch",
+        "template": "Infrastructures/Infr_JD.png",
         "roi": [
-            606,
-            665,
-            42,
-            26
+            543,
+            561,
+            168,
+            147
         ],
         "action": "Click",
         "post_delay": 3000,
@@ -667,7 +665,7 @@
         ]
     },
     "Infr_Deal": {
-        "enabled": false,
+        "enabled": true,
         "recognition": "TemplateMatch",
         "template": "Infrastructures/Infr_Deal.png",
         "roi": [
@@ -1550,16 +1548,11 @@
     },
     "Infr_制作素材_合成_返回": {
         "action": "Click",
-        "recognition": "OCR",
-        "expected": [
-            "概率"
+        "recognition": "TemplateMatch",
+        "template": [
+            "InfrastructureS/Infr_JDSC.png"
         ],
-        "roi": [
-            43,
-            428,
-            51,
-            31
-        ],
+        "roi":[1, 458, 235, 104],
         "target": [
             44,
             29,
@@ -1576,16 +1569,11 @@
     },
     "Infr_制作素材_返回": {
         "action": "Click",
-        "recognition": "OCR",
-        "expected": [
-            "基地素材"
+        "recognition": "TemplateMatch",
+        "template": [
+            "InfrastructureS/Infr_JDSC.png"
         ],
-        "roi": [
-            61,
-            481,
-            112,
-            37
-        ],
+        "roi":[1, 458, 235, 104],
         "target": [
             44,
             29,
@@ -1594,8 +1582,8 @@
         ],
         "post_delay": 1000,
         "next": [
-            "Infr_制作素材_返回",
-            "Infr_换取页面"
+            "Infr_换取页面",
+            "Infr_制作素材_返回"
         ]
     },
     "Infr_换取页面": {
@@ -1605,9 +1593,9 @@
         ],
         "roi": [
             44,
-            96,
+            44,
             100,
-            40
+            100
         ],
         "post_delay": 1000,
         "next": [

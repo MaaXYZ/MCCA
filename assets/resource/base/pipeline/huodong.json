@@ -1,0 +1,251 @@
+{
+  "活动": {
+    "next": [
+      "活动_入口",
+      "子任务_进入首页"
+    ]
+  },
+  "活动_入口": {
+
+    "action": "Click",
+    "target" : [1115,465,132,45],
+    "post_delay":2000,
+    "next": [
+      "活动_任务奖励入口",
+      "活动_入口"
+    ]
+  },
+  "活动_任务奖励入口": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template" : "StartUp/浪潮回响.png",
+    "recommended roi" : [167, 510, 292, 195],
+    "post_delay":1000,
+    "next": [
+      "活动_任务奖励_点击领取",
+      "活动_任务奖励_领取完成"
+  ]
+  },
+  "活动_任务奖励_点击领取": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "领取",
+    "recommended roi" : [956,53,269,129],
+    "next": [
+      "活动_任务奖励_奖励弹框",
+      "活动_任务奖励_领取完成",
+      "活动_任务奖励_点击领取"
+    ]
+  },
+  "活动_任务奖励_奖励弹框": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "获得物品",
+    "roi": [
+      527,
+      160,
+      214,
+      68
+    ],
+    "next": [
+      "活动_任务奖励_领取完成",
+      "活动_任务奖励_奖励弹框"
+    ]
+  },
+  "活动_任务奖励_领取完成": {
+    "recognition": "ColorMatch",
+    "recommended roi" : [1026,88,150,52],
+    "upper" : [90,77,58],
+    "lower" : [8,4,8],
+    "method" : 4,
+    "action":"Click",
+    "next": ["活动_任务奖励_返回",
+    "活动_任务奖励_领取完成"]
+  },
+  "活动_任务奖励_返回": {
+    "recognition": "TemplateMatch",
+    "template": "StartUp/lingqujieshu.png",
+    "roi" : [1014, 75, 180, 74],
+    "action": "Click",
+    "target": [
+      44,
+      34,
+      120,
+      32
+    ],
+    "next": [
+      "活动_进入关卡",
+      "活动_任务奖励_返回"
+    ]
+  },
+  "活动_进入关卡": {
+    "recognition": "OCR",
+    "expected" : "海滨",
+    "recommended roi" : [914, 543, 337, 171],
+    "action": "Click",
+    "target": [1016, 570, 101, 101],
+    "next": [
+      "活动_关卡_难度选择",
+      "活动_进入关卡"
+    ]
+  },
+  "活动_关卡_难度选择": {
+    "recognition": "OCR",
+    "action": "Click",
+    "expected": "模式",
+    "roi" : [4, 198, 118, 51],
+    "next": [
+      "活动_关卡_选择关卡1",
+      "活动_关卡_难度选择"
+    ]
+  },
+  "活动_关卡_选择关卡1": {
+    "recognition": "OCR",
+    "action": "Swipe",
+    "expected" : "漆黑",
+    "recommended roi" : [996, 605, 94, 39],
+     "begin": [1095, 625, 10, 10],
+     "end": [39, 625,10, 10],
+    "next":[
+      "活动_关卡_选择关卡2"]
+  },
+   "活动_关卡_选择关卡2":{
+    "recognition":"OCR",
+    "action":"Click",
+    "expected":"幻海之主",
+    "next": [
+      "活动_扫荡"
+    ]
+  },
+  "活动_扫荡": {
+    "recognition": "OCR",
+    "expected": [
+      "扫荡"
+    ],
+    "roi" : [794, 546, 92, 84],
+    "action": "Click",
+    "next": [
+      "活动_扫荡开始"
+    ]
+  },
+  "活动_扫荡奖励": {
+    "recognition": "OCR",
+    "expected": [
+      "扫荡成功"
+    ],
+    "roi":[7, 9, 482, 153],
+    "pre_delay":200,
+    "action": "Click",
+    "next": [
+      "活动_扫荡升级",
+      "活动_扫荡",
+      "活动_扫荡奖励"
+    ]
+  },
+  "活动_扫荡升级": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "Combat/DailyExplore_LevelUp.png",
+    "roi": [
+      540,
+      242,
+      207,
+      91
+    ],
+    "action": "Click"
+  },
+  "活动_扫荡开始": {
+    "recognition": "OCR",
+    "expected": [
+      "开始战斗"
+    ],
+    "roi" : [811,535,260,48],
+    "action": "Click",
+    "timeout":3000,
+    "next": [
+      "活动_无票券1",
+      "活动_无票券2",
+      "活动_扫荡双倍标记",
+      "活动_扫荡奖励"
+    ]
+  },
+  "活动_扫荡双倍标记": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "开启"
+    ],
+    "roi": [
+      702,
+      398,
+      252,
+      100
+    ],
+    "action": "Click"
+  },
+  "活动_无票券1": {
+    "recognition": "OCR",
+    "expected": 
+      "取消",
+    "action": "Click",
+    "next": "活动_无票券1.1"
+  },
+  "活动_无票券1.1": {
+    "recognition": "OCR",
+    "expected": 
+      "扫荡",
+    "roi" : [174, 105, 102, 53],
+    "action":"Click",
+    "target": [46, 30, 117, 38],
+  "pre_wait_freezes":500,
+    "next": "活动_无票券2.1"
+  },
+  "活动_无票券2": {
+  "recognition": "OCR",
+  "expected":"兑换" ,
+  "roi":[10, 81, 157, 68],
+  "action":"Click",
+  "target":[43, 29, 118, 36],
+  "pre_wait_freezes":500,
+  "next":"活动_无票券2.1"
+  },
+    "活动_无票券2.1": {
+    "recognition": "OCR",
+    "expected": "扫荡",
+    "roi" : [794, 546, 92, 84],
+    "action": "Click",
+    "target":[25, 20, 150, 59],
+  "pre_wait_freezes":500,
+  "next":"活动_无票券2.2"
+  },
+    "活动_无票券2.2": {
+    "recognition":"OCR",
+    "expected":"幻海之主",
+    "roi":[742, 588, 224, 101],
+    "action": "Click",
+    "target":[25, 20, 150, 59],
+  "pre_wait_freezes":500,
+    "next":"活动_领取奖励"
+  },
+  "活动_领取奖励":{
+    "recognition":"OCR",
+    "expected":"碧波",
+    "roi":[74, 429, 224, 128],
+    "action":"Click",
+    "next":["活动_领取奖励1","活动_领取奖励2"]
+  },
+  "活动_领取奖励1":{
+    "recognition":"OCR",
+    "expected":"领取",
+    "roi":[1027, 249, 241, 85],
+    "action":"Click",
+    "next":"通用-返回主页"
+  },
+  "活动_领取奖励2":{
+    "recognition":"OCR",
+    "expected":"获取",
+    "roi":[1027, 249, 241, 85],
+    "target": [46, 30, 117, 38],
+    "next":"通用-返回主页"
+  }
+}

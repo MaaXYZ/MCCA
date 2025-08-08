@@ -2,9 +2,6 @@
     "Shopping": {
         "next": [
             "子任务_关闭公告",
-            "NoForFree",
-            "ForFree",
-            "DailyGift",
             "Shop",
             "子任务_进入首页"
         ]
@@ -14,12 +11,7 @@
         "expected": [
             "补给站"
         ],
-        "roi": [
-            885,
-            451,
-            240,
-            139
-        ],
+        "roi": [1008, 593, 111, 118],
         "action": "Click",
         "next": [
             "DailyGift",
@@ -38,23 +30,21 @@
             89
         ],
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "DailyGiftYes",
-            "DailyGift"
+         
+            "进入首页"
         ]
     },
     "DailyGiftYes": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/NoForFree.png",
-        "roi": [
-            39,
-            540,
-            1198,
-            74
-        ],
+        "recognition": "OCR",
+        "expected": "免费",
+        "roi": [273, 522, 985, 79],
+        "action":"Click",
         "next": [
             "ForFree",
-            "NoForFree"
+            "进入首页"
         ]
     },
     "ForFree": {
@@ -62,29 +52,10 @@
         "expected": [
             "免费"
         ],
-        "roi": [
-            380,
-            528,
-            1190,
-            91
-        ],
-        "action": "Click",
+        "roi": [163, 9, 409, 239],
         "next": [
             "Purchase",
             "ForFree"
-        ]
-    },
-    "NoForFree": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/NoForFree.png",
-        "roi": [
-            39,
-            540,
-            1198,
-            74
-        ],
-        "next": [
-            "进入首页"
         ]
     },
     "Purchase": {
@@ -102,9 +73,7 @@
         "post_delay": 1000,
         "next": [
             "子任务_获得物品",
-            "Purchase",
-            "ForFree",
-            "NoForFree"
+            "进入首页"
         ]
     }
 }
