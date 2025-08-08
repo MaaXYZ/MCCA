@@ -44,15 +44,6 @@
             "doc": "无"
         },
         {
-            "name": "每日探索(只使用自然回复的燃料)",
-            "entry": "DailyExplore",
-            "check": true,
-            "doc": "无",
-            "option": [
-                "作战关卡"
-            ]
-        },
-        {
             "name": "限时贸易所购买",
             "entry": "Time-limited Shopping",
             "check": true,
@@ -73,23 +64,11 @@
             }
         },
         {
-            "name": "基建(换班+好友换抽)",
+            "name": "基建",
             "entry": "Infrastructures",
-            "check": true,
-            "doc": "暂无换星币经验",
+            "doc": "可能会有bug",
             "option": [
                 "是否访问每个好友换抽"
-            ]
-        },
-        {
-            "name": "基建",
-            "entry": "收菜",
-            "option": [
-                "驻员",
-                "矿场",
-                "交易所",
-                "浏览好友订单",
-                "好友界面向左滑动"
             ]
         },
         {
@@ -101,10 +80,6 @@
                 "是否手动选择次数(开启燃料使用)",
                 "手动次数"
             ]
-        },
-        {
-            "name": "仅好友换抽(不换班，只换抽，上面的开了这里就不用开了)",
-            "entry": "Infrastructures_Deal"
         },
         {
             "name": "周本",
