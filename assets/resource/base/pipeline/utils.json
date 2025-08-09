@@ -31,15 +31,13 @@
     ]
   },
   "首页_出击": {
-    "recognition": "OCR",
-    "expected": [
-      "出击"
-    ],
+    "recognition": "TemplateMatch",
+    "template": "StartUp/chuji.png",
     "roi": [
-      1134,
-      603,
-      97,
-      51
+      1094,
+      539,
+      176,
+      175
     ],
     "action": "Click",
     "next_doc": "Set in code."
@@ -129,12 +127,25 @@
       100,
       70
     ],
-    "action": "Click"
+    "action": "Click",
+    "post_delay": 5000
   },
   "子任务_关闭公告": {
     "is_sub": true,
     "recognition": "TemplateMatch",
     "template": "StartUp/CloseAnnouncement.png",
+    "roi": [
+      900,
+      55,
+      362,
+      200
+    ],
+    "action": "Click"
+  },
+  "子任务_关闭周年公告": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "StartUp/ZNGG.png",
     "roi": [
       900,
       55,

@@ -1,0 +1,117 @@
+{
+    "出击任务列表": {
+        "next": [
+            "出击",
+            "出击-重新执行"
+        ]
+    },
+    "出击-重新执行": {
+        "recognition": "TemplateMatch",
+        "template": "返回主页.png",
+        "roi": [
+            164,
+            21,
+            112,
+            51
+        ],
+        "action": "Click",
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        },
+        "next": [
+            "出击任务列表"
+        ],
+        "timeout": 30000
+    },
+    "出击": {
+        "recognition": "OCR",
+        "expected": "出击",
+        "roi": [
+            1132,
+            594,
+            98,
+            56
+        ],
+        "action": "Click",
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        },
+        "next": [
+            "出击-选择"
+        ],
+        "timeout": 30000,
+        "on_error": [
+            "出击任务列表"
+        ]
+    },
+    "出击-选择": {
+        "recognition": "OCR",
+        "roi": [
+            176,
+            97,
+            921,
+            508
+        ],
+        "action": "Click",
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        },
+        "timeout": 30000,
+        "on_error": [
+            "出击任务列表"
+        ],
+        "focus": true
+    },
+    "每日探索-选择": {
+        "recognition": "OCR",
+        "roi": [
+            304,
+            130,
+            190,
+            465
+        ],
+        "action": "Click",
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        },
+        "timeout": 30000,
+        "focus": true
+    },
+    "每日探索-选择2": {
+        "recognition": "OCR",
+        "roi": [
+            832,
+            112,
+            257,
+            550
+        ],
+        "action": "Click",
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        },
+        "timeout": 30000
+    },
+    "每日探索-第n层": {
+        "recognition": "OCR",
+        "roi": [
+            919,
+            214,
+            333,
+            438
+        ],
+        "action": "Click",
+        "pre_wait_freezes": {
+            "time": 1000,
+            "threshold": 0.95
+        },
+        "next": [
+            "扫荡"
+        ],
+        "timeout": 30000
+    }
+}

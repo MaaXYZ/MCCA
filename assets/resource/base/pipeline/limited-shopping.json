@@ -1,0 +1,73 @@
+{
+    "Time-limited Shopping": {
+        "next": [
+            "子任务_关闭公告",
+            "Shop1",
+            "子任务_进入首页"
+        ]
+    },
+    "Shop1": {
+        "recognition": "OCR",
+        "expected": [
+            "补给站"
+        ],
+        "roi": [
+            1005,
+            421,
+            112,
+            289
+        ],
+        "action": "Click",
+        "next": [
+            "time_limited",
+            "Shop1"
+        ]
+    },
+    "time_limited": {
+        "recognition": "OCR",
+        "expected": [
+            "限时贸易所"
+        ],
+      "roi" : [513,59,231,99],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Buy_something",
+            "进入首页"
+        ]
+    },
+    "Buy_something": {
+        "recognition": "OCR",
+        "expected": ["亚金合金","亚金电池","亚金组件","亚金半导体","涅槃剂","晶片",
+                    "幻金能源","幻金碳","荧晶精华瓶","荧晶单元","亚金外壳","亚金蓄能器",
+                    "亚金装置","亚金二极管","凝胶","结晶体","幻金聚变器","幻金刚石",
+                    "荧晶培养罐","荧晶密钥","武装技能训练","稀有模块"],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "Buyit", 
+            "进入首页",
+            "Buy_something"
+        ]
+    },
+    "Buyit":  {
+        "recognition": "OCR",
+        "expected": [
+            "购买"
+        ],
+        "roi": [
+            758,
+            513,
+            191,
+            75
+        ],
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "子任务_获得物品",
+            "Buy_something",
+            "Buyit",
+            "进入首页"
+        ]
+    }
+}
