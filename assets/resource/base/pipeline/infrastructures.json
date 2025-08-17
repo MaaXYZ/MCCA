@@ -679,7 +679,6 @@
         "next": [
             "Infr_制作素材",
             "Infr_DealmySelf",
-            "Infr_Dealothers",
             "Infr_Deal"
         ]
     },
@@ -705,517 +704,132 @@
             "Infr_DealSelf1",
             "Infr_DealSelf2",
             "Infr_DealSelf3",
-            "Infr_DealSelf4",
-            "Infr_DealSelf5",
-            "Infr_DealSelf6",
-            "Infr_DealSelf7",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
             "Infr_DealNextFriends"
         ]
     },
     "Infr_Dealothers": {
         "next": [
+            "Infr_DealNextFriends_End",
             "Infr_DealSelf1",
             "Infr_DealSelf2",
             "Infr_DealSelf3",
-            "Infr_DealSelf4",
-            "Infr_DealSelf5",
-            "Infr_DealSelf6",
-            "Infr_DealSelf7",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
             "Infr_DealNextFriends_VisitNext"
-        ]
+        ],
+        "on_error": "通用-返回主页"
     },
     "Infr_DealSelf1": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "InfrastructureS/Infr_DealCard.png",
+        "template": [
+            "InfrastructureS/构建订单2.png",
+            "InfrastructureS/构建订单1.png",
+            "InfrastructureS/构建订单2.1.png"
+        ],
+        "threshold": 0.97,
         "roi": [
-            408,
-            129,
-            80,
-            80
+            272,
+            89,
+            909,
+            603
         ],
         "action": "Click",
         "post_delay": 1000,
-        "target_offset": [
-            -60,
-            55,
-            10,
-            10
-        ],
         "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
+            "Infr_DealSelf_Yes",
+            "Infr_DealSelf_No",
             "子任务_获得物品",
-            "Infr_DealSelf2",
-            "Infr_DealSelf3",
-            "Infr_DealSelf4",
-            "Infr_DealSelf5",
-            "Infr_DealSelf6",
-            "Infr_DealSelf7",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
+            "Infr_1号物品售罄"
         ]
     },
     "Infr_DealSelf2": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "InfrastructureS/Infr_DealCard.png",
+        "template": "InfrastructureS/星币120000.png",
+        "threshold": 0.95,
         "roi": [
-            634,
-            128,
-            80,
-            80
+            272,
+            89,
+            909,
+            603
         ],
         "action": "Click",
         "post_delay": 1000,
-        "target_offset": [
-            -60,
-            55,
-            10,
-            10
-        ],
         "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
+            "Infr_DealSelf_Yes",
+            "Infr_DealSelf_No",
             "子任务_获得物品",
-            "Infr_DealSelf3",
-            "Infr_DealSelf4",
-            "Infr_DealSelf5",
-            "Infr_DealSelf6",
-            "Infr_DealSelf7",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
+            "Infr_2号物品售罄"
         ]
     },
     "Infr_DealSelf3": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "InfrastructureS/Infr_DealCard.png",
-        "roi": [
-            857,
-            128,
-            80,
-            80
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target_offset": [
-            -60,
-            55,
-            10,
-            10
-        ],
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf4",
-            "Infr_DealSelf5",
-            "Infr_DealSelf6",
-            "Infr_DealSelf7",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf4": {
-        "recognition": "TemplateMatch",
-        "template": "InfrastructureS/Infr_DealCard.png",
-        "roi": [
-            1089,
-            128,
-            80,
-            80
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target_offset": [
-            -60,
-            55,
-            10,
-            10
-        ],
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf5",
-            "Infr_DealSelf6",
-            "Infr_DealSelf7",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf5": {
-        "recognition": "TemplateMatch",
-        "template": "InfrastructureS/Infr_DealCard.png",
-        "roi": [
-            402,
-            435,
-            80,
-            80
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target_offset": [
-            -60,
-            55,
-            10,
-            10
-        ],
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf6",
-            "Infr_DealSelf7",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf6": {
-        "recognition": "TemplateMatch",
-        "template": "InfrastructureS/Infr_DealCard.png",
-        "roi": [
-            634,
-            435,
-            80,
-            80
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target_offset": [
-            -60,
-            55,
-            10,
-            10
-        ],
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf7",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf7": {
-        "recognition": "TemplateMatch",
-        "template": "InfrastructureS/Infr_DealCard.png",
-        "roi": [
-            857,
-            435,
-            80,
-            80
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target_offset": [
-            -60,
-            55,
-            10,
-            10
-        ],
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf8",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf8": {
-        "recognition": "TemplateMatch",
-        "template": "InfrastructureS/Infr_DealCard.png",
-        "roi": [
-            1089,
-            435,
-            80,
-            80
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "target_offset": [
-            -60,
-            55,
-            10,
-            10
-        ],
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf01",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf01": {
-        "recognition": "OCR",
-        "expected": [
-            "X120000"
-        ],
+        "template": "InfrastructureS/经验120000.png",
+        "threshold": 0.95,
         "roi": [
             272,
-            151,
-            175,
-            80
+            89,
+            909,
+            603
         ],
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
+            "Infr_DealSelf_Yes",
+            "Infr_DealSelf_No",
             "子任务_获得物品",
-            "Infr_DealSelf02",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
+            "Infr_3号物品售罄"
         ]
     },
-    "Infr_DealSelf02": {
-        "recognition": "OCR",
-        "expected": [
-            "X120000"
+    "Infr_1号物品售罄": {
+        "recognition": "ColorMatch",
+        "roi": "Infr_DealSelf1",
+        "method": 4,
+        "lower": [
+            0,
+            0,
+            0
         ],
-        "roi": [
-            522,
-            160,
-            136,
-            80
+        "upper": [
+            50,
+            50,
+            50
         ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf03",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
+        "count": 300
     },
-    "Infr_DealSelf03": {
-        "recognition": "OCR",
-        "expected": [
-            "X120000"
+    "Infr_2号物品售罄": {
+        "recognition": "ColorMatch",
+        "roi": "Infr_DealSelf2",
+        "method": 4,
+        "lower": [
+            0,
+            0,
+            0
         ],
-        "roi": [
-            740,
-            167,
-            154,
-            77
+        "upper": [
+            50,
+            50,
+            50
         ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf04",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
+        "count": 100
     },
-    "Infr_DealSelf04": {
-        "recognition": "OCR",
-        "expected": [
-            "X120000"
+    "Infr_3号物品售罄": {
+        "recognition": "ColorMatch",
+        "roi": "Infr_DealSelf2",
+        "method": 4,
+        "lower": [
+            0,
+            0,
+            0
         ],
-        "roi": [
-            962,
-            167,
-            137,
-            80
+        "upper": [
+            50,
+            50,
+            50
         ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf05",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
+        "count": 100
     },
-    "Infr_DealSelf05": {
-        "recognition": "OCR",
-        "expected": [
-            "X120000"
-        ],
-        "roi": [
-            286,
-            468,
-            142,
-            72
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf06",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf06": {
-        "recognition": "OCR",
-        "expected": [
-            "X120000"
-        ],
-        "roi": [
-            515,
-            471,
-            161,
-            80
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf07",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf07": {
-        "recognition": "OCR",
-        "expected": [
-            "X120000"
-        ],
-        "roi": [
-            729,
-            471,
-            74,
-            593
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealSelf08",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf08": {
-        "recognition": "OCR",
-        "expected": [
-            "X120000"
-        ],
-        "roi": [
-            962,
-            474,
-            140,
-            66
-        ],
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "Infr_DealSelf1_Yes",
-            "Infr_DealSelf1_No",
-            "子任务_获得物品",
-            "Infr_DealNextFriends_VisitNext"
-        ]
-    },
-    "Infr_DealSelf1_Yes": {
-        "is_sub": true,
+    "Infr_DealSelf_Yes": {
         "recognition": "OCR",
         "expected": [
             "是否确认提交订单"
@@ -1226,6 +840,7 @@
             340,
             126
         ],
+        "pre_wait_freezes": 100,
         "action": "Click",
         "post_delay": 1000,
         "target": [
@@ -1235,8 +850,7 @@
             36
         ]
     },
-    "Infr_DealSelf1_No": {
-        "is_sub": true,
+    "Infr_DealSelf_No": {
         "recognition": "OCR",
         "expected": [
             "订单兑换",
@@ -1248,6 +862,7 @@
             543,
             154
         ],
+        "pre_wait_freezes": 100,
         "action": "Click",
         "post_delay": 1000,
         "target": [
@@ -1300,12 +915,11 @@
         "post_delay": 1000,
         "next": [
             "Infr_Dealothers",
-            "Infr_DealNextFriends_VisitNext",
-            "Infr_DealNextFriends_End",
             "Infr_DealNextFriends1"
         ]
     },
     "Infr_DealNextFriends_VisitNext": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "向右箭头.png",
         "roi": [
@@ -1314,12 +928,7 @@
             134,
             82
         ],
-        "action": "Click",
-        "next": [
-            "Infr_DealNextFriends_End",
-            "Infr_Dealothers",
-            "Infr_DealNextFriends_VisitNext"
-        ]
+        "action": "Click"
     },
     "Infr_DealNextFriends_End": {
         "recognition": "OCR",
@@ -1333,7 +942,9 @@
         "post_delay": 1000,
         "next": [
             "进入首页"
-        ]
+        ],
+        "on_error": "通用-返回主页",
+        "timeout": 10000
     },
     "Infr_制作素材": {
         "recognition": "OCR",
