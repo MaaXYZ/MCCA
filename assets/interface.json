@@ -490,7 +490,8 @@
         "第几层": {
             "cases": [
                 {
-                    "name": "不选择-默认打最高"
+                    "name": "不选择-默认打最高",
+                    "pipeline_override": {}
                 },
                 {
                     "name": "第1层",
@@ -896,7 +897,8 @@
         "战力刷新选择": {
             "cases": [
                 {
-                    "name": "不选择"
+                    "name": "不选择",
+                    "pipeline_override": {}
                 },
                 {
                     "name": "5000战力刷新",
