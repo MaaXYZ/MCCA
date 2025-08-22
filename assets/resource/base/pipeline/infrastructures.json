@@ -155,6 +155,25 @@
         "post_delay": 2000,
         "next": [
             "Infr_使用",
+            "Infr_驻员预设4"
+        ]
+    },
+    "Infr_驻员预设4": {
+        "recognition": "OCR",
+        "expected": [
+            "驻员",
+            "预设"
+        ],
+        "roi": [
+            960,
+            600,
+            120,
+            90
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "Infr_使用",
             "Infr_BackButton"
         ]
     },
@@ -704,10 +723,12 @@
             "Infr_DealSelf1",
             "Infr_DealSelf2",
             "Infr_DealSelf3",
-            "Infr_DealNextFriends"
+            "Infr_DealNextFriends",
+            "通用-返回主页"
         ]
     },
     "Infr_Dealothers": {
+        "post_wait_freezes": 1000,
         "next": [
             "Infr_DealNextFriends_End",
             "Infr_DealSelf1",
@@ -721,11 +742,11 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": [
-            "InfrastructureS/构建订单2.png",
+            "InfrastructureS/构建订单3.png",
             "InfrastructureS/构建订单1.png",
-            "InfrastructureS/构建订单2.1.png"
+            "InfrastructureS/构建订单4.png"
         ],
-        "threshold": 0.97,
+        "threshold": 0.95,
         "roi": [
             272,
             89,
@@ -733,6 +754,13 @@
             603
         ],
         "action": "Click",
+        "target": true,
+        "target_offset": [
+            90,
+            128,
+            -90,
+            -128
+        ],
         "post_delay": 1000,
         "next": [
             "Infr_DealSelf_Yes",
@@ -753,6 +781,13 @@
             603
         ],
         "action": "Click",
+        "target": true,
+        "target_offset": [
+            90,
+            128,
+            -90,
+            -128
+        ],
         "post_delay": 1000,
         "next": [
             "Infr_DealSelf_Yes",
@@ -773,6 +808,13 @@
             603
         ],
         "action": "Click",
+        "target": true,
+        "target_offset": [
+            90,
+            128,
+            -90,
+            -128
+        ],
         "post_delay": 1000,
         "next": [
             "Infr_DealSelf_Yes",
@@ -815,7 +857,7 @@
     },
     "Infr_3号物品售罄": {
         "recognition": "ColorMatch",
-        "roi": "Infr_DealSelf2",
+        "roi": "Infr_DealSelf3",
         "method": 4,
         "lower": [
             0,
@@ -931,20 +973,19 @@
         "action": "Click"
     },
     "Infr_DealNextFriends_End": {
-        "recognition": "OCR",
-        "expected": "返回自己的",
+        "recognition": "TemplateMatch",
+        "template": "好友交付记录.png",
         "roi": [
-            512,
-            341,
-            251,
-            39
+            75,
+            474,
+            106,
+            76
         ],
+        "threshold": 0.9,
         "post_delay": 1000,
         "next": [
-            "进入首页"
-        ],
-        "on_error": "通用-返回主页",
-        "timeout": 10000
+            "通用-返回主页"
+        ]
     },
     "Infr_制作素材": {
         "recognition": "OCR",

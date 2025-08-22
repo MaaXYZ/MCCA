@@ -286,7 +286,7 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "Infr_Deal": {
+                        "Infr_DealNextFriends": {
                             "enabled": true
                         }
                     }
@@ -294,7 +294,7 @@
                 {
                     "name": "No",
                     "pipeline_override": {
-                        "Infr_Deal": {
+                        "Infr_DealNextFriends": {
                             "enabled": false
                         }
                     }
