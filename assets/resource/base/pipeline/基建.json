@@ -719,6 +719,10 @@
         ]
     },
     "Infr_DealmySelf": {
+        "post_wait_freezes": {
+            "time": 2000,
+            "threshold": 0.95
+        },
         "next": [
             "Infr_DealSelf1",
             "Infr_DealSelf2",
@@ -728,7 +732,10 @@
         ]
     },
     "Infr_Dealothers": {
-        "post_wait_freezes": 1000,
+        "post_wait_freezes": {
+            "time": 2000,
+            "threshold": 0.95
+        },
         "next": [
             "Infr_DealNextFriends_End",
             "Infr_DealSelf1",
@@ -746,7 +753,7 @@
             "InfrastructureS/构建订单1.png",
             "InfrastructureS/构建订单4.png"
         ],
-        "threshold": 0.95,
+        "threshold": 0.90,
         "roi": [
             272,
             89,

@@ -102,6 +102,22 @@
         {
             "name": "关闭游戏",
             "entry": "关闭游戏"
+        },
+        {
+            "name": "历战试炼",
+            "entry": "历战试炼",
+            "check": true,
+            "doc": "测试中,暂时仅支持打限时boss，任务目标达到10为高进度，将不会继续任务；[color:red]开启该任务需自行配置有足够强度的队伍[/color]",
+            "pipeline_override": {
+                "活动选择": {
+                    "expected": "历战试炼",
+                    "next": "历战试炼-关卡选择"
+                }
+            },
+            "option": [
+                "是否打挑战难度",
+                "挑战难度选择"
+            ]
         }
     ],
     "recognizer": {},
@@ -296,6 +312,70 @@
                     "pipeline_override": {
                         "Infr_DealNextFriends": {
                             "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "是否打挑战难度": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "历战试炼-boss挑战难度": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "历战试炼-boss挑战难度": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "挑战难度选择": {
+            "cases": [
+                {
+                    "name": "1",
+                    "pipeline_override": {
+                        "历战试炼-boss挑战难度-选择": {
+                            "expected": "1"
+                        }
+                    }
+                },
+                {
+                    "name": "2",
+                    "pipeline_override": {
+                        "历战试炼-boss挑战难度-选择": {
+                            "expected": "2"
+                        }
+                    }
+                },
+                {
+                    "name": "3",
+                    "pipeline_override": {
+                        "历战试炼-boss挑战难度-选择": {
+                            "expected": "3"
+                        }
+                    }
+                },
+                {
+                    "name": "4",
+                    "pipeline_override": {
+                        "历战试炼-boss挑战难度-选择": {
+                            "expected": "4"
+                        }
+                    }
+                },
+                {
+                    "name": "5",
+                    "pipeline_override": {
+                        "历战试炼-boss挑战难度-选择": {
+                            "expected": "5"
                         }
                     }
                 }

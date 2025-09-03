@@ -14,191 +14,9 @@
             "threshold": 0.95
         },
         "next": [
-            "扫荡次数选择",
-            "自选扫荡次数"
+            "扫荡次数选择"
         ],
         "focus": true
-    },
-    "自选扫荡次数": {
-        "enabled": false,
-        "next": [
-            "自选-次数1",
-            "自选-次数2"
-        ],
-        "interrupt": [
-            "重连网络"
-        ]
-    },
-    "自选-次数1": {
-        "enabled": false,
-        "recognition": "OCR",
-        "expected": "开始战斗",
-        "roi": [
-            946,
-            541,
-            127,
-            39
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code.",
-        "timeout": 30000
-    },
-    "自选-次数2": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
-    },
-    "自选-次数3": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
-    },
-    "自选-次数4": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
-    },
-    "自选-次数5": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
-    },
-    "自选-次数6": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
-    },
-    "自选-次数7": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
-    },
-    "自选-次数8": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
-    },
-    "自选-次数9": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
-    },
-    "自选-次数10": {
-        "enabled": false,
-        "recognition": "TemplateMatch",
-        "template": "选择次数.png",
-        "roi": [
-            503,
-            531,
-            84,
-            59
-        ],
-        "action": "Click",
-        "pre_wait_freezes": {
-            "time": 1000,
-            "threshold": 0.95
-        },
-        "next_doc": "Set in code."
     },
     "扫荡次数选择": {
         "enabled": true,
@@ -497,9 +315,22 @@
         },
         "action": "Click",
         "next": [
+            "扫荡升级",
             "扫荡成功-检查",
             "扫荡结束"
         ]
+    },
+    "扫荡升级": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Combat/DailyExplore_LevelUp.png",
+        "roi": [
+            540,
+            242,
+            207,
+            91
+        ],
+        "action": "Click"
     },
     "扫荡成功-检查": {
         "recognition": "OCR",

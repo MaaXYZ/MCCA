@@ -153,5 +153,132 @@
       200
     ],
     "action": "Click"
+  },
+  "通用-返回主页": {
+    "recognition": "TemplateMatch",
+    "template": "返回主页.png",
+    "roi": [
+      164,
+      21,
+      112,
+      51
+    ],
+    "pre_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    },
+    "action": "Click",
+    "focus": "返回主页"
+  },
+  "通用-确认获得物品": {
+    "recognition": "OCR",
+    "expected": "获得物品",
+    "roi": [
+      511,
+      154,
+      276,
+      116
+    ],
+    "pre_wait_freezes": {
+      "time": 2000,
+      "threshold": 0.95
+    },
+    "action": "Click"
+  },
+  "通用-返回": {
+    "recognition": "TemplateMatch",
+    "template": "返回.png",
+    "roi": [
+      11,
+      8,
+      426,
+      102
+    ],
+    "pre_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    },
+    "action": "Click"
+  },
+  "通用-啥也不做": {
+    "action": "DoNothing",
+    "focus": "结束任务"
+  },
+  "活动探索-首页-出击": {
+    "recognition": "TemplateMatch",
+    "template": "StartUp/chuji.png",
+    "roi": [
+      1085,
+      557,
+      194,
+      152
+    ],
+    "action": "Click",
+    "post_wait_freezes": 200,
+    "next": "进入活动探索界面"
+  },
+  "进入活动探索界面": {
+    "recognition": "OCR",
+    "expected": "活动探索",
+    "roi": [
+      527,
+      110,
+      227,
+      90
+    ],
+    "action": "Click",
+    "post_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    },
+    "next": "活动选择",
+    "interrupt": "活动探索-右滑"
+  },
+  "活动选择": {
+    "recognition": "OCR",
+    "expected": "活动选择",
+    "roi": [
+      91,
+      173,
+      1139,
+      422
+    ],
+    "action": "Click",
+    "post_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    }
+  },
+  "活动探索-右滑": {
+    "action": "Swipe",
+    "begin": [
+      1116,
+      376,
+      37,
+      47
+    ],
+    "end": [
+      858,
+      379,
+      49,
+      44
+    ],
+    "duration": 1000,
+    "post_wait_freezes": {
+      "time": 1000,
+      "threshold": 0.95
+    }
+  },
+  "跳过boss演出动画": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": "跳过",
+    "roi": [
+      1119,
+      30,
+      87,
+      44
+    ],
+    "action": "Click"
   }
 }
